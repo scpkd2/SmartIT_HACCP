@@ -9,3 +9,14 @@ C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.exe
 C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.pdb
 C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.Home.resources
 C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.csprojAssemblyReference.cache
+C:\git\SmartIT_HACCP\Haccp_MES\bin\Debug\Haccp_MES.exe.config
+C:\git\SmartIT_HACCP\Haccp_MES\bin\Debug\Haccp_MES.exe
+C:\git\SmartIT_HACCP\Haccp_MES\bin\Debug\Haccp_MES.pdb
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.csprojAssemblyReference.cache
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.Form1.resources
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.Home.resources
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.Properties.Resources.resources
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.csproj.GenerateResource.cache
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.csproj.CoreCompileInputs.cache
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.exe
+C:\git\SmartIT_HACCP\Haccp_MES\obj\Debug\Haccp_MES.pdb
