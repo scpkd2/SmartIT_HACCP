@@ -1,0 +1,11 @@
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\bin\Debug\Haccp_MES.exe.config
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\bin\Debug\Haccp_MES.exe
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\bin\Debug\Haccp_MES.pdb
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.Form1.resources
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.Properties.Resources.resources
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.csproj.GenerateResource.cache
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.csproj.CoreCompileInputs.cache
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.exe
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.pdb
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.Home.resources
+C:\Users\pkd\source\repos\Haccp_MES\Haccp_MES\obj\Debug\Haccp_MES.csprojAssemblyReference.cache
