@@ -90,7 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="1.menu_info\" />
+    <Folder Include="1_information\" />
+    <Folder Include="2_management\" />
+    <Folder Include="3_production\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

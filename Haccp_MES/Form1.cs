@@ -12,6 +12,7 @@ namespace Haccp_MES
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -204,7 +205,8 @@ namespace Haccp_MES
         private void btn_Clinet_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_Clinet_Mng);
-            tabBtnActiveOn(tabCilentMng);
+            tabBtnActiveOn(tabCilentMng);            
+
         }
 
         //품목관리버튼
