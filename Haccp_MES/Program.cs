@@ -14,6 +14,7 @@ namespace Haccp_MES
         [STAThread]
         static void Main()
         {
+            // changgi test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

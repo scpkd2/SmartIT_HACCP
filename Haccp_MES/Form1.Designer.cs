@@ -47,8 +47,6 @@
             this.btn_Input_Item_Mng = new System.Windows.Forms.Button();
             this.btn_Opt_Mng = new System.Windows.Forms.Button();
             this.panelMES_info_SubMenu = new System.Windows.Forms.Panel();
-            this.btn_Sample2 = new System.Windows.Forms.Button();
-            this.btn_Sample1 = new System.Windows.Forms.Button();
             this.btn_Storg_Mng = new System.Windows.Forms.Button();
             this.btn_Prodt_Mng = new System.Windows.Forms.Button();
             this.btn_Clinet_Mng = new System.Windows.Forms.Button();
@@ -61,9 +59,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tabCilentMng = new System.Windows.Forms.Button();
             this.tabHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tabCilentMng = new System.Windows.Forms.Button();
+            this.btn_Sample2 = new System.Windows.Forms.Button();
+            this.btn_Sample1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelProdt_SubMenu.SuspendLayout();
             this.panelOpt_SubMenu.SuspendLayout();
@@ -386,44 +386,6 @@
             this.panelMES_info_SubMenu.Size = new System.Drawing.Size(202, 172);
             this.panelMES_info_SubMenu.TabIndex = 4;
             // 
-            // btn_Sample2
-            // 
-            this.btn_Sample2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Sample2.FlatAppearance.BorderSize = 0;
-            this.btn_Sample2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sample2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Sample2.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Sample2.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample2.Image")));
-            this.btn_Sample2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample2.Location = new System.Drawing.Point(0, 128);
-            this.btn_Sample2.Name = "btn_Sample2";
-            this.btn_Sample2.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Sample2.Size = new System.Drawing.Size(202, 32);
-            this.btn_Sample2.TabIndex = 4;
-            this.btn_Sample2.Text = "     Sample2";
-            this.btn_Sample2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample2.UseVisualStyleBackColor = true;
-            this.btn_Sample2.Click += new System.EventHandler(this.btn_Sample2_Click);
-            // 
-            // btn_Sample1
-            // 
-            this.btn_Sample1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Sample1.FlatAppearance.BorderSize = 0;
-            this.btn_Sample1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sample1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Sample1.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Sample1.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample1.Image")));
-            this.btn_Sample1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample1.Location = new System.Drawing.Point(0, 96);
-            this.btn_Sample1.Name = "btn_Sample1";
-            this.btn_Sample1.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Sample1.Size = new System.Drawing.Size(202, 32);
-            this.btn_Sample1.TabIndex = 3;
-            this.btn_Sample1.Text = "     Sample1";
-            this.btn_Sample1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample1.UseVisualStyleBackColor = true;
-            this.btn_Sample1.Click += new System.EventHandler(this.btn_Sample1_Click);
-            // 
             // btn_Storg_Mng
             // 
             this.btn_Storg_Mng.Dock = System.Windows.Forms.DockStyle.Top;
@@ -595,6 +557,24 @@
             this.panel2.Size = new System.Drawing.Size(965, 34);
             this.panel2.TabIndex = 3;
             // 
+            // tabCilentMng
+            // 
+            this.tabCilentMng.BackColor = System.Drawing.Color.Transparent;
+            this.tabCilentMng.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabCilentMng.FlatAppearance.BorderSize = 0;
+            this.tabCilentMng.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
+            this.tabCilentMng.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.tabCilentMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tabCilentMng.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tabCilentMng.ForeColor = System.Drawing.SystemColors.Control;
+            this.tabCilentMng.Location = new System.Drawing.Point(86, 0);
+            this.tabCilentMng.Name = "tabCilentMng";
+            this.tabCilentMng.Size = new System.Drawing.Size(86, 34);
+            this.tabCilentMng.TabIndex = 1;
+            this.tabCilentMng.Text = "고객사관리";
+            this.tabCilentMng.UseVisualStyleBackColor = false;
+            this.tabCilentMng.Click += new System.EventHandler(this.tabCilentMng_Click);
+            // 
             // tabHome
             // 
             this.tabHome.BackColor = System.Drawing.Color.Transparent;
@@ -622,23 +602,43 @@
             this.panel3.Size = new System.Drawing.Size(965, 5);
             this.panel3.TabIndex = 4;
             // 
-            // tabCilentMng
+            // btn_Sample2
             // 
-            this.tabCilentMng.BackColor = System.Drawing.Color.Transparent;
-            this.tabCilentMng.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tabCilentMng.FlatAppearance.BorderSize = 0;
-            this.tabCilentMng.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.tabCilentMng.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.tabCilentMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tabCilentMng.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tabCilentMng.ForeColor = System.Drawing.SystemColors.Control;
-            this.tabCilentMng.Location = new System.Drawing.Point(86, 0);
-            this.tabCilentMng.Name = "tabCilentMng";
-            this.tabCilentMng.Size = new System.Drawing.Size(86, 34);
-            this.tabCilentMng.TabIndex = 1;
-            this.tabCilentMng.Text = "고객사관리";
-            this.tabCilentMng.UseVisualStyleBackColor = false;
-            this.tabCilentMng.Click += new System.EventHandler(this.tabCilentMng_Click);
+            this.btn_Sample2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Sample2.FlatAppearance.BorderSize = 0;
+            this.btn_Sample2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sample2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Sample2.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_Sample2.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample2.Image")));
+            this.btn_Sample2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sample2.Location = new System.Drawing.Point(0, 128);
+            this.btn_Sample2.Name = "btn_Sample2";
+            this.btn_Sample2.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btn_Sample2.Size = new System.Drawing.Size(202, 32);
+            this.btn_Sample2.TabIndex = 4;
+            this.btn_Sample2.Text = "     Sample2";
+            this.btn_Sample2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sample2.UseVisualStyleBackColor = true;
+            this.btn_Sample2.Click += new System.EventHandler(this.btn_Sample2_Click);
+            // 
+            // btn_Sample1
+            // 
+            this.btn_Sample1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Sample1.FlatAppearance.BorderSize = 0;
+            this.btn_Sample1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sample1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Sample1.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_Sample1.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample1.Image")));
+            this.btn_Sample1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sample1.Location = new System.Drawing.Point(0, 96);
+            this.btn_Sample1.Name = "btn_Sample1";
+            this.btn_Sample1.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btn_Sample1.Size = new System.Drawing.Size(202, 32);
+            this.btn_Sample1.TabIndex = 3;
+            this.btn_Sample1.Text = "     Sample1";
+            this.btn_Sample1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sample1.UseVisualStyleBackColor = true;
+            this.btn_Sample1.Click += new System.EventHandler(this.btn_Sample1_Click);
             // 
             // Form1
             // 
@@ -680,8 +680,6 @@
         private System.Windows.Forms.Button btn_Input_Item_Mng;
         private System.Windows.Forms.Button btn_Opt_Mng;
         private System.Windows.Forms.Panel panelMES_info_SubMenu;
-        private System.Windows.Forms.Button btn_Sample2;
-        private System.Windows.Forms.Button btn_Sample1;
         private System.Windows.Forms.Button btn_Storg_Mng;
         private System.Windows.Forms.Button btn_Prodt_Mng;
         private System.Windows.Forms.Button btn_Clinet_Mng;
@@ -702,6 +700,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button tabHome;
         private System.Windows.Forms.Button tabCilentMng;
+        private System.Windows.Forms.Button btn_Sample2;
+        private System.Windows.Forms.Button btn_Sample1;
     }
 }
 
