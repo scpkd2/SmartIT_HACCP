@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2_management\mngmnt_1-1_insertData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-1_insertData.Designer.cs">
+      <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-2_materialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-2_materialList.Designer.cs">
+      <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1_inputProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1_inputProduct.Designer.cs">
+      <DependentUpon>mngmnt_1_inputProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +79,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="2_management\mngmnt_1-1_insertData.resx">
+      <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_1-2_materialList.resx">
+      <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_1_inputProduct.resx">
+      <DependentUpon>mngmnt_1_inputProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,8 +119,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="1_information\" />
-    <Folder Include="2_management\" />
     <Folder Include="3_production\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\browser-4x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\list-2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\aperture-3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\list-3x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

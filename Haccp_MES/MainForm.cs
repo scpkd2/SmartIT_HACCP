@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Haccp_MES._2_management;
 
 namespace Haccp_MES
 {
@@ -240,6 +241,7 @@ namespace Haccp_MES
         private void btn_Input_Item_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Input_Item_Mng);
+            OpenChildForm(new mngmnt_1_inputProduct());
         }
 
         // 품목 출하등록 버튼
