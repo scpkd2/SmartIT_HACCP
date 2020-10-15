@@ -16,5 +16,10 @@ namespace Haccp_MES._2_management
         {
             InitializeComponent();
         }
+
+        private void mngmnt_1_2_materialList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
