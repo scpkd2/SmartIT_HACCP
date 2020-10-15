@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridMaterialList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,16 +39,18 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gridMaterialList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridMaterialList.AllowUserToAddRows = false;
+            this.gridMaterialList.AllowUserToResizeColumns = false;
+            this.gridMaterialList.AllowUserToResizeRows = false;
+            this.gridMaterialList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridMaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMaterialList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -55,11 +58,12 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(28, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(495, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.gridMaterialList.Location = new System.Drawing.Point(28, 80);
+            this.gridMaterialList.Name = "gridMaterialList";
+            this.gridMaterialList.RowTemplate.Height = 23;
+            this.gridMaterialList.Size = new System.Drawing.Size(495, 150);
+            this.gridMaterialList.TabIndex = 0;
+            this.gridMaterialList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridMaterialList_CellContentClick);
             // 
             // label1
             // 
@@ -81,11 +85,23 @@
             this.pictureBox2.TabIndex = 99;
             this.pictureBox2.TabStop = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(448, 268);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 100;
+            this.btnClose.Text = "취소";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "mat_no";
             this.Column1.HeaderText = "품목코드";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 78;
             // 
             // Column2
@@ -93,6 +109,7 @@
             this.Column2.DataPropertyName = "mat_name";
             this.Column2.HeaderText = "품목명";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 66;
             // 
             // Column3
@@ -100,6 +117,7 @@
             this.Column3.DataPropertyName = "mat_type";
             this.Column3.HeaderText = "품목유형";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 78;
             // 
             // Column4
@@ -107,6 +125,7 @@
             this.Column4.DataPropertyName = "mat_spec";
             this.Column4.HeaderText = "단위";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 54;
             // 
             // Column5
@@ -114,6 +133,7 @@
             this.Column5.DataPropertyName = "mat_price";
             this.Column5.HeaderText = "단가";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 54;
             // 
             // Column6
@@ -121,6 +141,7 @@
             this.Column6.DataPropertyName = "com_name";
             this.Column6.HeaderText = "거래처";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 66;
             // 
             // Column7
@@ -128,22 +149,24 @@
             this.Column7.DataPropertyName = "mat_etc";
             this.Column7.HeaderText = "비고";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 54;
             // 
             // mngmnt_1_2_materialList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 272);
+            this.ClientSize = new System.Drawing.Size(550, 303);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridMaterialList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mngmnt_1_2_materialList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "mngmnt_1_2_materialList";
             this.Load += new System.EventHandler(this.mngmnt_1_2_materialList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,9 +175,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridMaterialList;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

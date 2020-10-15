@@ -17,6 +17,8 @@ namespace Haccp_MES._2_management
             InitializeComponent();
         }
 
+        public DataGridViewRow childVal { get; set; }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,7 +37,13 @@ namespace Haccp_MES._2_management
         private void btnLoadMaterialList_Click(object sender, EventArgs e)
         {
             mngmnt_1_2_materialList dlg = new mngmnt_1_2_materialList();
-            dlg.ShowDialog();
+            dlg.Owner = this;
+
+            
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
