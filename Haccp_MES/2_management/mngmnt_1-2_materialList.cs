@@ -26,19 +26,19 @@ namespace Haccp_MES._2_management
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             dt = new DataTable();
 
+            gridMaterialList.RowHeadersVisible = false;
         }
 
         private void mngmnt_1_2_materialList_Load(object sender, EventArgs e)
         {
             conn.Open();
 
-            string orderInfoHeadQuery = "SELECT mat_no, mat_name, mat_type, mat_spec, mat_price, com_name, mat_etc FROM info_material m LEFT JOIN info_company c on m.com_no=c.com_no ;";
+            string orderInfoHeadQuery = "SELECT mat_no, mat_name, mat_type, mat_spec, mat_price, com_name, mat_etc FROM info_material m LEFT JOIN info_company c on m.com_no=c.com_no WHERE NOT mat_type IN ('제품');";
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 
             gridMaterialList.DataSource = dt;
-
             //dt.Dispose();
             conn.Close();
         }

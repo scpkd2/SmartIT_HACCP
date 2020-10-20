@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.gridMaterialList = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +36,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             // gridMaterialList
             // 
             this.gridMaterialList.AllowUserToAddRows = false;
+            this.gridMaterialList.AllowUserToDeleteRows = false;
             this.gridMaterialList.AllowUserToResizeColumns = false;
             this.gridMaterialList.AllowUserToResizeRows = false;
             this.gridMaterialList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -59,42 +60,14 @@
             this.Column6,
             this.Column7});
             this.gridMaterialList.Location = new System.Drawing.Point(28, 80);
+            this.gridMaterialList.MultiSelect = false;
             this.gridMaterialList.Name = "gridMaterialList";
+            this.gridMaterialList.ReadOnly = true;
             this.gridMaterialList.RowTemplate.Height = 23;
+            this.gridMaterialList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridMaterialList.Size = new System.Drawing.Size(495, 150);
             this.gridMaterialList.TabIndex = 0;
             this.gridMaterialList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridMaterialList_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(58, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 24);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "품목리스트";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_3x;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 99;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(448, 268);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 100;
-            this.btnClose.Text = "취소";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Column1
             // 
@@ -151,6 +124,37 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Width = 54;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(58, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "품목리스트";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_3x;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 99;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(448, 268);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 100;
+            this.btnClose.Text = "취소";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // mngmnt_1_2_materialList
             // 

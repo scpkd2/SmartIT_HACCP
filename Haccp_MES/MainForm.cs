@@ -103,8 +103,6 @@ namespace Haccp_MES
                 btn_Storg_Mng.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Sample1.ForeColor == System.Drawing.Color.Crimson)
                 btn_Sample1.ForeColor = System.Drawing.Color.LightGray;
-            if (btn_Sample2.ForeColor == System.Drawing.Color.Crimson)
-                btn_Sample2.ForeColor = System.Drawing.Color.LightGray;
             #endregion
 
             if (btn.ForeColor == System.Drawing.Color.LightGray)
@@ -124,10 +122,6 @@ namespace Haccp_MES
                 btn_Input_Item_Mng.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Out_item_Mng.ForeColor == System.Drawing.Color.Crimson)
                 btn_Out_item_Mng.ForeColor = System.Drawing.Color.LightGray;
-            if (btn_Prodt_In_Trend.ForeColor == System.Drawing.Color.Crimson)
-                btn_Prodt_In_Trend.ForeColor = System.Drawing.Color.LightGray;
-            if (btn_Prodt_Out_Trend.ForeColor == System.Drawing.Color.Crimson)
-                btn_Prodt_Out_Trend.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Inventory_Trend.ForeColor == System.Drawing.Color.Crimson)
                 btn_Inventory_Trend.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Inven_Matching.ForeColor == System.Drawing.Color.Crimson)
@@ -147,14 +141,10 @@ namespace Haccp_MES
         private void btnColorChange_ProdtMng(Button btn)
         {
             #region 생산관리 메뉴 제목 컬러 OFF
-            if (btn_Prodt_Plan.ForeColor == System.Drawing.Color.Crimson)
-                btn_Prodt_Plan.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Work_CMD.ForeColor == System.Drawing.Color.Crimson)
                 btn_Work_CMD.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Result_Mng.ForeColor == System.Drawing.Color.Crimson)
                 btn_Result_Mng.ForeColor = System.Drawing.Color.LightGray;
-            if (btn_defect_Mng.ForeColor == System.Drawing.Color.Crimson)
-                btn_defect_Mng.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Time_Trend.ForeColor == System.Drawing.Color.Crimson)
                 btn_Time_Trend.ForeColor = System.Drawing.Color.LightGray;
             #endregion
@@ -228,12 +218,6 @@ namespace Haccp_MES
         {
             btnColorChange_StdInfo(btn_Sample1);
         }
-
-        // Sample2 버튼
-        private void btn_Sample2_Click(object sender, EventArgs e)
-        {
-            btnColorChange_StdInfo(btn_Sample2);
-        }
         #endregion
 
         #region 영업관리 메뉴버튼
@@ -250,17 +234,6 @@ namespace Haccp_MES
             btnColorChange_OptInfo(btn_Out_item_Mng);
         }
 
-        // 제품 입고현황 버튼
-        private void btn_Prodt_In_Trend_Click(object sender, EventArgs e)
-        {
-            btnColorChange_OptInfo(btn_Prodt_In_Trend);
-        }
-
-        // 제품출하현황 버튼
-        private void btn_Prodt_Out_Trend_Click(object sender, EventArgs e)
-        {
-            btnColorChange_OptInfo(btn_Prodt_Out_Trend);
-        }
 
         // 제품 재고현황 버튼
         private void btn_Inventory_Trend_Click(object sender, EventArgs e)
@@ -280,11 +253,6 @@ namespace Haccp_MES
 
         #region 생산관리 메뉴버튼
 
-        //생산계획등록 버튼
-        private void btn_Prodt_Plan_Click(object sender, EventArgs e)
-        {
-            btnColorChange_ProdtMng(btn_Prodt_Plan);
-        }
 
         //작업지시등록 버튼
         private void btn_Work_CMD_Click(object sender, EventArgs e)
@@ -298,11 +266,6 @@ namespace Haccp_MES
             btnColorChange_ProdtMng(btn_Result_Mng);
         }
 
-        //불량유형관리 버튼
-        private void btn_defect_Mng_Click(object sender, EventArgs e)
-        {
-            btnColorChange_ProdtMng(btn_defect_Mng);
-        }
 
         //기관별생산현황 버튼
         private void btn_Time_Trend_Click(object sender, EventArgs e)
