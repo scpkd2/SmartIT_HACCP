@@ -11,7 +11,7 @@ using Haccp_MES._2_management;
 
 namespace Haccp_MES
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form //동욱이의 만행
     {
         
         public MainForm()
