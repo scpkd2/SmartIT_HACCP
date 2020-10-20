@@ -33,16 +33,12 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelProdt_SubMenu = new System.Windows.Forms.Panel();
             this.btn_Time_Trend = new System.Windows.Forms.Button();
-            this.btn_defect_Mng = new System.Windows.Forms.Button();
             this.btn_Result_Mng = new System.Windows.Forms.Button();
             this.btn_Work_CMD = new System.Windows.Forms.Button();
-            this.btn_Prodt_Plan = new System.Windows.Forms.Button();
             this.btn_Product_Mng = new System.Windows.Forms.Button();
             this.panelOpt_SubMenu = new System.Windows.Forms.Panel();
             this.btn_Inven_Matching = new System.Windows.Forms.Button();
             this.btn_Inventory_Trend = new System.Windows.Forms.Button();
-            this.btn_Prodt_Out_Trend = new System.Windows.Forms.Button();
-            this.btn_Prodt_In_Trend = new System.Windows.Forms.Button();
             this.btn_Out_item_Mng = new System.Windows.Forms.Button();
             this.btn_Input_Item_Mng = new System.Windows.Forms.Button();
             this.btn_Opt_Mng = new System.Windows.Forms.Button();
@@ -62,8 +58,6 @@
             this.tabCilentMng = new System.Windows.Forms.Button();
             this.tabHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Sample2 = new System.Windows.Forms.Button();
-            this.btn_Sample1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelProdt_SubMenu.SuspendLayout();
             this.panelOpt_SubMenu.SuspendLayout();
@@ -94,14 +88,12 @@
             // 
             this.panelProdt_SubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.panelProdt_SubMenu.Controls.Add(this.btn_Time_Trend);
-            this.panelProdt_SubMenu.Controls.Add(this.btn_defect_Mng);
             this.panelProdt_SubMenu.Controls.Add(this.btn_Result_Mng);
             this.panelProdt_SubMenu.Controls.Add(this.btn_Work_CMD);
-            this.panelProdt_SubMenu.Controls.Add(this.btn_Prodt_Plan);
             this.panelProdt_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProdt_SubMenu.Location = new System.Drawing.Point(0, 611);
+            this.panelProdt_SubMenu.Location = new System.Drawing.Point(0, 472);
             this.panelProdt_SubMenu.Name = "panelProdt_SubMenu";
-            this.panelProdt_SubMenu.Size = new System.Drawing.Size(202, 191);
+            this.panelProdt_SubMenu.Size = new System.Drawing.Size(219, 105);
             this.panelProdt_SubMenu.TabIndex = 8;
             // 
             // btn_Time_Trend
@@ -113,34 +105,15 @@
             this.btn_Time_Trend.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Time_Trend.Image = ((System.Drawing.Image)(resources.GetObject("btn_Time_Trend.Image")));
             this.btn_Time_Trend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Time_Trend.Location = new System.Drawing.Point(0, 128);
+            this.btn_Time_Trend.Location = new System.Drawing.Point(0, 64);
             this.btn_Time_Trend.Name = "btn_Time_Trend";
             this.btn_Time_Trend.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.btn_Time_Trend.Size = new System.Drawing.Size(202, 32);
+            this.btn_Time_Trend.Size = new System.Drawing.Size(219, 32);
             this.btn_Time_Trend.TabIndex = 4;
             this.btn_Time_Trend.Text = "     기간별 생산 현황";
             this.btn_Time_Trend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Time_Trend.UseVisualStyleBackColor = true;
             this.btn_Time_Trend.Click += new System.EventHandler(this.btn_Time_Trend_Click);
-            // 
-            // btn_defect_Mng
-            // 
-            this.btn_defect_Mng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_defect_Mng.FlatAppearance.BorderSize = 0;
-            this.btn_defect_Mng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_defect_Mng.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_defect_Mng.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_defect_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_defect_Mng.Image")));
-            this.btn_defect_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_defect_Mng.Location = new System.Drawing.Point(0, 96);
-            this.btn_defect_Mng.Name = "btn_defect_Mng";
-            this.btn_defect_Mng.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.btn_defect_Mng.Size = new System.Drawing.Size(202, 32);
-            this.btn_defect_Mng.TabIndex = 3;
-            this.btn_defect_Mng.Text = "     불량 유형 관리";
-            this.btn_defect_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_defect_Mng.UseVisualStyleBackColor = true;
-            this.btn_defect_Mng.Click += new System.EventHandler(this.btn_defect_Mng_Click);
             // 
             // btn_Result_Mng
             // 
@@ -151,10 +124,10 @@
             this.btn_Result_Mng.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Result_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_Result_Mng.Image")));
             this.btn_Result_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Result_Mng.Location = new System.Drawing.Point(0, 64);
+            this.btn_Result_Mng.Location = new System.Drawing.Point(0, 32);
             this.btn_Result_Mng.Name = "btn_Result_Mng";
             this.btn_Result_Mng.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.btn_Result_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Result_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Result_Mng.TabIndex = 2;
             this.btn_Result_Mng.Text = "     생산 실적 관리";
             this.btn_Result_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,35 +143,15 @@
             this.btn_Work_CMD.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Work_CMD.Image = ((System.Drawing.Image)(resources.GetObject("btn_Work_CMD.Image")));
             this.btn_Work_CMD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Work_CMD.Location = new System.Drawing.Point(0, 32);
+            this.btn_Work_CMD.Location = new System.Drawing.Point(0, 0);
             this.btn_Work_CMD.Name = "btn_Work_CMD";
             this.btn_Work_CMD.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.btn_Work_CMD.Size = new System.Drawing.Size(202, 32);
+            this.btn_Work_CMD.Size = new System.Drawing.Size(219, 32);
             this.btn_Work_CMD.TabIndex = 1;
             this.btn_Work_CMD.Text = "     작업 지시 등록";
             this.btn_Work_CMD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Work_CMD.UseVisualStyleBackColor = true;
             this.btn_Work_CMD.Click += new System.EventHandler(this.btn_Work_CMD_Click);
-            // 
-            // btn_Prodt_Plan
-            // 
-            this.btn_Prodt_Plan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Prodt_Plan.FlatAppearance.BorderSize = 0;
-            this.btn_Prodt_Plan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Prodt_Plan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Prodt_Plan.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Prodt_Plan.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prodt_Plan.Image")));
-            this.btn_Prodt_Plan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_Plan.Location = new System.Drawing.Point(0, 0);
-            this.btn_Prodt_Plan.Name = "btn_Prodt_Plan";
-            this.btn_Prodt_Plan.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.btn_Prodt_Plan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Prodt_Plan.Size = new System.Drawing.Size(202, 32);
-            this.btn_Prodt_Plan.TabIndex = 1;
-            this.btn_Prodt_Plan.Text = "    생산 계획 등록";
-            this.btn_Prodt_Plan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_Plan.UseVisualStyleBackColor = true;
-            this.btn_Prodt_Plan.Click += new System.EventHandler(this.btn_Prodt_Plan_Click);
             // 
             // btn_Product_Mng
             // 
@@ -211,10 +164,10 @@
             this.btn_Product_Mng.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Product_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_Product_Mng.Image")));
             this.btn_Product_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Product_Mng.Location = new System.Drawing.Point(0, 569);
+            this.btn_Product_Mng.Location = new System.Drawing.Point(0, 430);
             this.btn_Product_Mng.Name = "btn_Product_Mng";
             this.btn_Product_Mng.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btn_Product_Mng.Size = new System.Drawing.Size(202, 42);
+            this.btn_Product_Mng.Size = new System.Drawing.Size(219, 42);
             this.btn_Product_Mng.TabIndex = 7;
             this.btn_Product_Mng.Text = "      생산관리";
             this.btn_Product_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,14 +179,12 @@
             this.panelOpt_SubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.panelOpt_SubMenu.Controls.Add(this.btn_Inven_Matching);
             this.panelOpt_SubMenu.Controls.Add(this.btn_Inventory_Trend);
-            this.panelOpt_SubMenu.Controls.Add(this.btn_Prodt_Out_Trend);
-            this.panelOpt_SubMenu.Controls.Add(this.btn_Prodt_In_Trend);
             this.panelOpt_SubMenu.Controls.Add(this.btn_Out_item_Mng);
             this.panelOpt_SubMenu.Controls.Add(this.btn_Input_Item_Mng);
             this.panelOpt_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpt_SubMenu.Location = new System.Drawing.Point(0, 366);
+            this.panelOpt_SubMenu.Location = new System.Drawing.Point(0, 296);
             this.panelOpt_SubMenu.Name = "panelOpt_SubMenu";
-            this.panelOpt_SubMenu.Size = new System.Drawing.Size(202, 203);
+            this.panelOpt_SubMenu.Size = new System.Drawing.Size(219, 134);
             this.panelOpt_SubMenu.TabIndex = 6;
             // 
             // btn_Inven_Matching
@@ -245,10 +196,10 @@
             this.btn_Inven_Matching.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Inven_Matching.Image = ((System.Drawing.Image)(resources.GetObject("btn_Inven_Matching.Image")));
             this.btn_Inven_Matching.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Inven_Matching.Location = new System.Drawing.Point(0, 160);
+            this.btn_Inven_Matching.Location = new System.Drawing.Point(0, 96);
             this.btn_Inven_Matching.Name = "btn_Inven_Matching";
             this.btn_Inven_Matching.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Inven_Matching.Size = new System.Drawing.Size(202, 32);
+            this.btn_Inven_Matching.Size = new System.Drawing.Size(219, 32);
             this.btn_Inven_Matching.TabIndex = 5;
             this.btn_Inven_Matching.Text = "     제품 창고 실사";
             this.btn_Inven_Matching.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,53 +215,15 @@
             this.btn_Inventory_Trend.ForeColor = System.Drawing.Color.LightGray;
             this.btn_Inventory_Trend.Image = ((System.Drawing.Image)(resources.GetObject("btn_Inventory_Trend.Image")));
             this.btn_Inventory_Trend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Inventory_Trend.Location = new System.Drawing.Point(0, 128);
+            this.btn_Inventory_Trend.Location = new System.Drawing.Point(0, 64);
             this.btn_Inventory_Trend.Name = "btn_Inventory_Trend";
             this.btn_Inventory_Trend.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Inventory_Trend.Size = new System.Drawing.Size(202, 32);
+            this.btn_Inventory_Trend.Size = new System.Drawing.Size(219, 32);
             this.btn_Inventory_Trend.TabIndex = 4;
             this.btn_Inventory_Trend.Text = "     제품 재고 현황";
             this.btn_Inventory_Trend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventory_Trend.UseVisualStyleBackColor = true;
             this.btn_Inventory_Trend.Click += new System.EventHandler(this.btn_Inventory_Trend_Click);
-            // 
-            // btn_Prodt_Out_Trend
-            // 
-            this.btn_Prodt_Out_Trend.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Prodt_Out_Trend.FlatAppearance.BorderSize = 0;
-            this.btn_Prodt_Out_Trend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Prodt_Out_Trend.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Prodt_Out_Trend.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Prodt_Out_Trend.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prodt_Out_Trend.Image")));
-            this.btn_Prodt_Out_Trend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_Out_Trend.Location = new System.Drawing.Point(0, 96);
-            this.btn_Prodt_Out_Trend.Name = "btn_Prodt_Out_Trend";
-            this.btn_Prodt_Out_Trend.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btn_Prodt_Out_Trend.Size = new System.Drawing.Size(202, 32);
-            this.btn_Prodt_Out_Trend.TabIndex = 3;
-            this.btn_Prodt_Out_Trend.Text = "     제품 출하 현황";
-            this.btn_Prodt_Out_Trend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_Out_Trend.UseVisualStyleBackColor = true;
-            this.btn_Prodt_Out_Trend.Click += new System.EventHandler(this.btn_Prodt_Out_Trend_Click);
-            // 
-            // btn_Prodt_In_Trend
-            // 
-            this.btn_Prodt_In_Trend.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Prodt_In_Trend.FlatAppearance.BorderSize = 0;
-            this.btn_Prodt_In_Trend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Prodt_In_Trend.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Prodt_In_Trend.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Prodt_In_Trend.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prodt_In_Trend.Image")));
-            this.btn_Prodt_In_Trend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_In_Trend.Location = new System.Drawing.Point(0, 64);
-            this.btn_Prodt_In_Trend.Name = "btn_Prodt_In_Trend";
-            this.btn_Prodt_In_Trend.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Prodt_In_Trend.Size = new System.Drawing.Size(202, 32);
-            this.btn_Prodt_In_Trend.TabIndex = 2;
-            this.btn_Prodt_In_Trend.Text = "     제품 입고 현황";
-            this.btn_Prodt_In_Trend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prodt_In_Trend.UseVisualStyleBackColor = true;
-            this.btn_Prodt_In_Trend.Click += new System.EventHandler(this.btn_Prodt_In_Trend_Click);
             // 
             // btn_Out_item_Mng
             // 
@@ -324,9 +237,9 @@
             this.btn_Out_item_Mng.Location = new System.Drawing.Point(0, 32);
             this.btn_Out_item_Mng.Name = "btn_Out_item_Mng";
             this.btn_Out_item_Mng.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btn_Out_item_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Out_item_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Out_item_Mng.TabIndex = 1;
-            this.btn_Out_item_Mng.Text = "     품목 출하 등록";
+            this.btn_Out_item_Mng.Text = "     제품 출고 관리";
             this.btn_Out_item_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Out_item_Mng.UseVisualStyleBackColor = true;
             this.btn_Out_item_Mng.Click += new System.EventHandler(this.btn_Out_item_Mng_Click);
@@ -344,9 +257,9 @@
             this.btn_Input_Item_Mng.Name = "btn_Input_Item_Mng";
             this.btn_Input_Item_Mng.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.btn_Input_Item_Mng.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Input_Item_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Input_Item_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Input_Item_Mng.TabIndex = 1;
-            this.btn_Input_Item_Mng.Text = "     품목 입고 등록";
+            this.btn_Input_Item_Mng.Text = "     원자재 입고관리";
             this.btn_Input_Item_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Input_Item_Mng.UseVisualStyleBackColor = true;
             this.btn_Input_Item_Mng.Click += new System.EventHandler(this.btn_Input_Item_Mng_Click);
@@ -362,10 +275,10 @@
             this.btn_Opt_Mng.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Opt_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_Opt_Mng.Image")));
             this.btn_Opt_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Opt_Mng.Location = new System.Drawing.Point(0, 324);
+            this.btn_Opt_Mng.Location = new System.Drawing.Point(0, 254);
             this.btn_Opt_Mng.Name = "btn_Opt_Mng";
             this.btn_Opt_Mng.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btn_Opt_Mng.Size = new System.Drawing.Size(202, 42);
+            this.btn_Opt_Mng.Size = new System.Drawing.Size(219, 42);
             this.btn_Opt_Mng.TabIndex = 5;
             this.btn_Opt_Mng.Text = "      영업관리";
             this.btn_Opt_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,15 +288,13 @@
             // panelMES_info_SubMenu
             // 
             this.panelMES_info_SubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.panelMES_info_SubMenu.Controls.Add(this.btn_Sample2);
-            this.panelMES_info_SubMenu.Controls.Add(this.btn_Sample1);
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Storg_Mng);
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Prodt_Mng);
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Clinet_Mng);
             this.panelMES_info_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMES_info_SubMenu.Location = new System.Drawing.Point(0, 152);
             this.panelMES_info_SubMenu.Name = "panelMES_info_SubMenu";
-            this.panelMES_info_SubMenu.Size = new System.Drawing.Size(202, 172);
+            this.panelMES_info_SubMenu.Size = new System.Drawing.Size(219, 102);
             this.panelMES_info_SubMenu.TabIndex = 4;
             // 
             // btn_Storg_Mng
@@ -398,7 +309,7 @@
             this.btn_Storg_Mng.Location = new System.Drawing.Point(0, 64);
             this.btn_Storg_Mng.Name = "btn_Storg_Mng";
             this.btn_Storg_Mng.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Storg_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Storg_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Storg_Mng.TabIndex = 2;
             this.btn_Storg_Mng.Text = "     보관 창고 관리";
             this.btn_Storg_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -417,7 +328,7 @@
             this.btn_Prodt_Mng.Location = new System.Drawing.Point(0, 32);
             this.btn_Prodt_Mng.Name = "btn_Prodt_Mng";
             this.btn_Prodt_Mng.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Prodt_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Prodt_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Prodt_Mng.TabIndex = 1;
             this.btn_Prodt_Mng.Text = "     품목 관리";
             this.btn_Prodt_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -437,7 +348,7 @@
             this.btn_Clinet_Mng.Name = "btn_Clinet_Mng";
             this.btn_Clinet_Mng.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.btn_Clinet_Mng.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Clinet_Mng.Size = new System.Drawing.Size(202, 32);
+            this.btn_Clinet_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Clinet_Mng.TabIndex = 1;
             this.btn_Clinet_Mng.Text = "     고객사 관리";
             this.btn_Clinet_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,7 +369,7 @@
             this.btn_Std_Info.Location = new System.Drawing.Point(0, 110);
             this.btn_Std_Info.Name = "btn_Std_Info";
             this.btn_Std_Info.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btn_Std_Info.Size = new System.Drawing.Size(202, 42);
+            this.btn_Std_Info.Size = new System.Drawing.Size(219, 42);
             this.btn_Std_Info.TabIndex = 3;
             this.btn_Std_Info.Text = "      MES 기준정보";
             this.btn_Std_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -479,7 +390,7 @@
             this.btn_Home.Location = new System.Drawing.Point(0, 68);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btn_Home.Size = new System.Drawing.Size(202, 42);
+            this.btn_Home.Size = new System.Drawing.Size(219, 42);
             this.btn_Home.TabIndex = 1;
             this.btn_Home.Text = "      HOME";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -493,7 +404,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(202, 68);
+            this.panelLogo.Size = new System.Drawing.Size(219, 68);
             this.panelLogo.TabIndex = 1;
             // 
             // panel1
@@ -602,45 +513,7 @@
             this.panel3.Size = new System.Drawing.Size(965, 5);
             this.panel3.TabIndex = 4;
             // 
-            // btn_Sample2
-            // 
-            this.btn_Sample2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Sample2.FlatAppearance.BorderSize = 0;
-            this.btn_Sample2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sample2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Sample2.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Sample2.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample2.Image")));
-            this.btn_Sample2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample2.Location = new System.Drawing.Point(0, 128);
-            this.btn_Sample2.Name = "btn_Sample2";
-            this.btn_Sample2.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Sample2.Size = new System.Drawing.Size(202, 32);
-            this.btn_Sample2.TabIndex = 4;
-            this.btn_Sample2.Text = "     Sample2";
-            this.btn_Sample2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample2.UseVisualStyleBackColor = true;
-            this.btn_Sample2.Click += new System.EventHandler(this.btn_Sample2_Click);
-            // 
-            // btn_Sample1
-            // 
-            this.btn_Sample1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Sample1.FlatAppearance.BorderSize = 0;
-            this.btn_Sample1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sample1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Sample1.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_Sample1.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sample1.Image")));
-            this.btn_Sample1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample1.Location = new System.Drawing.Point(0, 96);
-            this.btn_Sample1.Name = "btn_Sample1";
-            this.btn_Sample1.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btn_Sample1.Size = new System.Drawing.Size(202, 32);
-            this.btn_Sample1.TabIndex = 3;
-            this.btn_Sample1.Text = "     Sample1";
-            this.btn_Sample1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sample1.UseVisualStyleBackColor = true;
-            this.btn_Sample1.Click += new System.EventHandler(this.btn_Sample1_Click);
-            // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -652,7 +525,7 @@
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1200, 677);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HACCP MESSI v1.0";
             this.panelSideMenu.ResumeLayout(false);
@@ -674,8 +547,6 @@
         private System.Windows.Forms.Panel panelOpt_SubMenu;
         private System.Windows.Forms.Button btn_Inven_Matching;
         private System.Windows.Forms.Button btn_Inventory_Trend;
-        private System.Windows.Forms.Button btn_Prodt_Out_Trend;
-        private System.Windows.Forms.Button btn_Prodt_In_Trend;
         private System.Windows.Forms.Button btn_Out_item_Mng;
         private System.Windows.Forms.Button btn_Input_Item_Mng;
         private System.Windows.Forms.Button btn_Opt_Mng;
@@ -686,10 +557,8 @@
         private System.Windows.Forms.Button btn_Std_Info;
         private System.Windows.Forms.Panel panelProdt_SubMenu;
         private System.Windows.Forms.Button btn_Time_Trend;
-        private System.Windows.Forms.Button btn_defect_Mng;
         private System.Windows.Forms.Button btn_Result_Mng;
         private System.Windows.Forms.Button btn_Work_CMD;
-        private System.Windows.Forms.Button btn_Prodt_Plan;
         private System.Windows.Forms.Button btn_Product_Mng;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -700,8 +569,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button tabHome;
         private System.Windows.Forms.Button tabCilentMng;
-        private System.Windows.Forms.Button btn_Sample2;
-        private System.Windows.Forms.Button btn_Sample1;
     }
 }
 
