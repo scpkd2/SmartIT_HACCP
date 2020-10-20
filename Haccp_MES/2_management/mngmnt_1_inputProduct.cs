@@ -15,9 +15,8 @@ namespace Haccp_MES._2_management
         public mngmnt_1_inputProduct()
         {
             InitializeComponent();
+            // 창기 주석테스트
         }
-
-
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
