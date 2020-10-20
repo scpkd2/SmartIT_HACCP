@@ -13,6 +13,7 @@ namespace Haccp_MES._2_management
 {
     public partial class mngmnt_1_2_materialList : Form
     {
+        // 문혁이 체크 s
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
