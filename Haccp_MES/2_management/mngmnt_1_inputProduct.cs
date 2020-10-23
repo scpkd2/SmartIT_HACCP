@@ -44,12 +44,25 @@ namespace Haccp_MES._2_management
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow drRow in gridManageInputHead.Rows)
+            {
+                bool isChecked = Convert.ToBoolean(drRow.Cells[0].Value);
+
+                if (isChecked)
+                    gridManageInputHead.Rows.Remove(drRow);
+            }
+        }
+
         private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
         {
             conn.Open();
             
-            string orderInfoHeadQuery = "SELECT input_idx, mat_name, mat_type, mat_spec, input_count, ware_name, input_date FROM manage_input, info_material, info_warehouse " + 
-                "WHERE manage_input.mat_no = info_material.mat_no and manage_input.ware_no = info_warehouse.ware_no;";
+            string orderInfoHeadQuery = "SELECT DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name, mat_type, mat_spec, input_count,  ware_name,  mat_price, mat_price * input_count as 'input_totprc' " + 
+                "FROM manage_input, info_material, info_warehouse, info_company " + 
+                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
+                "ORDER BY input_date;";
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
@@ -109,14 +122,19 @@ namespace Haccp_MES._2_management
         private void gvSheetListCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox ckbox = sender as CheckBox;
-            if(ckbox.CheckState == CheckState.Checked) {
-                foreach (DataGridViewRow r in gridManageInputHead.Rows) {
-                    r.Cells[0].Value = CheckState.Checked;
+
+            if(ckbox.CheckState == CheckState.Checked) 
+            {
+                for (int i = 0; i < gridManageInputHead.Rows.Count; i++)
+                {
+                    gridManageInputHead.Rows[i].Cells[0].Value = true;
                 }
             } 
-            else {
-                foreach (DataGridViewRow r in gridManageInputHead.Rows) {
-                    r.Cells[0].Value = CheckState.Unchecked;
+            else 
+            {
+                for (int i = 0; i < gridManageInputHead.Rows.Count; i++)
+                {
+                    gridManageInputHead.Rows[i].Cells[0].Value = false;
                 }
             }
         }
@@ -126,25 +144,11 @@ namespace Haccp_MES._2_management
             gridManageInputHead.CurrentCell = null;
         }
 
-        private void gridManageInput_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void gridManageInputHead_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dtBody = new DataTable();
+            DataGridView view = sender as DataGridView;
 
-            conn.Open();
-
-            string orderInfoBodyQuery = "SELECT info_material.mat_no, mat_name, mat_type, mat_spec, mat_price, input_count, mat_price * input_count as 'input_totprc', "
-                + "input_inspec, com_name, ware_name, input_admin, input_date "
-                + "FROM manage_input, info_material, info_warehouse, info_company "
-                + "WHERE manage_input.mat_no = info_material.mat_no and manage_input.ware_no = info_warehouse.ware_no and info_material.com_no = info_company.com_no;";
-            cmd = new MySqlCommand(orderInfoBodyQuery, conn);
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtBody);
-
-            gridManageInputBody.DataSource = dtBody;
-            lblBodyCount.Text = gridManageInputBody.Rows.Count.ToString();
-
-            conn.Close();
+            view.SelectedRows[0].Cells[0].Value = !Convert.ToBoolean(view.SelectedRows[0].Cells[0].Value);
         }
-
     }
 }
