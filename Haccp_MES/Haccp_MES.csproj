@@ -94,6 +94,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1_information\info_1-1_accountmng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_1-1_accountmng.Designer.cs">
+      <DependentUpon>info_1-1_accountmng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_1-2_inputacnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_1-2_inputacnt.Designer.cs">
+      <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
+    </Compile>
     <Compile Include="2_management\mngmnt_1-1_insertData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="1_information\info_1-1_accountmng.resx">
+      <DependentUpon>info_1-1_accountmng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_1-2_inputacnt.resx">
+      <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_1-1_insertData.resx">
       <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,7 +185,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="1_information\" />
     <Folder Include="3_production\" />
   </ItemGroup>
   <ItemGroup>

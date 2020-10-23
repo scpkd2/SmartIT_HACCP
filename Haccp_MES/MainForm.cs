@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Haccp_MES._2_management;
+using Haccp_MES._1_information;
 
 namespace Haccp_MES
 {
@@ -196,7 +197,8 @@ namespace Haccp_MES
         private void btn_Clinet_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_Clinet_Mng);
-            tabBtnActiveOn(tabCilentMng);            
+            tabBtnActiveOn(tabCilentMng);
+            OpenChildForm(new info_1_1_accountmng());
 
         }
 
