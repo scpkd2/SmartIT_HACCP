@@ -260,7 +260,7 @@
             this.btn_Input_Item_Mng.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Input_Item_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Input_Item_Mng.TabIndex = 1;
-            this.btn_Input_Item_Mng.Text = "     원자재 입고 관리";
+            this.btn_Input_Item_Mng.Text = "     품목 입고 관리";
             this.btn_Input_Item_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Input_Item_Mng.UseVisualStyleBackColor = true;
             this.btn_Input_Item_Mng.Click += new System.EventHandler(this.btn_Input_Item_Mng_Click);
