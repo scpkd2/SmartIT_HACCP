@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -40,26 +43,12 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.lblBodyCount = new System.Windows.Forms.Label();
             this.lblHeadCount = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.input_idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mat_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mat_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mat_spec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ware_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridManageInputBody = new System.Windows.Forms.DataGridView();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +61,21 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBodyCount = new System.Windows.Forms.Label();
+            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.input_idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_spec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ware_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -141,7 +144,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(60, 20);
+            this.label5.Location = new System.Drawing.Point(64, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 37);
             this.label5.TabIndex = 93;
@@ -191,15 +194,6 @@
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // lblBodyCount
-            // 
-            this.lblBodyCount.AutoSize = true;
-            this.lblBodyCount.Location = new System.Drawing.Point(917, 527);
-            this.lblBodyCount.Name = "lblBodyCount";
-            this.lblBodyCount.Size = new System.Drawing.Size(12, 12);
-            this.lblBodyCount.TabIndex = 88;
-            this.lblBodyCount.Text = "n";
-            // 
             // lblHeadCount
             // 
             this.lblHeadCount.AutoSize = true;
@@ -208,15 +202,6 @@
             this.lblHeadCount.Size = new System.Drawing.Size(12, 12);
             this.lblHeadCount.TabIndex = 87;
             this.lblHeadCount.Text = "n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(862, 527);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 12);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "총건수 :";
             // 
             // label3
             // 
@@ -251,16 +236,24 @@
             // 
             this.gridManageInputHead.AllowUserToAddRows = false;
             this.gridManageInputHead.AllowUserToDeleteRows = false;
+            this.gridManageInputHead.AllowUserToResizeColumns = false;
             this.gridManageInputHead.AllowUserToResizeRows = false;
+            this.gridManageInputHead.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridManageInputHead.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridManageInputHead.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridManageInputHead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCheck,
             this.input_idx,
@@ -270,87 +263,49 @@
             this.input_count,
             this.ware_name,
             this.input_date});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridManageInputHead.EnableHeadersVisualStyles = false;
             this.gridManageInputHead.Location = new System.Drawing.Point(25, 125);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
+            this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridManageInputHead.RowHeadersVisible = false;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(904, 159);
+            this.gridManageInputHead.Size = new System.Drawing.Size(886, 159);
             this.gridManageInputHead.TabIndex = 81;
             this.gridManageInputHead.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInput_CellClick);
-            this.gridManageInputHead.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridManageInputHead_CellFormatting);
             this.gridManageInputHead.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridManageInput_CellPainting);
-            // 
-            // colCheck
-            // 
-            this.colCheck.HeaderText = "";
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colCheck.Width = 50;
-            // 
-            // input_idx
-            // 
-            this.input_idx.DataPropertyName = "input_idx";
-            this.input_idx.HeaderText = "입고번호";
-            this.input_idx.Name = "input_idx";
-            this.input_idx.ReadOnly = true;
-            // 
-            // mat_name
-            // 
-            this.mat_name.DataPropertyName = "mat_name";
-            this.mat_name.HeaderText = "품목명";
-            this.mat_name.Name = "mat_name";
-            this.mat_name.ReadOnly = true;
-            // 
-            // mat_type
-            // 
-            this.mat_type.DataPropertyName = "mat_type";
-            this.mat_type.HeaderText = "품목유형";
-            this.mat_type.Name = "mat_type";
-            this.mat_type.ReadOnly = true;
-            // 
-            // mat_spec
-            // 
-            this.mat_spec.DataPropertyName = "mat_spec";
-            this.mat_spec.HeaderText = "수불단위";
-            this.mat_spec.Name = "mat_spec";
-            this.mat_spec.ReadOnly = true;
-            // 
-            // input_count
-            // 
-            this.input_count.DataPropertyName = "input_count";
-            this.input_count.HeaderText = "입고수량";
-            this.input_count.Name = "input_count";
-            this.input_count.ReadOnly = true;
-            // 
-            // ware_name
-            // 
-            this.ware_name.DataPropertyName = "ware_name";
-            this.ware_name.HeaderText = "창고";
-            this.ware_name.Name = "ware_name";
-            this.ware_name.ReadOnly = true;
-            // 
-            // input_date
-            // 
-            this.input_date.DataPropertyName = "input_date";
-            this.input_date.HeaderText = "입고일자";
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
             // 
             // gridManageInputBody
             // 
             this.gridManageInputBody.AllowUserToAddRows = false;
             this.gridManageInputBody.AllowUserToDeleteRows = false;
             this.gridManageInputBody.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputBody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridManageInputBody.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInputBody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridManageInputBody.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridManageInputBody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -372,51 +327,6 @@
             this.gridManageInputBody.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridManageInputBody.Size = new System.Drawing.Size(904, 188);
             this.gridManageInputBody.TabIndex = 82;
-            this.gridManageInputBody.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridManageInputBody_CellFormatting);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 306);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 104;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 102);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 95;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 94;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(412, 47);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(517, 62);
-            this.groupBox1.TabIndex = 105;
-            this.groupBox1.TabStop = false;
             // 
             // Column1
             // 
@@ -502,6 +412,50 @@
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 306);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 104;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 102);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 95;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 94;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(412, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(517, 62);
+            this.groupBox1.TabIndex = 105;
+            this.groupBox1.TabStop = false;
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
@@ -514,6 +468,86 @@
             this.btnDelete.TabIndex = 106;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(862, 527);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 12);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "총건수 :";
+            // 
+            // lblBodyCount
+            // 
+            this.lblBodyCount.AutoSize = true;
+            this.lblBodyCount.Location = new System.Drawing.Point(917, 527);
+            this.lblBodyCount.Name = "lblBodyCount";
+            this.lblBodyCount.Size = new System.Drawing.Size(12, 12);
+            this.lblBodyCount.TabIndex = 88;
+            this.lblBodyCount.Text = "n";
+            // 
+            // colCheck
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.NullValue = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCheck.HeaderText = "";
+            this.colCheck.Name = "colCheck";
+            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // input_idx
+            // 
+            this.input_idx.DataPropertyName = "input_idx";
+            this.input_idx.HeaderText = "입고번호";
+            this.input_idx.Name = "input_idx";
+            this.input_idx.ReadOnly = true;
+            // 
+            // mat_name
+            // 
+            this.mat_name.DataPropertyName = "mat_name";
+            this.mat_name.HeaderText = "품목명";
+            this.mat_name.Name = "mat_name";
+            this.mat_name.ReadOnly = true;
+            // 
+            // mat_type
+            // 
+            this.mat_type.DataPropertyName = "mat_type";
+            this.mat_type.HeaderText = "품목유형";
+            this.mat_type.Name = "mat_type";
+            this.mat_type.ReadOnly = true;
+            // 
+            // mat_spec
+            // 
+            this.mat_spec.DataPropertyName = "mat_spec";
+            this.mat_spec.HeaderText = "수불단위";
+            this.mat_spec.Name = "mat_spec";
+            this.mat_spec.ReadOnly = true;
+            // 
+            // input_count
+            // 
+            this.input_count.DataPropertyName = "input_count";
+            this.input_count.HeaderText = "입고수량";
+            this.input_count.Name = "input_count";
+            this.input_count.ReadOnly = true;
+            // 
+            // ware_name
+            // 
+            this.ware_name.DataPropertyName = "ware_name";
+            this.ware_name.HeaderText = "창고";
+            this.ware_name.Name = "ware_name";
+            this.ware_name.ReadOnly = true;
+            // 
+            // input_date
+            // 
+            this.input_date.DataPropertyName = "input_date";
+            this.input_date.HeaderText = "입고일자";
+            this.input_date.Name = "input_date";
+            this.input_date.ReadOnly = true;
             // 
             // mngmnt_1_inputProduct
             // 
@@ -569,23 +603,13 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Label lblBodyCount;
         private System.Windows.Forms.Label lblHeadCount;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridManageInputHead;
         private System.Windows.Forms.DataGridView gridManageInputBody;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_idx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mat_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mat_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mat_spec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_count;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ware_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -600,5 +624,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBodyCount;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn input_idx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_spec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn input_count;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ware_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
     }
 }

@@ -26,8 +26,6 @@ namespace Haccp_MES._2_management
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             dtHead = new DataTable();
 
-            gridManageInputHead.RowHeadersVisible = false;
-            gridManageInputBody.RowHeadersVisible = false;
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -60,7 +58,24 @@ namespace Haccp_MES._2_management
             lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
             //dt.Dispose();
             conn.Close();
+
+            //for (int i = 1; i < gridManageInputHead.Rows.Count; i++)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        gridManageInputHead.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+            //        //gridManageInputHead.Rows[i].Cells[0].Style.BackColor = Color.FromArgb(52, 52, 52);
+            //    }
+            //    else
+            //    {
+            //        gridManageInputHead.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(128, 128, 128);
+            //        //gridManageInputHead.Rows[i].Cells[0].Style.BackColor = Color.FromArgb(52, 52, 52);
+            //    }
+            //}
+
+            //gridManageInputHead.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(128, 128, 128);            
         }
+
 
         private void gridManageInput_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -70,8 +85,8 @@ namespace Haccp_MES._2_management
 
                 Point pt = e.CellBounds.Location;
 
-                int nChkBoxWidth = 15;
-                int nChkBoxHeight = 15;
+                int nChkBoxWidth = 10;
+                int nChkBoxHeight = 10;
                 int offsetx = (e.CellBounds.Width - nChkBoxWidth) / 2;
                 int offsety = (e.CellBounds.Height - nChkBoxHeight) / 2;
 
@@ -82,24 +97,33 @@ namespace Haccp_MES._2_management
                 cb.Size = new Size(nChkBoxWidth, nChkBoxHeight);
                 cb.Location = pt;
                 cb.CheckedChanged += new EventHandler(gvSheetListCheckBox_CheckedChanged);
-
+                cb.FlatStyle = FlatStyle.Flat;
+                
                 ((DataGridView)sender).Controls.Add(cb);
-
+                
                 e.Handled = true;
             }
         }
 
+
         private void gvSheetListCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow r in gridManageInputHead.Rows)
-            {
-                r.Cells["colCheck"].Value = ((CheckBox)sender).Checked;
+            CheckBox ckbox = sender as CheckBox;
+            if(ckbox.CheckState == CheckState.Checked) {
+                foreach (DataGridViewRow r in gridManageInputHead.Rows) {
+                    r.Cells[0].Value = CheckState.Checked;
+                }
+            } 
+            else {
+                foreach (DataGridViewRow r in gridManageInputHead.Rows) {
+                    r.Cells[0].Value = CheckState.Unchecked;
+                }
             }
         }
 
         private void mngmnt_1_inputProduct_Shown(object sender, EventArgs e)
         {
-            //gridManageInputHead.CurrentCell = null;
+            gridManageInputHead.CurrentCell = null;
         }
 
         private void gridManageInput_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -122,17 +146,5 @@ namespace Haccp_MES._2_management
             conn.Close();
         }
 
-        private void gridManageInputHead_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //gridManageInputHead.CurrentCell.Style.SelectionBackColor = Color.WhiteSmoke;
-            e.CellStyle.BackColor = Color.Brown;
-            
-        }
-
-        private void gridManageInputBody_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //gridManageInputBody.CurrentCell.Style.SelectionBackColor = Color.WhiteSmoke;
-            e.CellStyle.BackColor = Color.Brown;
-        }
     }
 }
