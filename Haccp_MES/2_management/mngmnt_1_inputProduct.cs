@@ -17,7 +17,6 @@ namespace Haccp_MES._2_management
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
         DataTable dtHead;
-        DataTable dtBody;
 
 
         public mngmnt_1_inputProduct()
@@ -59,7 +58,7 @@ namespace Haccp_MES._2_management
         {
             conn.Open();
             
-            string orderInfoHeadQuery = "SELECT DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name, mat_type, mat_spec, input_count,  ware_name,  mat_price, mat_price * input_count as 'input_totprc' " + 
+            string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " + 
                 "FROM manage_input, info_material, info_warehouse, info_company " + 
                 "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
                 "ORDER BY input_date;";
@@ -69,7 +68,7 @@ namespace Haccp_MES._2_management
 
             gridManageInputHead.DataSource = dtHead;
             lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
-            //dt.Dispose();
+
             conn.Close();
 
             //for (int i = 1; i < gridManageInputHead.Rows.Count; i++)
@@ -139,10 +138,10 @@ namespace Haccp_MES._2_management
             }
         }
 
-        private void mngmnt_1_inputProduct_Shown(object sender, EventArgs e)
-        {
-            gridManageInputHead.CurrentCell = null;
-        }
+        //private void mngmnt_1_inputProduct_Shown(object sender, EventArgs e)
+        //{
+        //    gridManageInputHead.CurrentCell = null;
+        //}
 
         private void gridManageInputHead_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -150,5 +149,42 @@ namespace Haccp_MES._2_management
 
             view.SelectedRows[0].Cells[0].Value = !Convert.ToBoolean(view.SelectedRows[0].Cells[0].Value);
         }
+
+        private void gridManageInputHead_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var input_idx = Convert.ToInt32(gridManageInputHead.CurrentRow.Cells[1].Value);
+            DataTable dtBody = new DataTable();
+            conn.Open();
+
+            string orderInfoBodyQuery = "SELECT info_material.mat_no, mat_name, mat_type, mat_spec, input_inspec, mat_price, input_count,  mat_price * input_count as 'input_totprc', ware_name, input_admin,  mat_etc " +
+                "FROM manage_input, info_material, info_warehouse " +
+                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND input_idx = @INPUT_IDX";
+            cmd = new MySqlCommand(orderInfoBodyQuery, conn);
+            cmd.Parameters.AddWithValue("@INPUT_IDX", input_idx);
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtBody);
+
+            int i = 0;
+            foreach (var item in tblLyoutPnl.Controls)
+            {
+                
+                if (item is Label)
+                {
+                    if (((Label)item).FlatStyle == FlatStyle.Standard)
+                    {
+                        ((Label)item).Text = dtBody.Rows[0].ItemArray[i].ToString();
+                        i++;
+                    }
+                }
+                else if (item is TextBox)
+                {
+                    ((TextBox)item).Text = dtBody.Rows[0].ItemArray[i].ToString();
+                    i++;
+                }
+            }
+            
+            conn.Close();
+        }
+
     }
 }
