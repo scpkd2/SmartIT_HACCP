@@ -29,7 +29,25 @@ namespace Haccp_MES._2_management
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            conn.Open();
 
+            string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
+                "FROM manage_input, info_material, info_warehouse, info_company " +
+                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + 
+                "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 " +
+                "ORDER BY input_date;";
+            cmd = new MySqlCommand(orderInfoHeadQuery, conn);
+
+            // 날짜 포맷팅이 안먹히는듯... 수정 요함.
+            cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.Date.ToString("yyyy-MM-dd"));
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtHead);
+
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+
+            conn.Close();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -40,7 +58,8 @@ namespace Haccp_MES._2_management
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            string[] updateDatas = new string[4] {txt_input_inspec.Text, txt_input_count.Text, txt_input_admin.Text, txt_input_etc.Text};
+            // .....
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
