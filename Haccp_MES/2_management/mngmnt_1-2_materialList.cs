@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,6 @@ namespace Haccp_MES._2_management
 {
     public partial class mngmnt_1_2_materialList : Form
     {
-        // 문혁이 체크 s
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
@@ -25,8 +25,6 @@ namespace Haccp_MES._2_management
             InitializeComponent();
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             dt = new DataTable();
-
-            gridMaterialList.RowHeadersVisible = false;
         }
 
         private void mngmnt_1_2_materialList_Load(object sender, EventArgs e)
@@ -38,8 +36,7 @@ namespace Haccp_MES._2_management
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 
-            gridMaterialList.DataSource = dt;
-            //dt.Dispose();
+            gridSelectInfoMaterial.DataSource = dt;
             conn.Close();
         }
 
@@ -48,12 +45,17 @@ namespace Haccp_MES._2_management
             this.Close();
         }
 
-        private void gridMaterialList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //int rowIndex = gridMaterialList.CurrentRow.Index;
 
-            mngmnt_1_1_insertData parentForm = (mngmnt_1_1_insertData)Owner;
-            parentForm.childVal = gridMaterialList.CurrentRow;
+        private void gridSelectInfoMaterial_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (gridSelectInfoMaterial.CurrentRow != null)
+            {
+                ((mngmnt_1_1_insertData)(this.Owner)).childVal = gridSelectInfoMaterial.CurrentRow;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+                this.DialogResult = DialogResult.Cancel;
+            
             this.Close();
         }
     }

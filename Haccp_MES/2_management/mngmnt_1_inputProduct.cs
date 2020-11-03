@@ -18,7 +18,6 @@ namespace Haccp_MES._2_management
         MySqlDataAdapter adapter;
         DataTable dtHead;
 
-
         public mngmnt_1_inputProduct()
         {
             InitializeComponent();
@@ -30,15 +29,17 @@ namespace Haccp_MES._2_management
         private void btnSelect_Click(object sender, EventArgs e)
         {
             conn.Open();
-
+            dtHead.Clear();
             string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
                 "FROM manage_input, info_material, info_warehouse, info_company " +
                 "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + 
                 "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 " +
-                "ORDER BY input_date;";
+                "ORDER BY input_idx;";
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
-            // 날짜 포맷팅이 안먹히는듯... 수정 요함.
+            // 날짜 포맷팅이 안먹히는듯... 
+            // 11월 30일로 설정하면 11월 30일 오전 00시 00분까지 컷팅되므로 11월 30일 오전 11시 정보는 read 불가함...
+            // 이부분 처리해야함 ... !!! 
             cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.Date.ToString("yyyy-MM-dd"));
             adapter = new MySqlDataAdapter(cmd);
@@ -53,13 +54,39 @@ namespace Haccp_MES._2_management
         private void btnInsert_Click(object sender, EventArgs e)
         {
             mngmnt_1_1_insertData dlg = new mngmnt_1_1_insertData();
-            dlg.ShowDialog();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                btnSelect_Click(sender, e);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            conn.Open();
             string[] updateDatas = new string[4] {txt_input_inspec.Text, txt_input_count.Text, txt_input_admin.Text, txt_input_etc.Text};
-            // .....
+            var input_idx = Convert.ToInt32(gridManageInputHead.CurrentRow.Cells[1].Value);
+
+            // 수정 사항 중, 수량값이 변화히면? -> 그에 따라 input_totprc 값도 변화해야한다.
+            // 하지만, totprc의 값은 컬럼으로 저장되지 않고 가져올때 계산하여 값을 반환하므로 추가적인 수정은 필요없으므로 쿼리로 처리한다.
+
+            string UpdateQuery = "UPDATE manage_input " + 
+                "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " + 
+                "WHERE input_idx=@INPUT_IDX;";
+            cmd = new MySqlCommand(UpdateQuery, conn);
+            cmd.Parameters.AddWithValue("@INPUT_INSPEC", updateDatas[0]);
+            cmd.Parameters.AddWithValue("@INPUT_COUNT", Convert.ToInt32(updateDatas[1]));
+            cmd.Parameters.AddWithValue("@INPUT_ADMIN", updateDatas[2]);
+            cmd.Parameters.AddWithValue("@INPUT_ETC", updateDatas[3]);
+            cmd.Parameters.AddWithValue("@INPUT_IDX", input_idx);
+
+            if(cmd.ExecuteNonQuery() == 0) 
+            {
+                MessageBox.Show("Update Error 발생.");
+            }
+            conn.Close();
+
+            btnSelect_Click(sender, e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -71,6 +98,19 @@ namespace Haccp_MES._2_management
                 if (isChecked)
                     gridManageInputHead.Rows.Remove(drRow);
             }
+
+            foreach (DataRow drRow in dtHead.Rows)
+            {
+                if(drRow.RowState == DataRowState.Deleted)
+                {
+                    string deleteQuery = "DELETE FROM manage_input WHERE input_idx=@INPUT_IDX";
+                    conn.Open();
+                    cmd = new MySqlCommand(deleteQuery, conn);
+                    cmd.Parameters.AddWithValue("@INPUT_IDX", drRow["input_idx", DataRowVersion.Original]);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
         }
 
         private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
@@ -80,7 +120,7 @@ namespace Haccp_MES._2_management
             string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " + 
                 "FROM manage_input, info_material, info_warehouse, info_company " + 
                 "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
-                "ORDER BY input_date;";
+                "ORDER BY input_idx;";
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
@@ -88,23 +128,7 @@ namespace Haccp_MES._2_management
             gridManageInputHead.DataSource = dtHead;
             lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
 
-            conn.Close();
-
-            //for (int i = 1; i < gridManageInputHead.Rows.Count; i++)
-            //{
-            //    if (i % 2 != 0)
-            //    {
-            //        gridManageInputHead.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
-            //        //gridManageInputHead.Rows[i].Cells[0].Style.BackColor = Color.FromArgb(52, 52, 52);
-            //    }
-            //    else
-            //    {
-            //        gridManageInputHead.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(128, 128, 128);
-            //        //gridManageInputHead.Rows[i].Cells[0].Style.BackColor = Color.FromArgb(52, 52, 52);
-            //    }
-            //}
-
-            //gridManageInputHead.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(128, 128, 128);            
+            conn.Close();         
         }
 
 
@@ -157,11 +181,6 @@ namespace Haccp_MES._2_management
             }
         }
 
-        //private void mngmnt_1_inputProduct_Shown(object sender, EventArgs e)
-        //{
-        //    gridManageInputHead.CurrentCell = null;
-        //}
-
         private void gridManageInputHead_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView view = sender as DataGridView;
@@ -175,7 +194,7 @@ namespace Haccp_MES._2_management
             DataTable dtBody = new DataTable();
             conn.Open();
 
-            string orderInfoBodyQuery = "SELECT info_material.mat_no, mat_name, mat_type, mat_spec, input_inspec, mat_price, input_count,  mat_price * input_count as 'input_totprc', ware_name, input_admin,  mat_etc " +
+            string orderInfoBodyQuery = "SELECT info_material.mat_no, mat_name, mat_type, mat_spec, input_inspec, mat_price, input_count,  mat_price * input_count as 'input_totprc', ware_name, input_admin,  input_etc " +
                 "FROM manage_input, info_material, info_warehouse " +
                 "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND input_idx = @INPUT_IDX";
             cmd = new MySqlCommand(orderInfoBodyQuery, conn);
