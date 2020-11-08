@@ -13,6 +13,8 @@ namespace Haccp_MES._2_management
 {
     public partial class mngmnt_1_inputProduct : Form
     {
+
+        // 수정 test
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
