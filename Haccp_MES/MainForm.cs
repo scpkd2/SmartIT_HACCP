@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Drawing;
 using Haccp_MES._2_management;
 using Haccp_MES._1_information;
@@ -17,13 +18,28 @@ namespace Haccp_MES
         
         public MainForm()
         {
+            Thread tr = new Thread(new ThreadStart(OpeningForm));
+            tr.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
+            tr.Abort();
             CustomizeDesign();
             HideTabbarButton();
-          #region 시간표시용 타이머
+            // 로딩 끝나고 바로 HOME화면 표시
+            tabBtnActiveOn(tabHome);
+            OpenChildForm(new Home());
+            #region 시간표시용 타이머
             timer1.Start();
             timer1.Interval = 1000;
           #endregion
+        }
+
+        /// <summary>
+        /// 프로그램 구동시 있어보이려고 만든 기능
+        /// </summary>
+        public void OpeningForm()
+        {
+            Application.Run(new Splash_Form());
         }
 
         private void CustomizeDesign()
