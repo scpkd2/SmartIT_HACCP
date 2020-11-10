@@ -118,6 +118,12 @@
     <Compile Include="2_management\mngmnt_1-2_materialList.Designer.cs">
       <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
     </Compile>
+    <Compile Include="2_management\mngmnt_2_outputProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_2_outputProduct.Designer.cs">
+      <DependentUpon>mngmnt_2_outputProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="2_management\mngmnt_1_inputProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_1-2_materialList.resx">
       <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_2_outputProduct.resx">
+      <DependentUpon>mngmnt_2_outputProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_1_inputProduct.resx">
       <DependentUpon>mngmnt_1_inputProduct.cs</DependentUpon>

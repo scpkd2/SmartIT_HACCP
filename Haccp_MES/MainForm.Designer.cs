@@ -549,6 +549,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HACCP MESSI v1.0";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelProdt_SubMenu.ResumeLayout(false);
             this.panelOpt_SubMenu.ResumeLayout(false);

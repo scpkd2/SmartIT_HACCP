@@ -234,6 +234,7 @@ namespace Haccp_MES
         private void btn_Out_item_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Out_item_Mng);
+            OpenChildForm(new mngmnt_2_outputProduct());
         }
 
 
@@ -289,6 +290,12 @@ namespace Haccp_MES
         private void tabCilentMng_Click(object sender, EventArgs e)
         {
             tabBtnActiveOn(tabCilentMng);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            tabBtnActiveOn(tabHome);
+            OpenChildForm(new Home());
         }
     }
 

@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Haccp_MES._2_management
 {
-    public partial class mngmnt_1_inputProduct : Form
+    public partial class mngmnt_2_outputProduct : Form
     {
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
         DataTable dtHead;
 
-        public mngmnt_1_inputProduct()
+        public mngmnt_2_outputProduct()
         {
             InitializeComponent();
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
