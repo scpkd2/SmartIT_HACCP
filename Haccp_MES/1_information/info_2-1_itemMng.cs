@@ -16,5 +16,11 @@ namespace Haccp_MES._1_information
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            info_2_2_inputitem info = new info_2_2_inputitem();
+            info.ShowDialog();
+        }
     }
 }
