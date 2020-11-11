@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using mes;
 
 namespace Haccp_MES._2_management
 {
@@ -99,7 +98,8 @@ namespace Haccp_MES._2_management
                     conn.Open();
                     string InsertQuery =
                         "INSERT INTO manage_input(input_date, mat_no, input_count, input_admin, input_inspec, ware_no, input_etc) " +
-                        "VALUES (NOW(), @MAT_NO, @INPUT_COUNT, @INPUT_ADMIN, @INPUT_INSPEC, @WARE_NO, @INPUT_ETC);";
+                        "VALUES (NOW(), @MAT_NO, @INPUT_COUNT, @INPUT_ADMIN, @INPUT_INSPEC, @WARE_NO, @INPUT_ETC);" +
+                        "INSERT INTO manage_curmat VALUES(@WARE_NO, @MAT_NO, @INPUT_COUNT) ON DUPLICATE KEY UPDATE curmat_count = curmat_count + @INPUT_COUNT;";
                     cmd = new MySqlCommand(InsertQuery, conn);
                     
                     cmd.Parameters.AddWithValue("@MAT_NO",          Convert.ToInt32(dtRow["mat_no"]));
@@ -111,7 +111,7 @@ namespace Haccp_MES._2_management
 
                     if (cmd.ExecuteNonQuery() == 0)
                     {
-                        MessageBox.Show("Update Error 발생.");
+                        MessageBox.Show("INSERT Error 발생.");
                     }
 
                     conn.Close();
