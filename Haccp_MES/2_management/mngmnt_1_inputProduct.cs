@@ -37,11 +37,8 @@ namespace Haccp_MES._2_management
                 "ORDER BY input_idx;";
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
-            // 날짜 포맷팅이 안먹히는듯... 
-            // 11월 30일로 설정하면 11월 30일 오전 00시 00분까지 컷팅되므로 11월 30일 오전 11시 정보는 read 불가함...
-            // 이부분 처리해야함 ... !!! 
             cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.Date.ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd"));
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
 
@@ -69,9 +66,13 @@ namespace Haccp_MES._2_management
 
             // 수정 사항 중, 수량값이 변화히면? -> 그에 따라 input_totprc 값도 변화해야한다.
             // 하지만, totprc의 값은 컬럼으로 저장되지 않고 가져올때 계산하여 값을 반환하므로 추가적인 수정은 필요없으므로 쿼리로 처리한다.
+            // 수량 수정하면 manage_curmat 에 적극 반영... 후에 날짜가 이미 지나버렸으면 반영 못하도록 막아야 합니다 ~~~ !!! 
 
-            string UpdateQuery = "UPDATE manage_input " + 
-                "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " + 
+            string UpdateQuery = 
+                "UPDATE manage_curmat SET curmat_count = curmat_count - (SELECT input_count FROM manage_input WHERE input_idx=@INPUT_IDX) + @INPUT_COUNT " +
+                "WHERE ware_no = (SELECT ware_no FROM manage_input WHERE input_idx=@INPUT_IDX) AND mat_no = (SELECT mat_no FROM manage_input WHERE input_idx=@INPUT_IDX); " +
+                "UPDATE manage_input " +
+                "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " +
                 "WHERE input_idx=@INPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
             cmd.Parameters.AddWithValue("@INPUT_INSPEC", updateDatas[0]);
@@ -130,7 +131,8 @@ namespace Haccp_MES._2_management
 
             conn.Close();
 
-            gridManageInputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
+            if (gridManageInputHead.Rows.Count != 0)
+                gridManageInputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
 
