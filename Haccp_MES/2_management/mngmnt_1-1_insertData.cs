@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Haccp_MES;
 
 namespace Haccp_MES._2_management
 {

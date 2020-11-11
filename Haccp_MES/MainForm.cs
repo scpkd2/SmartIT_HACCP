@@ -197,52 +197,110 @@ namespace Haccp_MES
         private void tabBtnActiveOn(Button tbtn)
         {
             if (tbtn.Visible == false)
-            tbtn.Visible = true;  // 일단 탭버튼 보여주고
+                tbtn.Visible = true;  // 일단 탭버튼 보여주고
 
             #region 활성화된 탭버튼 끄기
             if (tabHome.BackColor == Color.Crimson) //홈
+            {
                 tabHome.BackColor = Color.Transparent;
-
-            if (tabCilentMng.BackColor == Color.Crimson)       // 거래처관리탭
-                tabCilentMng.BackColor = Color.Transparent; 
+                tabHome.ForeColor = Color.DimGray;
+            }
+            if (tabCilentMng.BackColor == Color.Crimson) // 거래처관리탭
+            {
+                tabCilentMng.BackColor = Color.Transparent;
+                tabCilentMng.ForeColor = Color.DimGray;
+            }
             if (tabItemInFoMng.BackColor == Color.Crimson)     // 품목정보관리탭
+            {
                 tabItemInFoMng.BackColor = Color.Transparent;
+                tabItemInFoMng.ForeColor = Color.DimGray;
+            }
             if (tabWHSmng.BackColor == Color.Crimson)          // 보관창고관리탭
+            {
                 tabWHSmng.BackColor = Color.Transparent;
+                tabWHSmng.ForeColor = Color.DimGray;
+            }
             if (tabProcess.BackColor == Color.Crimson)        // 공정관리탭
+            {
                 tabProcess.BackColor = Color.Transparent;
-
+                tabProcess.ForeColor = Color.DimGray;
+            }
             if (tabitem_Input_mng.BackColor == Color.Crimson)      // 품목입고관리탭
+            {
                 tabitem_Input_mng.BackColor = Color.Transparent;
+                tabitem_Input_mng.ForeColor = Color.DimGray;
+            }
             if (tabOutputProduct.BackColor == Color.Crimson)       // 제품출고관리탭
+            {
                 tabOutputProduct.BackColor = Color.Transparent;
+                tabOutputProduct.ForeColor = Color.DimGray;
+            }
             if (tabStockState.BackColor == Color.Crimson)          // 품목재고현황탭
+            {
                 tabStockState.BackColor = Color.Transparent;
+                tabStockState.ForeColor = Color.DimGray;
+            }
             if (tabRealSTKing.BackColor == Color.Crimson)          // 품목창고실사탭
+            {
                 tabRealSTKing.BackColor = Color.Transparent;
-
+                tabRealSTKing.ForeColor = Color.DimGray;
+            }
             if (tabWorkOder.BackColor == Color.Crimson)          // 작업지시등록탭
+            {
                 tabWorkOder.BackColor = Color.Transparent;
+                tabWorkOder.ForeColor = Color.DimGray;
+            }
             if (tabPerformanceMng.BackColor == Color.Crimson)    // 생산실적관리탭
+            {
                 tabPerformanceMng.BackColor = Color.Transparent;
+                tabPerformanceMng.ForeColor = Color.DimGray;
+            }
             if (tabProdTrend.BackColor == Color.Crimson)         // 기간별생산현황탭  
+            {
                 tabProdTrend.BackColor = Color.Transparent;
+                tabProdTrend.ForeColor = Color.DimGray;
+            }
+                
 
             #endregion
 
             if (tbtn.BackColor == Color.Transparent)
             {
                 tbtn.BackColor = Color.Crimson;
+                tbtn.ForeColor = Color.White;
             }
 
+        }
+        #endregion
+
+        #region 열려있는 화면 맨 앞으로 가져오기
+        private void BringToScreen(Button tbn, String fName)
+        {
+            tabBtnActiveOn(tbn);  // 상단 HOME 메뉴버튼 활성화하고
+
+            // 패널 위에 열려있는 폼들 중에서 이름이 Home인 화면을 가장 앞으로 가져온다.
+            foreach (Control item in panelChildForm.Controls.OfType<Form>())
+            {
+                if (item.Name == fName)
+                {
+                    item.BringToFront();
+                }
+            }
         }
         #endregion
 
         #region HOME 버튼
         private void btn_Home_Click(object sender, EventArgs e)
         {
-            tabBtnActiveOn(tabHome);
-            OpenChildForm(new Home());
+            if(tabHome.Visible == true) // 이미 HOME 화면이 패널에 올라간 상태이면 
+            {
+                BringToScreen(tabHome,"Home");
+            }
+            else
+            {
+                tabBtnActiveOn(tabHome);
+                OpenChildForm(new Home());
+            }                
           
         }
         #endregion
@@ -253,18 +311,34 @@ namespace Haccp_MES
         private void btn_Clinet_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_Clinet_Mng);
-            tabBtnActiveOn(tabCilentMng);
-            OpenChildForm(new info_1_1_accountmng());
+            
+            if(tabCilentMng.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabCilentMng, "info_1_1_accountmng"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabCilentMng);
+                OpenChildForm(new info_1_1_accountmng());
+            }
+           
 
         }
 
         //품목 정보 관리버튼
         private void btn_Prodt_Mng_Click(object sender, EventArgs e)
         {
-          
             btnColorChange_StdInfo(btn_Prodt_Mng);
-            tabBtnActiveOn(tabItemInFoMng);
-            OpenChildForm(new info_2_itemMng());
+
+            if (tabItemInFoMng.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabItemInFoMng, "info_2_itemMng"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabItemInFoMng);
+                OpenChildForm(new info_2_itemMng());
+            }
 
         }
 
@@ -272,8 +346,16 @@ namespace Haccp_MES
         private void btn_Storg_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_Storg_Mng);
-            tabBtnActiveOn(tabWHSmng);
-            OpenChildForm(new info_3_WareHouseMng());
+
+            if (tabWHSmng.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabWHSmng, "info_3_WareHouseMng"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabWHSmng);
+                OpenChildForm(new info_3_WareHouseMng());
+            }
 
         }
 
@@ -281,8 +363,17 @@ namespace Haccp_MES
         private void btn_ProcessMng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_ProcessMng);
-            tabBtnActiveOn(tabProcess);
-            OpenChildForm(new info_4_ProcessMng());
+
+            if (tabProcess.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabProcess, "info_4_ProcessMng"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabProcess);
+                OpenChildForm(new info_4_ProcessMng());
+            }
+
         }
 
         #endregion
@@ -293,32 +384,67 @@ namespace Haccp_MES
         private void btn_Input_Item_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Input_Item_Mng);
-            tabBtnActiveOn(tabitem_Input_mng);
-            OpenChildForm(new mngmnt_1_inputProduct());
+
+            if (tabitem_Input_mng.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabitem_Input_mng, "mngmnt_1_inputProduct"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabitem_Input_mng);
+                OpenChildForm(new mngmnt_1_inputProduct());
+            }
+
         }
 
         // 제품출고관리 버튼
         private void btn_Out_item_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Out_item_Mng);
-            tabBtnActiveOn(tabOutputProduct);
-            OpenChildForm(new mngmnt_2_outputProduct());
+
+            if (tabOutputProduct.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabOutputProduct, "mngmnt_2_outputProduct"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabOutputProduct);
+                OpenChildForm(new mngmnt_2_outputProduct());
+            }
+
         }
 
         // 품목재고현황 버튼
         private void btn_Inventory_Trend_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Inventory_Trend);
-            tabBtnActiveOn(tabStockState);
-            OpenChildForm(new mngmnt_3_StockState());
+
+            if (tabStockState.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabStockState, "mngmnt_3_StockState"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabStockState);
+                OpenChildForm(new mngmnt_3_StockState());
+            }
+
         }
 
         // 품목창고실사 버튼
         private void btn_Inven_Matching_Click(object sender, EventArgs e)
         {
             btnColorChange_OptInfo(btn_Inven_Matching);
-            tabBtnActiveOn(tabRealSTKing);
-            OpenChildForm(new mngmnt_4_RealStockTaking());
+
+            if (tabRealSTKing.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabRealSTKing, "mngmnt_4_RealStockTaking"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabRealSTKing);
+                OpenChildForm(new mngmnt_4_RealStockTaking());
+            }
         }
         #endregion
 
@@ -328,25 +454,48 @@ namespace Haccp_MES
         private void btn_Work_CMD_Click(object sender, EventArgs e)
         {
             btnColorChange_ProdtMng(btn_Work_CMD);
-            tabBtnActiveOn(tabWorkOder);
-            OpenChildForm(new Prod_1_WorkOrders());
 
+            if (tabWorkOder.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabWorkOder, "Prod_1_WorkOrders"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabWorkOder);
+                OpenChildForm(new Prod_1_WorkOrders());
+            }
         }
 
         //생산실적관리 버튼
         private void btn_Result_Mng_Click(object sender, EventArgs e)
         {
             btnColorChange_ProdtMng(btn_Result_Mng);
-            tabBtnActiveOn(tabPerformanceMng);
-            OpenChildForm(new Prod_2_PerformanceMng());
+
+            if (tabPerformanceMng.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabPerformanceMng, "Prod_2_PerformanceMng"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabPerformanceMng);
+                OpenChildForm(new Prod_2_PerformanceMng());
+            }
         }
 
         //기관별생산현황 버튼
         private void btn_Time_Trend_Click(object sender, EventArgs e)
         {
             btnColorChange_ProdtMng(btn_Time_Trend);
-            tabBtnActiveOn(tabProdTrend);
-            OpenChildForm(new Prod_3_Production_Trend());
+
+            if (tabProdTrend.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
+            {
+                BringToScreen(tabProdTrend, "Prod_3_Production_Trend"); // 새로 만들지 말고 맨앞으로
+            }
+            else
+            {
+                tabBtnActiveOn(tabProdTrend);
+                OpenChildForm(new Prod_3_Production_Trend());
+            }
         }
 
         #endregion
@@ -363,17 +512,8 @@ namespace Haccp_MES
         private void tabCilentMng_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭이면
-            {     
-                tabBtnActiveOn(tabCilentMng);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 info_1_1_accountmng인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-                    if (item.Name == "info_1_1_accountmng")
-                    {
-                        item.BringToFront();
-                    }
-                }
+            {
+                BringToScreen(tabCilentMng, "info_1_1_accountmng"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭이면
             {
@@ -393,17 +533,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabHome);  // 상단 HOME 메뉴버튼 활성화하고
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 Home인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-                    if (item.Name == "Home")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabHome, "Home"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -423,17 +553,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabItemInFoMng);  // 상단 품목정보관리 메뉴버튼 활성화하고
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 info_2_itemMng인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-                    if (item.Name == "info_2_itemMng")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabItemInFoMng, "info_2_itemMng"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -453,17 +573,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabWHSmng);  // 상단 보관창고관리 메뉴버튼 활성화하고
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 info_3_WareHouseMng인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-                    if (item.Name == "info_3_WareHouseMng")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabWHSmng, "info_3_WareHouseMng"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -483,17 +593,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabProcess);  // 상단 공정관리 메뉴버튼 활성화하고
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 info_4_ProcessMng인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-                    if (item.Name == "info_4_ProcessMng")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabProcess, "info_4_ProcessMng"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -513,18 +613,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabitem_Input_mng);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 mngmnt_1_inputProduct인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "mngmnt_1_inputProduct")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabitem_Input_mng, "mngmnt_1_inputProduct"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -544,18 +633,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabOutputProduct);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 mngmnt_2_outputProduct인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "mngmnt_2_outputProduct")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabOutputProduct, "mngmnt_2_outputProduct"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -575,18 +653,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabStockState);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 mngmnt_3_StockState인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "mngmnt_3_StockState")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabStockState, "mngmnt_3_StockState"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -606,18 +673,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabRealSTKing);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 mngmnt_4_RealStockTaking인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "mngmnt_4_RealStockTaking")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabRealSTKing, "mngmnt_4_RealStockTaking"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -637,18 +693,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabWorkOder);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 Prod_1_WorkOrders인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "Prod_1_WorkOrders")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabWorkOder, "Prod_1_WorkOrders"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -668,18 +713,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabPerformanceMng);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 Prod_2_PerformanceMng인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "Prod_2_PerformanceMng")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabPerformanceMng, "Prod_2_PerformanceMng"); // 새로 만들지 말고 맨앞으로
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -699,18 +733,7 @@ namespace Haccp_MES
         {
             if (e.Button == MouseButtons.Left) // 마우스 좌클릭하면
             {
-                tabBtnActiveOn(tabProdTrend);
-
-                // 패널 위에 열려있는 폼들 중에서 이름이 Prod_3_Production_Trend인 화면을 가장 앞으로 가져온다.
-                foreach (Control item in panelChildForm.Controls.OfType<Form>())
-                {
-
-                    if (item.Name == "Prod_3_Production_Trend")
-                    {
-                        item.BringToFront();
-                    }
-                }
-
+                BringToScreen(tabProdTrend, "Prod_3_Production_Trend");
             }
             else if (e.Button == MouseButtons.Right)  // 마우스 우클릭하면
             {
@@ -726,6 +749,8 @@ namespace Haccp_MES
         }
 
         #endregion
+
+
     }
 
 }
