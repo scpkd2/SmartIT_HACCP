@@ -106,11 +106,17 @@
     <Compile Include="1_information\info_1-2_inputacnt.Designer.cs">
       <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="1_information\info_2_itemMng.cs">
+    <Compile Include="1_information\info_2-2_inputitem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1_information\info_2_itemMng.Designer.cs">
-      <DependentUpon>info_2_itemMng.cs</DependentUpon>
+    <Compile Include="1_information\info_2-2_inputitem.Designer.cs">
+      <DependentUpon>info_2-2_inputitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_2-1_itemMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_2-1_itemMng.Designer.cs">
+      <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
     </Compile>
     <Compile Include="1_information\info_3_WareHouseMng.cs">
       <SubType>Form</SubType>
@@ -205,8 +211,11 @@
     <EmbeddedResource Include="1_information\info_1-2_inputacnt.resx">
       <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1_information\info_2_itemMng.resx">
-      <DependentUpon>info_2_itemMng.cs</DependentUpon>
+    <EmbeddedResource Include="1_information\info_2-2_inputitem.resx">
+      <DependentUpon>info_2-2_inputitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_2-1_itemMng.resx">
+      <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1_information\info_3_WareHouseMng.resx">
       <DependentUpon>info_3_WareHouseMng.cs</DependentUpon>

@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6ea36504c18c3cc569a85922d3cd3cf1c0163303
 
 namespace Haccp_MES._2_management
 {
