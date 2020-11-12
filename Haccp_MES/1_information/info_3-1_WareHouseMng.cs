@@ -17,6 +17,10 @@ namespace Haccp_MES._1_information
             InitializeComponent();
         }
 
-        
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            info_3_2_inputware newForm = new info_3_2_inputware();
+            newForm.Show();
+        }
     }
 }

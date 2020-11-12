@@ -15,17 +15,15 @@ namespace Haccp_MES._1_information
         public info_1_1_accountmng()
         {
             InitializeComponent();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            info_1_2_inputacnt info = new info_1_2_inputacnt();
-            info.ShowDialog();
-        }
 
-        private void txtMatName_TextChanged(object sender, EventArgs e)
+        //신규 버튼 누르면 창띄우기
+        private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            info_1_2_inputacnt newForm = new info_1_2_inputacnt();
+            newForm.Show();
         }
     }
 }

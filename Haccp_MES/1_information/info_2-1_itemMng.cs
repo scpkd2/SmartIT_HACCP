@@ -23,9 +23,10 @@ namespace Haccp_MES._1_information
             info.ShowDialog();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            info_2_2_inputitem newForm = new info_2_2_inputitem();
+            newForm.Show();
         }
     }
 }
