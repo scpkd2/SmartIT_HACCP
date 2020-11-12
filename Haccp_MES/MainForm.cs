@@ -88,7 +88,7 @@ namespace Haccp_MES
             //}
             activeForm = ChildForm;
             ChildForm.TopLevel = false;
-            ChildForm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(ChildForm);
             ChildForm.Tag = ChildForm;
