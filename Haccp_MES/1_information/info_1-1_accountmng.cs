@@ -22,5 +22,10 @@ namespace Haccp_MES._1_information
             info_1_2_inputacnt info = new info_1_2_inputacnt();
             info.ShowDialog();
         }
+
+        private void txtMatName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

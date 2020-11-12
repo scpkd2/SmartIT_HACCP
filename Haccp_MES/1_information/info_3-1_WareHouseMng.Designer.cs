@@ -1,6 +1,6 @@
 ﻿namespace Haccp_MES._1_information
 {
-    partial class info_2_itemMng
+    partial class info_3_WareHouseMng
     {
         /// <summary>
         /// Required designer variable.
@@ -42,9 +42,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
+            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,31 +61,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
             this.lbl_mat_no = new System.Windows.Forms.Label();
             this.lbl_mat_name = new System.Windows.Forms.Label();
             this.lbl_mat_type = new System.Windows.Forms.Label();
             this.lbl_mat_spec = new System.Windows.Forms.Label();
             this.lbl_mat_price = new System.Windows.Forms.Label();
-            this.txt_input_count = new System.Windows.Forms.TextBox();
-            this.lbl_ware_name = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,7 +87,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 15);
             this.label8.TabIndex = 102;
-            this.label8.Text = "품목명";
+            this.label8.Text = "창고명";
             // 
             // label6
             // 
@@ -102,7 +96,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 98;
-            this.label6.Text = "품목코드";
+            this.label6.Text = "창고코드";
             // 
             // label5
             // 
@@ -113,8 +107,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 46);
             this.label5.TabIndex = 93;
-            this.label5.Text = "품목관리";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Text = "창고관리";
             // 
             // btnUpdate
             // 
@@ -219,9 +212,7 @@
             this.input_date,
             this.Column13,
             this.Column3,
-            this.Column15,
-            this.Column5,
-            this.Column1});
+            this.Column15});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -251,6 +242,70 @@
             this.gridManageInputHead.Size = new System.Drawing.Size(993, 255);
             this.gridManageInputHead.TabIndex = 81;
             // 
+            // colCheck
+            // 
+            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCheck.DataPropertyName = "chkbox";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.NullValue = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colCheck.FalseValue = "false";
+            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCheck.Frozen = true;
+            this.colCheck.HeaderText = "";
+            this.colCheck.MinimumWidth = 6;
+            this.colCheck.Name = "colCheck";
+            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colCheck.TrueValue = "true";
+            this.colCheck.Width = 89;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "input_idx";
+            this.Column2.HeaderText = "창고코드";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // input_date
+            // 
+            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.input_date.DataPropertyName = "input_date";
+            this.input_date.HeaderText = "창고명";
+            this.input_date.MinimumWidth = 6;
+            this.input_date.Name = "input_date";
+            this.input_date.ReadOnly = true;
+            this.input_date.Width = 88;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column13.DataPropertyName = "com_name";
+            this.Column13.HeaderText = "창고유형";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 89;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "mat_name";
+            this.Column3.HeaderText = "사용여부";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "input_totprc";
+            this.Column15.HeaderText = "비고";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
@@ -275,7 +330,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label7);
@@ -290,6 +345,26 @@
             this.groupBox1.Size = new System.Drawing.Size(860, 83);
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "사용",
+            "미사용"});
+            this.comboBox1.Location = new System.Drawing.Point(699, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 112;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(626, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 110;
+            this.label4.Text = "사용여부";
             // 
             // textBox2
             // 
@@ -306,7 +381,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 107;
-            this.label7.Text = "품목유형";
+            this.label7.Text = "창고유형";
             // 
             // textBox1
             // 
@@ -367,27 +442,22 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.24752F));
-            this.tableLayoutPanel1.Controls.Add(this.label13, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.lbl_mat_no, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_mat_name, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_mat_type, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_mat_spec, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_mat_price, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_input_count, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_ware_name, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label14, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label17, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label20, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label21, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label22, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label25, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 0, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 525);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -395,27 +465,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1011, 146);
             this.tableLayoutPanel1.TabIndex = 110;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Silver;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(483, 109);
-            this.label13.Margin = new System.Windows.Forms.Padding(0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 36);
-            this.label13.TabIndex = 112;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_mat_no
             // 
             this.lbl_mat_no.AutoSize = true;
             this.lbl_mat_no.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_mat_no.Location = new System.Drawing.Point(165, 1);
             this.lbl_mat_no.Name = "lbl_mat_no";
-            this.lbl_mat_no.Size = new System.Drawing.Size(314, 35);
+            this.lbl_mat_no.Size = new System.Drawing.Size(314, 47);
             this.lbl_mat_no.TabIndex = 121;
             this.lbl_mat_no.Text = " ";
             this.lbl_mat_no.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,7 +483,7 @@
             this.lbl_mat_name.Location = new System.Drawing.Point(661, 1);
             this.lbl_mat_name.Margin = new System.Windows.Forms.Padding(17, 0, 3, 0);
             this.lbl_mat_name.Name = "lbl_mat_name";
-            this.lbl_mat_name.Size = new System.Drawing.Size(346, 35);
+            this.lbl_mat_name.Size = new System.Drawing.Size(346, 47);
             this.lbl_mat_name.TabIndex = 123;
             this.lbl_mat_name.Text = " ";
             this.lbl_mat_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,9 +492,9 @@
             // 
             this.lbl_mat_type.AutoSize = true;
             this.lbl_mat_type.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_type.Location = new System.Drawing.Point(165, 37);
+            this.lbl_mat_type.Location = new System.Drawing.Point(165, 49);
             this.lbl_mat_type.Name = "lbl_mat_type";
-            this.lbl_mat_type.Size = new System.Drawing.Size(314, 35);
+            this.lbl_mat_type.Size = new System.Drawing.Size(314, 47);
             this.lbl_mat_type.TabIndex = 125;
             this.lbl_mat_type.Text = " ";
             this.lbl_mat_type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -447,9 +503,9 @@
             // 
             this.lbl_mat_spec.AutoSize = true;
             this.lbl_mat_spec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_spec.Location = new System.Drawing.Point(647, 37);
+            this.lbl_mat_spec.Location = new System.Drawing.Point(647, 49);
             this.lbl_mat_spec.Name = "lbl_mat_spec";
-            this.lbl_mat_spec.Size = new System.Drawing.Size(360, 35);
+            this.lbl_mat_spec.Size = new System.Drawing.Size(360, 47);
             this.lbl_mat_spec.TabIndex = 127;
             this.lbl_mat_spec.Text = " ";
             this.lbl_mat_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -458,33 +514,12 @@
             // 
             this.lbl_mat_price.AutoSize = true;
             this.lbl_mat_price.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_price.Location = new System.Drawing.Point(165, 73);
+            this.lbl_mat_price.Location = new System.Drawing.Point(165, 97);
             this.lbl_mat_price.Name = "lbl_mat_price";
-            this.lbl_mat_price.Size = new System.Drawing.Size(314, 35);
+            this.lbl_mat_price.Size = new System.Drawing.Size(314, 48);
             this.lbl_mat_price.TabIndex = 129;
             this.lbl_mat_price.Text = " ";
             this.lbl_mat_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txt_input_count
-            // 
-            this.txt_input_count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_input_count.Location = new System.Drawing.Point(647, 77);
-            this.txt_input_count.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txt_input_count.Name = "txt_input_count";
-            this.txt_input_count.Size = new System.Drawing.Size(360, 27);
-            this.txt_input_count.TabIndex = 116;
-            this.txt_input_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lbl_ware_name
-            // 
-            this.lbl_ware_name.AutoSize = true;
-            this.lbl_ware_name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ware_name.Location = new System.Drawing.Point(165, 109);
-            this.lbl_ware_name.Name = "lbl_ware_name";
-            this.lbl_ware_name.Size = new System.Drawing.Size(314, 36);
-            this.lbl_ware_name.TabIndex = 131;
-            this.lbl_ware_name.Text = " ";
-            this.lbl_ware_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -493,12 +528,11 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(483, 73);
+            this.label14.Location = new System.Drawing.Point(483, 97);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(160, 35);
+            this.label14.Size = new System.Drawing.Size(160, 48);
             this.label14.TabIndex = 111;
-            this.label14.Text = "비고란";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
@@ -508,12 +542,12 @@
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(1, 37);
+            this.label17.Location = new System.Drawing.Point(1, 49);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(160, 35);
+            this.label17.Size = new System.Drawing.Size(160, 47);
             this.label17.TabIndex = 110;
-            this.label17.Text = "품목명";
+            this.label17.Text = "창고명";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
@@ -526,9 +560,9 @@
             this.label20.Location = new System.Drawing.Point(1, 1);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(160, 35);
+            this.label20.Size = new System.Drawing.Size(160, 47);
             this.label20.TabIndex = 0;
-            this.label20.Text = "품목코드";
+            this.label20.Text = "창고코드";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
@@ -541,9 +575,9 @@
             this.label21.Location = new System.Drawing.Point(483, 1);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(160, 35);
+            this.label21.Size = new System.Drawing.Size(160, 47);
             this.label21.TabIndex = 1;
-            this.label21.Text = "가격";
+            this.label21.Text = "사용여부";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label22
@@ -553,12 +587,12 @@
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label22.Location = new System.Drawing.Point(1, 73);
+            this.label22.Location = new System.Drawing.Point(1, 97);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(160, 35);
+            this.label22.Size = new System.Drawing.Size(160, 48);
             this.label22.TabIndex = 111;
-            this.label22.Text = "품목유형";
+            this.label22.Text = "창고유형";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label25
@@ -568,125 +602,15 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label25.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label25.Location = new System.Drawing.Point(483, 37);
+            this.label25.Location = new System.Drawing.Point(483, 49);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(160, 35);
+            this.label25.Size = new System.Drawing.Size(160, 47);
             this.label25.TabIndex = 113;
-            this.label25.Text = "거래처코드";
+            this.label25.Text = "비고";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Silver;
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label26.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label26.Location = new System.Drawing.Point(1, 109);
-            this.label26.Margin = new System.Windows.Forms.Padding(0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(160, 36);
-            this.label26.TabIndex = 119;
-            this.label26.Text = "규격";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(714, 35);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 25);
-            this.textBox3.TabIndex = 111;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(626, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 110;
-            this.label4.Text = "거래처코드";
-            // 
-            // colCheck
-            // 
-            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colCheck.DataPropertyName = "chkbox";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colCheck.FalseValue = "false";
-            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colCheck.Frozen = true;
-            this.colCheck.HeaderText = "";
-            this.colCheck.MinimumWidth = 6;
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colCheck.TrueValue = "true";
-            this.colCheck.Width = 89;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "input_idx";
-            this.Column2.HeaderText = "품목코드";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // input_date
-            // 
-            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.input_date.DataPropertyName = "input_date";
-            this.input_date.HeaderText = "품목명";
-            this.input_date.MinimumWidth = 6;
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
-            this.input_date.Width = 88;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column13.DataPropertyName = "com_name";
-            this.Column13.HeaderText = "품목유형";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 89;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "mat_name";
-            this.Column3.HeaderText = "규격";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "input_totprc";
-            this.Column15.HeaderText = "가격";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "거래처코드";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "input_admin";
-            this.Column1.HeaderText = "비고란";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // info_2_itemMng
+            // info_3_WareHouseMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -709,7 +633,7 @@
             this.Controls.Add(this.gridManageInputHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "info_2_itemMng";
+            this.Name = "info_3_WareHouseMng";
             this.Text = "mngmnt_inputProduct";
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -746,22 +670,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lbl_mat_no;
         private System.Windows.Forms.Label lbl_mat_name;
         private System.Windows.Forms.Label lbl_mat_type;
         private System.Windows.Forms.Label lbl_mat_spec;
         private System.Windows.Forms.Label lbl_mat_price;
-        private System.Windows.Forms.TextBox txt_input_count;
-        private System.Windows.Forms.Label lbl_ware_name;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -769,7 +688,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

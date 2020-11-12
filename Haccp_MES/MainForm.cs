@@ -282,7 +282,6 @@ namespace Haccp_MES
         {
             btnColorChange_StdInfo(btn_ProcessMng);
             tabBtnActiveOn(tabProcess);
-            OpenChildForm(new info_4_ProcessMng());
         }
 
         #endregion

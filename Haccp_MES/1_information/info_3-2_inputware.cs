@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Haccp_MES._1_information
 {
-    public partial class info_3_WareHouseMng : Form
+    public partial class info_3_2_inputware : Form
     {
-        public info_3_WareHouseMng()
+        public info_3_2_inputware()
         {
             InitializeComponent();
         }

@@ -118,17 +118,17 @@
     <Compile Include="1_information\info_2-1_itemMng.Designer.cs">
       <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
     </Compile>
-    <Compile Include="1_information\info_3_WareHouseMng.cs">
+    <Compile Include="1_information\info_3-1_WareHouseMng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1_information\info_3_WareHouseMng.Designer.cs">
-      <DependentUpon>info_3_WareHouseMng.cs</DependentUpon>
+    <Compile Include="1_information\info_3-1_WareHouseMng.Designer.cs">
+      <DependentUpon>info_3-1_WareHouseMng.cs</DependentUpon>
     </Compile>
-    <Compile Include="1_information\info_4_ProcessMng.cs">
+    <Compile Include="1_information\info_3-2_inputware.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1_information\info_4_ProcessMng.Designer.cs">
-      <DependentUpon>info_4_ProcessMng.cs</DependentUpon>
+    <Compile Include="1_information\info_3-2_inputware.Designer.cs">
+      <DependentUpon>info_3-2_inputware.cs</DependentUpon>
     </Compile>
     <Compile Include="2_management\mngmnt_1-1_insertData.cs">
       <SubType>Form</SubType>
@@ -217,11 +217,11 @@
     <EmbeddedResource Include="1_information\info_2-1_itemMng.resx">
       <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1_information\info_3_WareHouseMng.resx">
-      <DependentUpon>info_3_WareHouseMng.cs</DependentUpon>
+    <EmbeddedResource Include="1_information\info_3-1_WareHouseMng.resx">
+      <DependentUpon>info_3-1_WareHouseMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1_information\info_4_ProcessMng.resx">
-      <DependentUpon>info_4_ProcessMng.cs</DependentUpon>
+    <EmbeddedResource Include="1_information\info_3-2_inputware.resx">
+      <DependentUpon>info_3-2_inputware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_1-1_insertData.resx">
       <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
