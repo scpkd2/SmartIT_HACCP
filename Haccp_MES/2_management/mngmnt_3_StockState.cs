@@ -29,9 +29,9 @@ namespace Haccp_MES._2_management
         {
             conn.Open();
             dtHead.Clear();
-            string orderInfoHeadQuery = "SELECT manage_curmat.ware_no as 'stock_wareHouseCode', info_warehouse.ware_name as 'stock_wareHouseName', info_material.mat_name as 'stock_matName', info_material.mat_type as 'stock_matType', manage_curmat.curmat_count as 'stock_count', info_material.mat_spec as 'stock_matSpec', info_material.mat_name as 'stock_ProductName' " +
+            string orderInfoHeadQuery = "SELECT manage_curmat.ware_no as 'stock_wareHouseCode', info_warehouse.ware_name as 'stock_wareHouseName', info_material.mat_name as 'stock_matName', info_material.mat_type as 'stock_matType', manage_curmat.curmat_count as 'stock_count', info_material.mat_spec as 'stock_matSpec', (select mat_name from info_material where mat_no in (select mat_no from info_material, info_bom where bom_parent_no = mat_no)) as 'stock_ProductName' " +
                 "FROM manage_curmat, info_warehouse, info_material, info_bom " +
-                "WHERE manage_curmat.ware_no = info_warehouse.ware_no AND manage_curmat.mat_no = info_material.mat_no  " +
+                "WHERE manage_curmat.ware_no = info_warehouse.ware_no AND manage_curmat.mat_no = info_material.mat_no AND info_bom.bom_no = info_material.mat_no " +
                 "GROUP BY manage_curmat.ware_no, manage_curmat.mat_no " +
                 "ORDER BY manage_curmat.ware_no;";
 
