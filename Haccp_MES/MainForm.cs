@@ -363,9 +363,7 @@ namespace Haccp_MES
         private void btn_ProcessMng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_ProcessMng);
-<<<<<<< HEAD
             tabBtnActiveOn(tabProcess);
-=======
 
             if (tabProcess.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
             {
@@ -374,10 +372,8 @@ namespace Haccp_MES
             else
             {
                 tabBtnActiveOn(tabProcess);
-                OpenChildForm(new info_4_ProcessMng());
             }
 
->>>>>>> 5b5d8369e428a17e0c9d1bbbf11eb176ee221494
         }
 
         #endregion
