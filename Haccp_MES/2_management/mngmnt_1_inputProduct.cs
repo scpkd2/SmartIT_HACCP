@@ -62,21 +62,24 @@ namespace Haccp_MES._2_management
                 "AND manage_input.com_no = info_company.com_no " +
                 "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 ";               
 
+            // 만약에 회사명을 입력했다면, Text값이 "" 이 아니니까 AND문으로 쿼리문에 추가
+            // 입력하지 않았다면 Text값이 ""이므로 추가하지 않음.
             if (txtComName.Text != "") {
                 orderInfoHeadQuery += "AND com_name = @COM_NAME ";
             }
+            // 이하동문
             if (txtMatName.Text != "") {
                 orderInfoHeadQuery += "AND mat_name = @MAT_NAME ";
             }
-
+            // 마지막으로 정렬문을 추가하고, 쿼리문 끝내는 ";" 추가해준다.
             orderInfoHeadQuery += "ORDER BY input_idx;";
 
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
-            cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@COM_NAME", txtComName.Text.ToString());
-            cmd.Parameters.AddWithValue("@MAT_NAME", txtMatName.Text.ToString());
+            cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));     // Datetime 첫번째 매개추가.
+            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd")); // Datetime 두번째 매개추가.
+            cmd.Parameters.AddWithValue("@COM_NAME", txtComName.Text.ToString());   // 회사명을 매개값으로 추가해준다.
+            cmd.Parameters.AddWithValue("@MAT_NAME", txtMatName.Text.ToString());   // 제품명을 매개값으로 추가해준다.
 
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
