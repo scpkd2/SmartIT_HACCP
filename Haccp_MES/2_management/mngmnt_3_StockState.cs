@@ -44,5 +44,15 @@ namespace Haccp_MES._2_management
 
             conn.Close();
         }
+
+        private void btnSelectCondition_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteCondition_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

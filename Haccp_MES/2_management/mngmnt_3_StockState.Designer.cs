@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblLyoutPnl = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_mat_etc = new System.Windows.Forms.Label();
+            this.lbl_item_spec = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lbl_wareHouse_code = new System.Windows.Forms.Label();
             this.lbl_mat_name = new System.Windows.Forms.Label();
@@ -45,10 +47,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.lbl_wareHouse_name = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSelectCondition = new System.Windows.Forms.Button();
+            this.btnDeleteCondition = new System.Windows.Forms.Button();
             this.txtSelectWarehouseCode = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -68,12 +73,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_wareHouse_name = new System.Windows.Forms.Label();
-            this.lbl_item_spec = new System.Windows.Forms.Label();
-            this.lbl_mat_etc = new System.Windows.Forms.Label();
-            this.btnDeleteCondition = new System.Windows.Forms.Button();
-            this.btnSelectCondition = new System.Windows.Forms.Button();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +80,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.tblLyoutPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,6 +125,26 @@
             this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLyoutPnl.Size = new System.Drawing.Size(885, 117);
             this.tblLyoutPnl.TabIndex = 124;
+            // 
+            // lbl_mat_etc
+            // 
+            this.lbl_mat_etc.AutoSize = true;
+            this.lbl_mat_etc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_etc.Location = new System.Drawing.Point(592, 88);
+            this.lbl_mat_etc.Name = "lbl_mat_etc";
+            this.lbl_mat_etc.Size = new System.Drawing.Size(289, 28);
+            this.lbl_mat_etc.TabIndex = 133;
+            this.lbl_mat_etc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_item_spec
+            // 
+            this.lbl_item_spec.AutoSize = true;
+            this.lbl_item_spec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_item_spec.Location = new System.Drawing.Point(592, 59);
+            this.lbl_item_spec.Name = "lbl_item_spec";
+            this.lbl_item_spec.Size = new System.Drawing.Size(289, 28);
+            this.lbl_item_spec.TabIndex = 132;
+            this.lbl_item_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label18
             // 
@@ -301,6 +321,16 @@
             this.label16.Text = "완제품명";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_wareHouse_name
+            // 
+            this.lbl_wareHouse_name.AutoSize = true;
+            this.lbl_wareHouse_name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_wareHouse_name.Location = new System.Drawing.Point(592, 1);
+            this.lbl_wareHouse_name.Name = "lbl_wareHouse_name";
+            this.lbl_wareHouse_name.Size = new System.Drawing.Size(289, 28);
+            this.lbl_wareHouse_name.TabIndex = 126;
+            this.lbl_wareHouse_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
@@ -354,6 +384,35 @@
             this.groupBox1.Size = new System.Drawing.Size(817, 73);
             this.groupBox1.TabIndex = 120;
             this.groupBox1.TabStop = false;
+            // 
+            // btnSelectCondition
+            // 
+            this.btnSelectCondition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSelectCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelectCondition.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSelectCondition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectCondition.Location = new System.Drawing.Point(728, 48);
+            this.btnSelectCondition.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSelectCondition.Name = "btnSelectCondition";
+            this.btnSelectCondition.Size = new System.Drawing.Size(85, 25);
+            this.btnSelectCondition.TabIndex = 126;
+            this.btnSelectCondition.Text = "조건 검색";
+            this.btnSelectCondition.UseVisualStyleBackColor = false;
+            this.btnSelectCondition.Click += new System.EventHandler(this.btnSelectCondition_Click);
+            // 
+            // btnDeleteCondition
+            // 
+            this.btnDeleteCondition.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDeleteCondition.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDeleteCondition.Location = new System.Drawing.Point(620, 48);
+            this.btnDeleteCondition.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteCondition.Name = "btnDeleteCondition";
+            this.btnDeleteCondition.Size = new System.Drawing.Size(85, 25);
+            this.btnDeleteCondition.TabIndex = 126;
+            this.btnDeleteCondition.Text = "조건 삭제";
+            this.btnDeleteCondition.UseVisualStyleBackColor = false;
+            this.btnDeleteCondition.Click += new System.EventHandler(this.btnDeleteCondition_Click);
             // 
             // txtSelectWarehouseCode
             // 
@@ -548,14 +607,14 @@
             this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0,
             this.Column1,
@@ -564,98 +623,32 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
             this.gridManageInputHead.Location = new System.Drawing.Point(31, 163);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
             this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridManageInputHead.RowHeadersVisible = false;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridManageInputHead.Size = new System.Drawing.Size(886, 196);
             this.gridManageInputHead.TabIndex = 110;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(274, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 12);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "이건 일단 안쓸건데 혹시몰라 둡니다";
-            // 
-            // lbl_wareHouse_name
-            // 
-            this.lbl_wareHouse_name.AutoSize = true;
-            this.lbl_wareHouse_name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_wareHouse_name.Location = new System.Drawing.Point(592, 1);
-            this.lbl_wareHouse_name.Name = "lbl_wareHouse_name";
-            this.lbl_wareHouse_name.Size = new System.Drawing.Size(289, 28);
-            this.lbl_wareHouse_name.TabIndex = 126;
-            this.lbl_wareHouse_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_item_spec
-            // 
-            this.lbl_item_spec.AutoSize = true;
-            this.lbl_item_spec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_item_spec.Location = new System.Drawing.Point(592, 59);
-            this.lbl_item_spec.Name = "lbl_item_spec";
-            this.lbl_item_spec.Size = new System.Drawing.Size(289, 28);
-            this.lbl_item_spec.TabIndex = 132;
-            this.lbl_item_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_mat_etc
-            // 
-            this.lbl_mat_etc.AutoSize = true;
-            this.lbl_mat_etc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_etc.Location = new System.Drawing.Point(592, 88);
-            this.lbl_mat_etc.Name = "lbl_mat_etc";
-            this.lbl_mat_etc.Size = new System.Drawing.Size(289, 28);
-            this.lbl_mat_etc.TabIndex = 133;
-            this.lbl_mat_etc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnDeleteCondition
-            // 
-            this.btnDeleteCondition.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDeleteCondition.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDeleteCondition.Location = new System.Drawing.Point(620, 48);
-            this.btnDeleteCondition.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteCondition.Name = "btnDeleteCondition";
-            this.btnDeleteCondition.Size = new System.Drawing.Size(85, 25);
-            this.btnDeleteCondition.TabIndex = 126;
-            this.btnDeleteCondition.Text = "조건 삭제";
-            this.btnDeleteCondition.UseVisualStyleBackColor = false;
-            // 
-            // btnSelectCondition
-            // 
-            this.btnSelectCondition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSelectCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelectCondition.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSelectCondition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectCondition.Location = new System.Drawing.Point(728, 48);
-            this.btnSelectCondition.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSelectCondition.Name = "btnSelectCondition";
-            this.btnSelectCondition.Size = new System.Drawing.Size(85, 25);
-            this.btnSelectCondition.TabIndex = 126;
-            this.btnSelectCondition.Text = "조건 검색";
-            this.btnSelectCondition.UseVisualStyleBackColor = false;
             // 
             // Column0
             // 
@@ -705,6 +698,15 @@
             this.Column6.HeaderText = "완제품명";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(274, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(201, 12);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "이건 일단 안쓸건데 혹시몰라 둡니다";
             // 
             // mngmnt_3_StockState
             // 

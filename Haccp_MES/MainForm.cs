@@ -26,6 +26,7 @@ namespace Haccp_MES
             tr.Abort();
             CustomizeDesign();
             HideTabbarButton();
+            this.Show();
             #region 시간표시용 타이머
             timer1.Start();
             timer1.Interval = 1000;
@@ -503,6 +504,7 @@ namespace Haccp_MES
         private void MainForm_Load(object sender, EventArgs e)
         {
             tabBtnActiveOn(tabHome);
+            this.Show();
             OpenChildForm(new Home());
         }
 
