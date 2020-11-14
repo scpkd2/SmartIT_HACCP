@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Haccp_MES._3_production
 {
     public partial class Prod_1_WorkOrders : Form
     {
+
         public Prod_1_WorkOrders()
         {
             InitializeComponent();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
