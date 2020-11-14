@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,10 +21,34 @@ namespace Haccp_MES._2_management
 
         public mngmnt_1_inputProduct()
         {
-            InitializeComponent();
-            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             dtHead = new DataTable();
+            InitializeComponent();
+        }
 
+        private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
+        {
+            Thread t = new Thread(() => {
+                conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+                conn.Open();
+
+                string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
+                    "FROM manage_input, info_material, info_warehouse, info_company " +
+                    "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
+                    "ORDER BY input_idx;";
+                cmd = new MySqlCommand(orderInfoHeadQuery, conn);
+                adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtHead);
+
+                conn.Close();
+            });
+
+            t.Start();
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+            t.Join();
+
+            if (gridManageInputHead.Rows.Count != 0)
+                gridManageInputHead_CellContentClick(new object(), new DataGridViewCellEventArgs(0, 0));
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -112,27 +137,6 @@ namespace Haccp_MES._2_management
                     conn.Close();
                 }
             }
-        }
-
-        private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
-        {
-            conn.Open();
-            
-            string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " + 
-                "FROM manage_input, info_material, info_warehouse, info_company " + 
-                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
-                "ORDER BY input_idx;";
-            cmd = new MySqlCommand(orderInfoHeadQuery, conn);
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtHead);
-
-            gridManageInputHead.DataSource = dtHead;
-            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
-
-            conn.Close();
-
-            if (gridManageInputHead.Rows.Count != 0)
-                gridManageInputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
 
