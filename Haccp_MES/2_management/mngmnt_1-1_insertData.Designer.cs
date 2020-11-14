@@ -45,6 +45,7 @@
             this.col_input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_inspec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ware_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.col_com_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col_input_admin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -147,6 +148,7 @@
             this.col_input_count,
             this.col_input_inspec,
             this.col_ware_no,
+            this.col_com_no,
             this.col_input_admin,
             this.col_input_etc});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -222,6 +224,12 @@
             this.col_ware_no.HeaderText = "창고명";
             this.col_ware_no.Name = "col_ware_no";
             // 
+            // col_com_no
+            // 
+            this.col_com_no.DataPropertyName = "com_name";
+            this.col_com_no.HeaderText = "거래처명";
+            this.col_com_no.Name = "col_com_no";
+            // 
             // col_input_admin
             // 
             this.col_input_admin.DataPropertyName = "input_admin";
@@ -254,7 +262,7 @@
             this.Name = "mngmnt_1_1_insertData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "mngmnt_1_1_insertData";
-            this.Load += new System.EventHandler(this.mngmnt_1_1_insertData_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridInsertManageInput)).EndInit();
             this.ResumeLayout(false);
@@ -278,6 +286,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_count;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_inspec;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_ware_no;
+        private System.Windows.Forms.DataGridViewComboBoxColumn col_com_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_admin;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_etc;
     }

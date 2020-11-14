@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Haccp_MES;
+using System.Threading;
 
 namespace Haccp_MES._2_management
 {
@@ -19,15 +20,52 @@ namespace Haccp_MES._2_management
         MySqlDataAdapter adapter;
         DataTable dt;
         DataTable dtwareList;
+        DataTable dtcomList;
+
+        Dictionary<string, int> dictCompany;
         Dictionary<string, int> dictWarehouse;
+
         public DataGridViewRow childVal { get; set; }
 
         public mngmnt_1_1_insertData()
         {
-            InitializeComponent();
-            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());            
-            dtwareList = new DataTable();
+            Thread thread = new Thread(() => {
+                conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
 
+                conn.Open();
+
+                string selectWarelistQuery = "SELECT ware_name, ware_no FROM info_warehouse";
+                cmd = new MySqlCommand(selectWarelistQuery, conn);
+                adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtwareList);
+
+                dictWarehouse = dtwareList.AsEnumerable().ToDictionary<DataRow, string, int>
+                    (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
+                col_ware_no.DataSource = dtwareList;
+                col_ware_no.DisplayMember = "ware_name";
+                col_ware_no.ValueMember = "ware_name";
+
+
+
+                string selectComlistQuery = "SELECT com_name, com_no FROM info_company";
+                cmd = new MySqlCommand(selectComlistQuery, conn);
+                adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtcomList);
+
+                dictCompany = dtcomList.AsEnumerable().ToDictionary<DataRow, string, int>
+                    (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
+                col_com_no.DataSource = dtcomList;
+                col_com_no.DisplayMember = "com_name";
+                col_com_no.ValueMember = "com_name";
+
+                conn.Close();
+            });
+
+            dtwareList = new DataTable();
+            dtcomList = new DataTable();
+
+            thread.Start();
+            InitializeComponent();
             dt = new DataTable();
             dt.Columns.Add(new DataColumn("mat_no", typeof(int)));
             dt.Columns.Add(new DataColumn("mat_name", typeof(string)));
@@ -36,26 +74,10 @@ namespace Haccp_MES._2_management
             dt.Columns.Add(new DataColumn("input_count", typeof(int)));
             dt.Columns.Add(new DataColumn("input_inspec", typeof(string)));
             dt.Columns.Add(new DataColumn("ware_name", typeof(string)));
+            dt.Columns.Add(new DataColumn("com_name", typeof(string)));
             dt.Columns.Add(new DataColumn("input_admin", typeof(string)));
             dt.Columns.Add(new DataColumn("input_etc", typeof(string)));
-        }
-
-        private void mngmnt_1_1_insertData_Load(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            string selectWarelistQuery = "SELECT ware_name, ware_no FROM info_warehouse";
-            cmd = new MySqlCommand(selectWarelistQuery, conn);
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtwareList);
-
-            dictWarehouse = dtwareList.AsEnumerable().ToDictionary<DataRow, string, int>
-                (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
-            col_ware_no.DataSource = dtwareList;
-            col_ware_no.DisplayMember = "ware_name";
-            col_ware_no.ValueMember = "ware_name";
-
-            conn.Close();
+            thread.Join();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -81,6 +103,7 @@ namespace Haccp_MES._2_management
                 row["input_count"] = 0;
                 row["input_inspec"] = "";
                 row["ware_name"] = "";
+                row["com_name"] = "";
                 row["input_admin"] = "";
                 row["input_etc"] = "";
                 dt.Rows.Add(row);

@@ -33,7 +33,7 @@ namespace Haccp_MES._2_management
 
                 string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
                     "FROM manage_input, info_material, info_warehouse, info_company " +
-                    "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
+                    "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = manage_input.com_no " + "" +
                     "ORDER BY input_idx;";
                 cmd = new MySqlCommand(orderInfoHeadQuery, conn);
                 adapter = new MySqlDataAdapter(cmd);
@@ -100,6 +100,7 @@ namespace Haccp_MES._2_management
                 "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " +
                 "WHERE input_idx=@INPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
+
             cmd.Parameters.AddWithValue("@INPUT_INSPEC", updateDatas[0]);
             cmd.Parameters.AddWithValue("@INPUT_COUNT", Convert.ToInt32(updateDatas[1]));
             cmd.Parameters.AddWithValue("@INPUT_ADMIN", updateDatas[2]);
@@ -107,9 +108,8 @@ namespace Haccp_MES._2_management
             cmd.Parameters.AddWithValue("@INPUT_IDX", input_idx);
 
             if(cmd.ExecuteNonQuery() == 0) 
-            {
                 MessageBox.Show("Update Error 발생.");
-            }
+
             conn.Close();
 
             btnSelect_Click(sender, e);
