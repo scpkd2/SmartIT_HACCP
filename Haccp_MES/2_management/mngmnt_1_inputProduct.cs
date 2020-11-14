@@ -57,13 +57,27 @@ namespace Haccp_MES._2_management
             dtHead.Clear();
             string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
                 "FROM manage_input, info_material, info_warehouse, info_company " +
-                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + 
-                "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 " +
-                "ORDER BY input_idx;";
+                "WHERE manage_input.mat_no = info_material.mat_no " +
+                "AND manage_input.ware_no = info_warehouse.ware_no " +
+                "AND manage_input.com_no = info_company.com_no " +
+                "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 ";               
+
+            if (txtComName.Text != "") {
+                orderInfoHeadQuery += "AND com_name = @COM_NAME ";
+            }
+            if (txtMatName.Text != "") {
+                orderInfoHeadQuery += "AND mat_name = @MAT_NAME ";
+            }
+
+            orderInfoHeadQuery += "ORDER BY input_idx;";
+
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
             cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@COM_NAME", txtComName.Text.ToString());
+            cmd.Parameters.AddWithValue("@MAT_NAME", txtMatName.Text.ToString());
+
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
 
