@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,10 +21,34 @@ namespace Haccp_MES._2_management
 
         public mngmnt_1_inputProduct()
         {
-            InitializeComponent();
-            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             dtHead = new DataTable();
+            InitializeComponent();
+        }
 
+        private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
+        {
+            Thread t = new Thread(() => {
+                conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+                conn.Open();
+
+                string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
+                    "FROM manage_input, info_material, info_warehouse, info_company " +
+                    "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = manage_input.com_no " + "" +
+                    "ORDER BY input_idx;";
+                cmd = new MySqlCommand(orderInfoHeadQuery, conn);
+                adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtHead);
+
+                conn.Close();
+            });
+
+            t.Start();
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+            t.Join();
+
+            if (gridManageInputHead.Rows.Count != 0)
+                gridManageInputHead_CellContentClick(new object(), new DataGridViewCellEventArgs(0, 0));
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -32,13 +57,30 @@ namespace Haccp_MES._2_management
             dtHead.Clear();
             string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " +
                 "FROM manage_input, info_material, info_warehouse, info_company " +
-                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + 
-                "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 " +
-                "ORDER BY input_idx;";
+                "WHERE manage_input.mat_no = info_material.mat_no " +
+                "AND manage_input.ware_no = info_warehouse.ware_no " +
+                "AND manage_input.com_no = info_company.com_no " +
+                "AND input_date BETWEEN @DATETIME1 AND @DATETIME2 ";               
+
+            // 만약에 회사명을 입력했다면, Text값이 "" 이 아니니까 AND문으로 쿼리문에 추가
+            // 입력하지 않았다면 Text값이 ""이므로 추가하지 않음.
+            if (txtComName.Text != "") {
+                orderInfoHeadQuery += "AND com_name = @COM_NAME ";
+            }
+            // 이하동문
+            if (txtMatName.Text != "") {
+                orderInfoHeadQuery += "AND mat_name = @MAT_NAME ";
+            }
+            // 마지막으로 정렬문을 추가하고, 쿼리문 끝내는 ";" 추가해준다.
+            orderInfoHeadQuery += "ORDER BY input_idx;";
+
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
-            cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));     // Datetime 첫번째 매개추가.
+            cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd")); // Datetime 두번째 매개추가.
+            cmd.Parameters.AddWithValue("@COM_NAME", txtComName.Text.ToString());   // 회사명을 매개값으로 추가해준다.
+            cmd.Parameters.AddWithValue("@MAT_NAME", txtMatName.Text.ToString());   // 제품명을 매개값으로 추가해준다.
+
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
 
@@ -75,6 +117,7 @@ namespace Haccp_MES._2_management
                 "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " +
                 "WHERE input_idx=@INPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
+
             cmd.Parameters.AddWithValue("@INPUT_INSPEC", updateDatas[0]);
             cmd.Parameters.AddWithValue("@INPUT_COUNT", Convert.ToInt32(updateDatas[1]));
             cmd.Parameters.AddWithValue("@INPUT_ADMIN", updateDatas[2]);
@@ -82,9 +125,8 @@ namespace Haccp_MES._2_management
             cmd.Parameters.AddWithValue("@INPUT_IDX", input_idx);
 
             if(cmd.ExecuteNonQuery() == 0) 
-            {
                 MessageBox.Show("Update Error 발생.");
-            }
+
             conn.Close();
 
             btnSelect_Click(sender, e);
@@ -112,27 +154,6 @@ namespace Haccp_MES._2_management
                     conn.Close();
                 }
             }
-        }
-
-        private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
-        {
-            conn.Open();
-            
-            string orderInfoHeadQuery = "SELECT input_idx, DATE_FORMAT(input_date, '%Y-%m-%d') as 'input_date', com_name, mat_name,  mat_price * input_count as 'input_totprc', input_admin " + 
-                "FROM manage_input, info_material, info_warehouse, info_company " + 
-                "WHERE manage_input.mat_no = info_material.mat_no AND manage_input.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + "" +
-                "ORDER BY input_idx;";
-            cmd = new MySqlCommand(orderInfoHeadQuery, conn);
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtHead);
-
-            gridManageInputHead.DataSource = dtHead;
-            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
-
-            conn.Close();
-
-            if (gridManageInputHead.Rows.Count != 0)
-                gridManageInputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
 

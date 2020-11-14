@@ -8,64 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Haccp_MES;
-using System.Threading;
 
 namespace Haccp_MES._2_management
 {
-    public partial class mngmnt_1_1_insertData : Form
+    public partial class mngmnt_2_1_insertData : Form
     {
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
         DataTable dt;
         DataTable dtwareList;
-        DataTable dtcomList;
-
-        Dictionary<string, int> dictCompany;
         Dictionary<string, int> dictWarehouse;
-
         public DataGridViewRow childVal { get; set; }
 
-        public mngmnt_1_1_insertData()
+        public mngmnt_2_1_insertData()
         {
-            Thread thread = new Thread(() => {
-                conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
-
-                conn.Open();
-
-                string selectWarelistQuery = "SELECT ware_name, ware_no FROM info_warehouse";
-                cmd = new MySqlCommand(selectWarelistQuery, conn);
-                adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dtwareList);
-
-                dictWarehouse = dtwareList.AsEnumerable().ToDictionary<DataRow, string, int>
-                    (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
-                col_ware_no.DataSource = dtwareList;
-                col_ware_no.DisplayMember = "ware_name";
-                col_ware_no.ValueMember = "ware_name";
-
-
-
-                string selectComlistQuery = "SELECT com_name, com_no FROM info_company";
-                cmd = new MySqlCommand(selectComlistQuery, conn);
-                adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dtcomList);
-
-                dictCompany = dtcomList.AsEnumerable().ToDictionary<DataRow, string, int>
-                    (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
-                col_com_no.DataSource = dtcomList;
-                col_com_no.DisplayMember = "com_name";
-                col_com_no.ValueMember = "com_name";
-
-                conn.Close();
-            });
-
-            dtwareList = new DataTable();
-            dtcomList = new DataTable();
-
-            thread.Start();
             InitializeComponent();
+            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());            
+            dtwareList = new DataTable();
+
             dt = new DataTable();
             dt.Columns.Add(new DataColumn("mat_no", typeof(int)));
             dt.Columns.Add(new DataColumn("mat_name", typeof(string)));
@@ -74,10 +35,26 @@ namespace Haccp_MES._2_management
             dt.Columns.Add(new DataColumn("input_count", typeof(int)));
             dt.Columns.Add(new DataColumn("input_inspec", typeof(string)));
             dt.Columns.Add(new DataColumn("ware_name", typeof(string)));
-            dt.Columns.Add(new DataColumn("com_name", typeof(string)));
             dt.Columns.Add(new DataColumn("input_admin", typeof(string)));
             dt.Columns.Add(new DataColumn("input_etc", typeof(string)));
-            thread.Join();
+        }
+
+        private void mngmnt_2_1_insertData_Load(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string selectWarelistQuery = "SELECT ware_name, ware_no FROM info_warehouse";
+            cmd = new MySqlCommand(selectWarelistQuery, conn);
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtwareList);
+
+            dictWarehouse = dtwareList.AsEnumerable().ToDictionary<DataRow, string, int>
+                (row => Convert.ToString(row[0]), row => Convert.ToInt32(row[1]));
+            col_ware_no.DataSource = dtwareList;
+            col_ware_no.DisplayMember = "ware_name";
+            col_ware_no.ValueMember = "ware_name";
+
+            conn.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -89,27 +66,26 @@ namespace Haccp_MES._2_management
 
         private void btnLoadMaterialList_Click(object sender, EventArgs e)
         {
-            mngmnt_1_2_materialList dlg = new mngmnt_1_2_materialList();
-            dlg.Owner = this;
+            //mngmnt_1_2_materialList dlg = new mngmnt_1_2_materialList();
+            //dlg.Owner = this;
 
             
-            if(dlg.ShowDialog() == DialogResult.OK)
-            {
-                DataRow row = dt.NewRow();
-                row["mat_no"] = Convert.ToInt32(childVal.Cells[0].Value);
-                row["mat_name"] = Convert.ToString(childVal.Cells[1].Value);
-                row["mat_type"] = Convert.ToString(childVal.Cells[2].Value);
-                row["mat_price"] = Convert.ToInt32(childVal.Cells[4].Value);
-                row["input_count"] = 0;
-                row["input_inspec"] = "";
-                row["ware_name"] = "";
-                row["com_name"] = "";
-                row["input_admin"] = "";
-                row["input_etc"] = "";
-                dt.Rows.Add(row);
+            //if(dlg.ShowDialog() == DialogResult.OK)
+            //{
+            //    DataRow row = dt.NewRow();
+            //    row["mat_no"] = Convert.ToInt32(childVal.Cells[0].Value);
+            //    row["mat_name"] = Convert.ToString(childVal.Cells[1].Value);
+            //    row["mat_type"] = Convert.ToString(childVal.Cells[2].Value);
+            //    row["mat_price"] = Convert.ToInt32(childVal.Cells[4].Value);
+            //    row["input_count"] = 0;
+            //    row["input_inspec"] = "";
+            //    row["ware_name"] = "";
+            //    row["input_admin"] = "";
+            //    row["input_etc"] = "";
+            //    dt.Rows.Add(row);
 
-                gridInsertManageInput.DataSource = dt;
-            }
+            //    gridInsertManageInput.DataSource = dt;
+            //}
         }
 
         private void btnSave_Click(object sender, EventArgs e)

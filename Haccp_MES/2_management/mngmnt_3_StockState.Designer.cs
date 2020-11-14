@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblLyoutPnl = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_mat_etc = new System.Windows.Forms.Label();
+            this.lbl_item_spec = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lbl_wareHouse_code = new System.Windows.Forms.Label();
             this.lbl_mat_name = new System.Windows.Forms.Label();
@@ -45,14 +47,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.lbl_wareHouse_name = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSelectCondition = new System.Windows.Forms.Button();
+            this.btnDeleteCondition = new System.Windows.Forms.Button();
             this.txtSelectWarehouseCode = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.comBoxMatTyoe = new System.Windows.Forms.ComboBox();
+            this.comBoxMatType = new System.Windows.Forms.ComboBox();
             this.txtSelectWarehouseName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
@@ -68,12 +73,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_wareHouse_name = new System.Windows.Forms.Label();
-            this.lbl_item_spec = new System.Windows.Forms.Label();
-            this.lbl_mat_etc = new System.Windows.Forms.Label();
-            this.btnDeleteCondition = new System.Windows.Forms.Button();
-            this.btnSelectCondition = new System.Windows.Forms.Button();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +80,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.tblLyoutPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,6 +125,26 @@
             this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLyoutPnl.Size = new System.Drawing.Size(885, 117);
             this.tblLyoutPnl.TabIndex = 124;
+            // 
+            // lbl_mat_etc
+            // 
+            this.lbl_mat_etc.AutoSize = true;
+            this.lbl_mat_etc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_etc.Location = new System.Drawing.Point(592, 88);
+            this.lbl_mat_etc.Name = "lbl_mat_etc";
+            this.lbl_mat_etc.Size = new System.Drawing.Size(289, 28);
+            this.lbl_mat_etc.TabIndex = 133;
+            this.lbl_mat_etc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_item_spec
+            // 
+            this.lbl_item_spec.AutoSize = true;
+            this.lbl_item_spec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_item_spec.Location = new System.Drawing.Point(592, 59);
+            this.lbl_item_spec.Name = "lbl_item_spec";
+            this.lbl_item_spec.Size = new System.Drawing.Size(289, 28);
+            this.lbl_item_spec.TabIndex = 132;
+            this.lbl_item_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label18
             // 
@@ -301,6 +321,16 @@
             this.label16.Text = "완제품명";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_wareHouse_name
+            // 
+            this.lbl_wareHouse_name.AutoSize = true;
+            this.lbl_wareHouse_name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_wareHouse_name.Location = new System.Drawing.Point(592, 1);
+            this.lbl_wareHouse_name.Name = "lbl_wareHouse_name";
+            this.lbl_wareHouse_name.Size = new System.Drawing.Size(289, 28);
+            this.lbl_wareHouse_name.TabIndex = 126;
+            this.lbl_wareHouse_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
@@ -342,7 +372,7 @@
             this.groupBox1.Controls.Add(this.txtSelectWarehouseCode);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.comBoxMatTyoe);
+            this.groupBox1.Controls.Add(this.comBoxMatType);
             this.groupBox1.Controls.Add(this.txtSelectWarehouseName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtProductName);
@@ -354,6 +384,35 @@
             this.groupBox1.Size = new System.Drawing.Size(817, 73);
             this.groupBox1.TabIndex = 120;
             this.groupBox1.TabStop = false;
+            // 
+            // btnSelectCondition
+            // 
+            this.btnSelectCondition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSelectCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSelectCondition.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSelectCondition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectCondition.Location = new System.Drawing.Point(728, 48);
+            this.btnSelectCondition.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSelectCondition.Name = "btnSelectCondition";
+            this.btnSelectCondition.Size = new System.Drawing.Size(85, 25);
+            this.btnSelectCondition.TabIndex = 126;
+            this.btnSelectCondition.Text = "조건 검색";
+            this.btnSelectCondition.UseVisualStyleBackColor = false;
+            this.btnSelectCondition.Click += new System.EventHandler(this.btnSelectCondition_Click);
+            // 
+            // btnDeleteCondition
+            // 
+            this.btnDeleteCondition.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDeleteCondition.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDeleteCondition.Location = new System.Drawing.Point(620, 48);
+            this.btnDeleteCondition.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteCondition.Name = "btnDeleteCondition";
+            this.btnDeleteCondition.Size = new System.Drawing.Size(85, 25);
+            this.btnDeleteCondition.TabIndex = 126;
+            this.btnDeleteCondition.Text = "조건 삭제";
+            this.btnDeleteCondition.UseVisualStyleBackColor = false;
+            this.btnDeleteCondition.Click += new System.EventHandler(this.btnDeleteCondition_Click);
             // 
             // txtSelectWarehouseCode
             // 
@@ -380,19 +439,19 @@
             this.label20.TabIndex = 127;
             this.label20.Text = "품목유형";
             // 
-            // comBoxMatTyoe
+            // comBoxMatType
             // 
-            this.comBoxMatTyoe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comBoxMatTyoe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comBoxMatTyoe.FormattingEnabled = true;
-            this.comBoxMatTyoe.Items.AddRange(new object[] {
+            this.comBoxMatType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comBoxMatType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comBoxMatType.FormattingEnabled = true;
+            this.comBoxMatType.Items.AddRange(new object[] {
             "원재료",
             "부재료",
             "제품"});
-            this.comBoxMatTyoe.Location = new System.Drawing.Point(546, 14);
-            this.comBoxMatTyoe.Name = "comBoxMatTyoe";
-            this.comBoxMatTyoe.Size = new System.Drawing.Size(100, 20);
-            this.comBoxMatTyoe.TabIndex = 126;
+            this.comBoxMatType.Location = new System.Drawing.Point(546, 14);
+            this.comBoxMatType.Name = "comBoxMatType";
+            this.comBoxMatType.Size = new System.Drawing.Size(100, 20);
+            this.comBoxMatType.TabIndex = 126;
             // 
             // txtSelectWarehouseName
             // 
@@ -591,72 +650,6 @@
             this.gridManageInputHead.Size = new System.Drawing.Size(886, 196);
             this.gridManageInputHead.TabIndex = 110;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(274, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 12);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "이건 일단 안쓸건데 혹시몰라 둡니다";
-            // 
-            // lbl_wareHouse_name
-            // 
-            this.lbl_wareHouse_name.AutoSize = true;
-            this.lbl_wareHouse_name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_wareHouse_name.Location = new System.Drawing.Point(592, 1);
-            this.lbl_wareHouse_name.Name = "lbl_wareHouse_name";
-            this.lbl_wareHouse_name.Size = new System.Drawing.Size(289, 28);
-            this.lbl_wareHouse_name.TabIndex = 126;
-            this.lbl_wareHouse_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_item_spec
-            // 
-            this.lbl_item_spec.AutoSize = true;
-            this.lbl_item_spec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_item_spec.Location = new System.Drawing.Point(592, 59);
-            this.lbl_item_spec.Name = "lbl_item_spec";
-            this.lbl_item_spec.Size = new System.Drawing.Size(289, 28);
-            this.lbl_item_spec.TabIndex = 132;
-            this.lbl_item_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_mat_etc
-            // 
-            this.lbl_mat_etc.AutoSize = true;
-            this.lbl_mat_etc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_etc.Location = new System.Drawing.Point(592, 88);
-            this.lbl_mat_etc.Name = "lbl_mat_etc";
-            this.lbl_mat_etc.Size = new System.Drawing.Size(289, 28);
-            this.lbl_mat_etc.TabIndex = 133;
-            this.lbl_mat_etc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnDeleteCondition
-            // 
-            this.btnDeleteCondition.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDeleteCondition.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDeleteCondition.Location = new System.Drawing.Point(620, 48);
-            this.btnDeleteCondition.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteCondition.Name = "btnDeleteCondition";
-            this.btnDeleteCondition.Size = new System.Drawing.Size(85, 25);
-            this.btnDeleteCondition.TabIndex = 126;
-            this.btnDeleteCondition.Text = "조건 삭제";
-            this.btnDeleteCondition.UseVisualStyleBackColor = false;
-            // 
-            // btnSelectCondition
-            // 
-            this.btnSelectCondition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSelectCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSelectCondition.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSelectCondition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectCondition.Location = new System.Drawing.Point(728, 48);
-            this.btnSelectCondition.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSelectCondition.Name = "btnSelectCondition";
-            this.btnSelectCondition.Size = new System.Drawing.Size(85, 25);
-            this.btnSelectCondition.TabIndex = 126;
-            this.btnSelectCondition.Text = "조건 검색";
-            this.btnSelectCondition.UseVisualStyleBackColor = false;
-            // 
             // Column0
             // 
             this.Column0.DataPropertyName = "stock_wareHouseCode";
@@ -705,6 +698,15 @@
             this.Column6.HeaderText = "완제품명";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(274, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(201, 12);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "이건 일단 안쓸건데 혹시몰라 둡니다";
             // 
             // mngmnt_3_StockState
             // 
@@ -777,7 +779,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridManageInputHead;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comBoxMatTyoe;
+        private System.Windows.Forms.ComboBox comBoxMatType;
         private System.Windows.Forms.TextBox txtSelectWarehouseName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
