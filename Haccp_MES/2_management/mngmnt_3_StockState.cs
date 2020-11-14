@@ -52,7 +52,11 @@ namespace Haccp_MES._2_management
 
         private void btnDeleteCondition_Click(object sender, EventArgs e)
         {
-
+            txtSelectWarehouseCode.Text = "";
+            txtSelectWarehouseName.Text = "";
+            txtMatName.Text             = "";
+            comBoxMatType.Text          = "";
+            txtProductName.Text         = "";
         }
     }
 }

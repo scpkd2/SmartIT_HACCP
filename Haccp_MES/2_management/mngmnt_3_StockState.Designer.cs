@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblLyoutPnl = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_mat_etc = new System.Windows.Forms.Label();
             this.lbl_item_spec = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.txtSelectWarehouseCode = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.comBoxMatTyoe = new System.Windows.Forms.ComboBox();
+            this.comBoxMatType = new System.Windows.Forms.ComboBox();
             this.txtSelectWarehouseName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
@@ -372,7 +372,7 @@
             this.groupBox1.Controls.Add(this.txtSelectWarehouseCode);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.comBoxMatTyoe);
+            this.groupBox1.Controls.Add(this.comBoxMatType);
             this.groupBox1.Controls.Add(this.txtSelectWarehouseName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtProductName);
@@ -439,19 +439,19 @@
             this.label20.TabIndex = 127;
             this.label20.Text = "품목유형";
             // 
-            // comBoxMatTyoe
+            // comBoxMatType
             // 
-            this.comBoxMatTyoe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comBoxMatTyoe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comBoxMatTyoe.FormattingEnabled = true;
-            this.comBoxMatTyoe.Items.AddRange(new object[] {
+            this.comBoxMatType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comBoxMatType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comBoxMatType.FormattingEnabled = true;
+            this.comBoxMatType.Items.AddRange(new object[] {
             "원재료",
             "부재료",
             "제품"});
-            this.comBoxMatTyoe.Location = new System.Drawing.Point(546, 14);
-            this.comBoxMatTyoe.Name = "comBoxMatTyoe";
-            this.comBoxMatTyoe.Size = new System.Drawing.Size(100, 20);
-            this.comBoxMatTyoe.TabIndex = 126;
+            this.comBoxMatType.Location = new System.Drawing.Point(546, 14);
+            this.comBoxMatType.Name = "comBoxMatType";
+            this.comBoxMatType.Size = new System.Drawing.Size(100, 20);
+            this.comBoxMatType.TabIndex = 126;
             // 
             // txtSelectWarehouseName
             // 
@@ -607,14 +607,14 @@
             this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0,
             this.Column1,
@@ -623,27 +623,27 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
             this.gridManageInputHead.Location = new System.Drawing.Point(31, 163);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
             this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridManageInputHead.RowHeadersVisible = false;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -779,7 +779,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridManageInputHead;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comBoxMatTyoe;
+        private System.Windows.Forms.ComboBox comBoxMatType;
         private System.Windows.Forms.TextBox txtSelectWarehouseName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
