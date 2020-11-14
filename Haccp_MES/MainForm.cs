@@ -504,6 +504,13 @@ namespace Haccp_MES
         {
             tabBtnActiveOn(tabHome);
             OpenChildForm(new Home());
+
+            // 앞으로 가져오기위해 최소화 -> 창 띄우기
+            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Normal;
+
+            // 앞으로 가져오라는 명령어인데 비쥬얼 스튜디오 보다는 뒤로 밀리네요.
+            this.BringToFront();
         }
 
         #region 상단 탭메뉴 버튼 관련
