@@ -103,9 +103,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(71, 36);
+            this.label5.Location = new System.Drawing.Point(62, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 46);
+            this.label5.Size = new System.Drawing.Size(142, 37);
             this.label5.TabIndex = 93;
             this.label5.Text = "거래처관리";
             // 
@@ -114,10 +114,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Location = new System.Drawing.Point(963, 504);
+            this.btnUpdate.Location = new System.Drawing.Point(843, 403);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(78, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(68, 23);
             this.btnUpdate.TabIndex = 91;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -128,10 +128,14 @@
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.btnInsert.Location = new System.Drawing.Point(993, 36);
+=======
+            this.btnInsert.Location = new System.Drawing.Point(827, 29);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(48, 29);
+            this.btnInsert.Size = new System.Drawing.Size(42, 23);
             this.btnInsert.TabIndex = 90;
             this.btnInsert.Text = "신규";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -142,9 +146,9 @@
             this.lblHeadCount.AutoSize = true;
             this.lblHeadCount.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblHeadCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblHeadCount.Location = new System.Drawing.Point(986, 461);
+            this.lblHeadCount.Location = new System.Drawing.Point(863, 369);
             this.lblHeadCount.Name = "lblHeadCount";
-            this.lblHeadCount.Size = new System.Drawing.Size(0, 20);
+            this.lblHeadCount.Size = new System.Drawing.Size(0, 15);
             this.lblHeadCount.TabIndex = 87;
             // 
             // label3
@@ -152,9 +156,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label3.Location = new System.Drawing.Point(914, 461);
+            this.label3.Location = new System.Drawing.Point(800, 369);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 20);
+            this.label3.Size = new System.Drawing.Size(94, 15);
             this.label3.TabIndex = 85;
             this.label3.Text = "(총건수 :         )";
             // 
@@ -163,9 +167,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(55, 178);
+            this.label1.Location = new System.Drawing.Point(48, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 83;
             this.label1.Text = "거래처 관리";
             // 
@@ -209,8 +213,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(29, 212);
-            this.gridManageInputHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridManageInputHead.Location = new System.Drawing.Point(25, 170);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
             this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -226,7 +229,7 @@
             this.gridManageInputHead.RowHeadersWidth = 51;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(993, 245);
+            this.gridManageInputHead.Size = new System.Drawing.Size(869, 196);
             this.gridManageInputHead.TabIndex = 81;
             this.gridManageInputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentClick);
             this.gridManageInputHead.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentDoubleClick);
@@ -302,6 +305,77 @@
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             // 
+            // colCheck
+            // 
+            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCheck.DataPropertyName = "chkbox";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.NullValue = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCheck.FalseValue = "false";
+            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCheck.Frozen = true;
+            this.colCheck.HeaderText = "";
+            this.colCheck.MinimumWidth = 6;
+            this.colCheck.Name = "colCheck";
+            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colCheck.TrueValue = "true";
+            this.colCheck.Width = 89;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "com_no";
+            this.Column2.HeaderText = "거래처코드";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // input_date
+            // 
+            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.input_date.DataPropertyName = "com_type";
+            this.input_date.HeaderText = "거래처유형";
+            this.input_date.MinimumWidth = 6;
+            this.input_date.Name = "input_date";
+            this.input_date.ReadOnly = true;
+            this.input_date.Width = 88;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column13.DataPropertyName = "com_name";
+            this.Column13.HeaderText = "거래처명";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 89;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "com_licenseno";
+            this.Column3.HeaderText = "사업자번호";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "com_phoneno";
+            this.Column5.HeaderText = "전화번호";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "com_rep_name";
+            this.Column15.HeaderText = "대표자";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbComNo);
@@ -310,6 +384,7 @@
             this.groupBox1.Controls.Add(this.txtComName);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(239, 95);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
@@ -326,41 +401,146 @@
             this.cbComNo.Location = new System.Drawing.Point(159, 35);
             this.cbComNo.Name = "cbComNo";
             this.cbComNo.Size = new System.Drawing.Size(114, 23);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(24, 76);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(882, 62);
+            this.groupBox1.TabIndex = 105;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnTypeSerch
+            // 
+            this.btnTypeSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTypeSerch.BackgroundImage = global::Haccp_MES.Properties.Resources.magnifying_glass_4x;
+            this.btnTypeSerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTypeSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnTypeSerch.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTypeSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTypeSerch.Location = new System.Drawing.Point(607, 25);
+            this.btnTypeSerch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTypeSerch.Name = "btnTypeSerch";
+            this.btnTypeSerch.Size = new System.Drawing.Size(24, 23);
+            this.btnTypeSerch.TabIndex = 113;
+            this.btnTypeSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTypeSerch.UseVisualStyleBackColor = false;
+            this.btnTypeSerch.Click += new System.EventHandler(this.btnTypeSerch_Click);
+            // 
+            // btnNoSerch
+            // 
+            this.btnNoSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnNoSerch.BackgroundImage = global::Haccp_MES.Properties.Resources.magnifying_glass_4x;
+            this.btnNoSerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNoSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnNoSerch.ForeColor = System.Drawing.Color.Transparent;
+            this.btnNoSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNoSerch.Location = new System.Drawing.Point(206, 26);
+            this.btnNoSerch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNoSerch.Name = "btnNoSerch";
+            this.btnNoSerch.Size = new System.Drawing.Size(24, 23);
+            this.btnNoSerch.TabIndex = 112;
+            this.btnNoSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNoSerch.UseVisualStyleBackColor = false;
+            this.btnNoSerch.Click += new System.EventHandler(this.btnNoSerch_Click);
+            // 
+            // cbComNo
+            // 
+            this.cbComNo.FormattingEnabled = true;
+            this.cbComNo.Location = new System.Drawing.Point(92, 30);
+            this.cbComNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbComNo.Name = "cbComNo";
+            this.cbComNo.Size = new System.Drawing.Size(100, 20);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.cbComNo.TabIndex = 112;
             // 
             // cbComType
             // 
             this.cbComType.FormattingEnabled = true;
+<<<<<<< HEAD
             this.cbComType.Location = new System.Drawing.Point(609, 33);
+=======
+            this.cbComType.Location = new System.Drawing.Point(486, 28);
+            this.cbComType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.cbComType.Name = "cbComType";
-            this.cbComType.Size = new System.Drawing.Size(121, 23);
+            this.cbComType.Size = new System.Drawing.Size(106, 20);
             this.cbComType.TabIndex = 110;
             // 
+<<<<<<< HEAD
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(526, 38);
+=======
+            // cbCom
+            // 
+            this.cbCom.FormattingEnabled = true;
+            this.cbCom.Items.AddRange(new object[] {
+            "사용",
+            "미사용"});
+            this.cbCom.Location = new System.Drawing.Point(718, 28);
+            this.cbCom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCom.Name = "cbCom";
+            this.cbCom.Size = new System.Drawing.Size(106, 20);
+            this.cbCom.TabIndex = 109;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(413, 32);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 107;
             this.label7.Text = "거래처유형";
             // 
+<<<<<<< HEAD
             // txtComName
             // 
             this.txtComName.Location = new System.Drawing.Point(402, 33);
             this.txtComName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+=======
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(652, 32);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.TabIndex = 104;
+            this.label19.Text = "사용여부";
+            // 
+            // txtComName
+            // 
+            this.txtComName.Location = new System.Drawing.Point(304, 28);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.txtComName.Name = "txtComName";
-            this.txtComName.Size = new System.Drawing.Size(114, 25);
+            this.txtComName.Size = new System.Drawing.Size(100, 21);
             this.txtComName.TabIndex = 103;
             // 
+<<<<<<< HEAD
+=======
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Location = new System.Drawing.Point(869, 29);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(42, 23);
+            this.btnDelete.TabIndex = 106;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(55, 502);
+            this.label2.Location = new System.Drawing.Point(48, 402);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 29);
+            this.label2.Size = new System.Drawing.Size(70, 24);
             this.label2.TabIndex = 107;
             this.label2.Text = "상세정보";
             // 
@@ -386,16 +566,16 @@
             this.tblLyoutPnl.Controls.Add(this.txtcom_phone, 3, 1);
             this.tblLyoutPnl.Controls.Add(this.txtcom_rep_name, 3, 2);
             this.tblLyoutPnl.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tblLyoutPnl.Location = new System.Drawing.Point(30, 537);
-            this.tblLyoutPnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tblLyoutPnl.Location = new System.Drawing.Point(26, 430);
             this.tblLyoutPnl.Name = "tblLyoutPnl";
             this.tblLyoutPnl.RowCount = 3;
             this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblLyoutPnl.Size = new System.Drawing.Size(1011, 146);
+            this.tblLyoutPnl.Size = new System.Drawing.Size(885, 117);
             this.tblLyoutPnl.TabIndex = 110;
             // 
+<<<<<<< HEAD
             // lbl_com_no
             // 
             this.lbl_com_no.AutoSize = true;
@@ -433,6 +613,58 @@
             this.lbl_com_license.Size = new System.Drawing.Size(331, 47);
             this.lbl_com_license.TabIndex = 130;
             this.lbl_com_license.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+=======
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(592, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(289, 38);
+            this.label9.TabIndex = 131;
+            // 
+            // lbl_mat_no
+            // 
+            this.lbl_mat_no.AutoSize = true;
+            this.lbl_mat_no.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_no.Location = new System.Drawing.Point(151, 1);
+            this.lbl_mat_no.Name = "lbl_mat_no";
+            this.lbl_mat_no.Size = new System.Drawing.Size(287, 37);
+            this.lbl_mat_no.TabIndex = 121;
+            this.lbl_mat_no.Text = " ";
+            this.lbl_mat_no.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_mat_type
+            // 
+            this.lbl_mat_type.AutoSize = true;
+            this.lbl_mat_type.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_type.Location = new System.Drawing.Point(151, 39);
+            this.lbl_mat_type.Name = "lbl_mat_type";
+            this.lbl_mat_type.Size = new System.Drawing.Size(287, 37);
+            this.lbl_mat_type.TabIndex = 125;
+            this.lbl_mat_type.Text = " ";
+            this.lbl_mat_type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_mat_spec
+            // 
+            this.lbl_mat_spec.AutoSize = true;
+            this.lbl_mat_spec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_spec.Location = new System.Drawing.Point(592, 39);
+            this.lbl_mat_spec.Name = "lbl_mat_spec";
+            this.lbl_mat_spec.Size = new System.Drawing.Size(289, 37);
+            this.lbl_mat_spec.TabIndex = 127;
+            this.lbl_mat_spec.Text = " ";
+            this.lbl_mat_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_mat_price
+            // 
+            this.lbl_mat_price.AutoSize = true;
+            this.lbl_mat_price.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_mat_price.Location = new System.Drawing.Point(151, 77);
+            this.lbl_mat_price.Name = "lbl_mat_price";
+            this.lbl_mat_price.Size = new System.Drawing.Size(287, 39);
+            this.lbl_mat_price.TabIndex = 129;
+            this.lbl_mat_price.Text = " ";
+            this.lbl_mat_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             // 
             // label14
             // 
@@ -441,10 +673,10 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(505, 97);
+            this.label14.Location = new System.Drawing.Point(442, 77);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(167, 48);
+            this.label14.Size = new System.Drawing.Size(146, 39);
             this.label14.TabIndex = 111;
             this.label14.Text = "대표자";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -456,10 +688,10 @@
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(1, 49);
+            this.label17.Location = new System.Drawing.Point(1, 39);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(167, 47);
+            this.label17.Size = new System.Drawing.Size(146, 37);
             this.label17.TabIndex = 110;
             this.label17.Text = "거래처유형";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,7 +706,7 @@
             this.label20.Location = new System.Drawing.Point(1, 1);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(167, 47);
+            this.label20.Size = new System.Drawing.Size(146, 37);
             this.label20.TabIndex = 0;
             this.label20.Text = "거래처코드";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,10 +718,10 @@
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label21.Location = new System.Drawing.Point(505, 1);
+            this.label21.Location = new System.Drawing.Point(442, 1);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(167, 47);
+            this.label21.Size = new System.Drawing.Size(146, 37);
             this.label21.TabIndex = 1;
             this.label21.Text = "사업자번호";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,10 +733,10 @@
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label22.Location = new System.Drawing.Point(1, 97);
+            this.label22.Location = new System.Drawing.Point(1, 77);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(167, 48);
+            this.label22.Size = new System.Drawing.Size(146, 39);
             this.label22.TabIndex = 111;
             this.label22.Text = "거래처명";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -516,14 +748,15 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label25.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label25.Location = new System.Drawing.Point(505, 49);
+            this.label25.Location = new System.Drawing.Point(442, 39);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(167, 47);
+            this.label25.Size = new System.Drawing.Size(146, 37);
             this.label25.TabIndex = 113;
             this.label25.Text = "전화번호";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
             // txtcom_phone
             // 
             this.txtcom_phone.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -539,6 +772,14 @@
             this.txtcom_rep_name.Name = "txtcom_rep_name";
             this.txtcom_rep_name.Size = new System.Drawing.Size(331, 27);
             this.txtcom_rep_name.TabIndex = 131;
+=======
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(592, 1);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(289, 37);
+            this.label4.TabIndex = 130;
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             // 
             // btnSerch
             // 
@@ -546,10 +787,14 @@
             this.btnSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSerch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnSerch.Location = new System.Drawing.Point(946, 36);
+=======
+            this.btnSerch.Location = new System.Drawing.Point(785, 29);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.btnSerch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSerch.Name = "btnSerch";
-            this.btnSerch.Size = new System.Drawing.Size(47, 29);
+            this.btnSerch.Size = new System.Drawing.Size(41, 23);
             this.btnSerch.TabIndex = 111;
             this.btnSerch.Text = "조회";
             this.btnSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -559,8 +804,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 507);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 406);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -570,8 +814,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 183);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 146);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -581,8 +824,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -597,10 +839,14 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnSelect.Location = new System.Drawing.Point(918, 36);
+=======
+            this.btnSelect.Location = new System.Drawing.Point(760, 29);
+>>>>>>> e9e7add4b1924921f0d49dd1d498f1ab8ae7f648
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(28, 29);
+            this.btnSelect.Size = new System.Drawing.Size(24, 23);
             this.btnSelect.TabIndex = 89;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -608,10 +854,10 @@
             // 
             // info_1_1_accountmng
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1085, 714);
+            this.ClientSize = new System.Drawing.Size(949, 571);
             this.Controls.Add(this.btnSerch);
             this.Controls.Add(this.tblLyoutPnl);
             this.Controls.Add(this.pictureBox3);
@@ -628,7 +874,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridManageInputHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "info_1_1_accountmng";
             this.Text = "mngmnt_inputProduct";
             this.Load += new System.EventHandler(this.info_1_1_accountmng_Load);

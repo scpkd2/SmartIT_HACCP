@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,13 +22,13 @@ namespace Haccp_MES._2_management
         public mngmnt_2_outputProduct()
         {
             InitializeComponent();
-            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+            
             dtHead = new DataTable();
 
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
-        {
+        {                        
             conn.Open();
             dtHead.Clear();
             string orderInfoHeadQuery = "SELECT output_idx, DATE_FORMAT(output_date, '%Y-%m-%d') as 'output_date', com_name, mat_name,  mat_price * output_count as 'output_totprc', output_admin " +
@@ -114,22 +115,28 @@ namespace Haccp_MES._2_management
 
         private void mngmnt_2_outputProduct_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            
-            string orderInfoHeadQuery = "SELECT output_idx, DATE_FORMAT(output_date, '%Y-%m-%d') as 'output_date', com_name, mat_name,  mat_price * output_count as 'output_totprc', output_admin " + 
-                "FROM manage_output, info_material, info_warehouse, info_company " + 
-                "WHERE manage_output.mat_no = info_material.mat_no AND manage_output.ware_no = info_warehouse.ware_no AND info_company.com_no = manage_output.com_no " + "" +
-                "ORDER BY output_idx;";
-            cmd = new MySqlCommand(orderInfoHeadQuery, conn);
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtHead);
+            Thread t = new Thread(() => {
+                conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+                conn.Open();
+
+                string orderInfoHeadQuery = "SELECT output_idx, DATE_FORMAT(output_date, '%Y-%m-%d') as 'output_date', com_name, mat_name,  mat_price * output_count as 'output_totprc', output_admin " +
+                    "FROM manage_output, info_material, info_warehouse, info_company " +
+                    "WHERE manage_output.mat_no = info_material.mat_no AND manage_output.ware_no = info_warehouse.ware_no AND info_company.com_no = manage_output.com_no " + "" +
+                    "ORDER BY output_idx;";
+                cmd = new MySqlCommand(orderInfoHeadQuery, conn);
+                adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dtHead);
+
+                conn.Close();
+            });
+            t.Start();
 
             gridManageoutputHead.DataSource = dtHead;
             lblHeadCount.Text = gridManageoutputHead.Rows.Count.ToString();
 
-            conn.Close();
-            
-            if(gridManageoutputHead.Rows.Count != 0)
+            t.Join();
+
+            if (gridManageoutputHead.Rows.Count != 0)
                 gridManageoutputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
