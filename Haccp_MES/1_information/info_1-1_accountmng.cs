@@ -110,13 +110,18 @@ namespace Haccp_MES._1_information
             lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
 
             conn.Close();
+
+            if (gridManageInputHead.Rows.Count != 0)
+                gridManageInputHead_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void btnSerch_Click(object sender, EventArgs e)
         {
             conn.Open();
             dtHead.Clear();
-            string companyInfoHeadQuery = "SELECT * FROM info_company WHERE com_name='" + txtComName.Text + "';";
+            string companyInfoHeadQuery = "SELECT * FROM info_company WHERE com_name LIKE '" + txtComName.Text +
+                                          "' OR com_type LIKE '" + cbComType.SelectedItem + "' OR com_no LIKE '" +
+                                          cbComNo.SelectedItem + "';";
             cmd = new MySqlCommand(companyInfoHeadQuery, conn);
 
             adapter = new MySqlDataAdapter(cmd);
@@ -125,44 +130,16 @@ namespace Haccp_MES._1_information
             gridManageInputHead.DataSource = dtHead;
             lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
 
+
+            if (cmd.ExecuteNonQuery() == 0)
+            {
+                MessageBox.Show(" Error 발생.");
+            }
             conn.Close();
 
         }
 
-        private void btnNoSerch_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            dtHead.Clear();
-            string companyInfoHeadQuery = "SELECT * FROM info_company WHERE com_no=" + cbComNo.SelectedItem +
-                                          " OR com_name='" + txtComName.Text + "';";
-            cmd = new MySqlCommand(companyInfoHeadQuery, conn);
 
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtHead);
-
-            gridManageInputHead.DataSource = dtHead;
-            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
-
-            conn.Close();
-
-        }
-
-        private void btnTypeSerch_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            dtHead.Clear();
-            string companyInfoHeadQuery = "SELECT * FROM info_company WHERE com_type='" + cbComType.SelectedItem +
-                                          "' OR com_name='" + txtComName.Text + "';";
-            cmd = new MySqlCommand(companyInfoHeadQuery, conn);
-
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtHead);
-
-            gridManageInputHead.DataSource = dtHead;
-            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
-
-            conn.Close();
-        }
 
         private void gridManageInputHead_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -170,8 +147,9 @@ namespace Haccp_MES._1_information
             DataTable dtBody = new DataTable();
             conn.Open();
 
-            string companyInfoBodyQuery = "SELECT * FROM info_company;";
+            string companyInfoBodyQuery = "SELECT * FROM info_company WHERE com_no=@COM_NO;";
             cmd = new MySqlCommand(companyInfoBodyQuery, conn);
+            cmd.Parameters.AddWithValue("@COM_NO", com_no);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtBody);
 
@@ -197,9 +175,36 @@ namespace Haccp_MES._1_information
             conn.Close();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
 
+        private void gridManageInputHead_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView view = sender as DataGridView;
+
+            view.SelectedRows[0].Cells[0].Value = !Convert.ToBoolean(view.SelectedRows[0].Cells[0].Value);
+        }
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string[] updateDatas = new string[3] { txtcom_type.Text, txtcom_phone.Text, txtcom_rep_name.Text };
+            var com_no = Convert.ToInt32(gridManageInputHead.CurrentRow.Cells[1].Value);
+
+
+            string UpdateQuery = "UPDATE info_company SET com_type=@COM_TYPE, com_phoneno=@COM_PHONE, com_rep_name=@COM_REP_NAME WHERE com_no=@COM_NO;";
+            cmd = new MySqlCommand(UpdateQuery, conn);
+            cmd.Parameters.AddWithValue("@COM_TYPE", updateDatas[0]);
+            cmd.Parameters.AddWithValue("@COM_PHONE", updateDatas[1]);
+            cmd.Parameters.AddWithValue("@COM_REP_NAME", updateDatas[2]);
+            cmd.Parameters.AddWithValue("@COM_NO", com_no);
+
+            if (cmd.ExecuteNonQuery() == 0)
+            {
+                MessageBox.Show("Update Error 발생.");
+            }
+            conn.Close();
+
+            btnSelect_Click(sender, e);
         }
     }
 }
