@@ -284,6 +284,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="png\loop-circular-3x.png" />
+    <None Include="png\magnifying-glass-4x.png" />
     <Content Include="png\miniLogo.png" />
   </ItemGroup>
   <ItemGroup>
