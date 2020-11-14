@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(949, 571);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(949, 571);
+            this.MaximumSize = new System.Drawing.Size(965, 571);
             this.Name = "Prod_3_Production_Trend";
             this.Text = "Prod_3_Production_Trend";
             this.ResumeLayout(false);

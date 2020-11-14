@@ -484,6 +484,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(67)))), ((int)(((byte)(71)))));
             this.panelChildForm.Location = new System.Drawing.Point(219, 39);
+            this.panelChildForm.MaximumSize = new System.Drawing.Size(965, 571);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(965, 571);
             this.panelChildForm.TabIndex = 2;
