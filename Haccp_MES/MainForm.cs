@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Drawing;
-//susing Haccp_MES._3_production;
+using Haccp_MES._3_production;
 using Haccp_MES._2_management;
 using Haccp_MES._1_information;
 
@@ -462,7 +462,7 @@ namespace Haccp_MES
             else
             {
                 tabBtnActiveOn(tabWorkOder);
-                //OpenChildForm(new Prod_1_WorkOrders());
+                OpenChildForm(new Prod_1_WorkOrders());
             }
         }
 
@@ -478,7 +478,7 @@ namespace Haccp_MES
             else
             {
                 tabBtnActiveOn(tabPerformanceMng);
-                //OpenChildForm(new Prod_2_PerformanceMng());
+                OpenChildForm(new Prod_2_PerformanceMng());
             }
         }
 
@@ -494,7 +494,7 @@ namespace Haccp_MES
             else
             {
                 tabBtnActiveOn(tabProdTrend);
-                //OpenChildForm(new Prod_3_Production_Trend());
+                OpenChildForm(new Prod_3_Production_Trend());
             }
         }
 
