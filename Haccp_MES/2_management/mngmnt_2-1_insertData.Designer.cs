@@ -1,6 +1,6 @@
 ﻿namespace Haccp_MES._2_management
 {
-    partial class mngmnt_1_1_insertData
+    partial class mngmnt_2_1_insertData
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,6 @@
             this.col_input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_inspec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ware_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.col_com_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col_input_admin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,7 +70,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 24);
             this.label1.TabIndex = 96;
-            this.label1.Text = "입고등록";
+            this.label1.Text = "출고등록";
             // 
             // pictureBox2
             // 
@@ -148,7 +147,6 @@
             this.col_input_count,
             this.col_input_inspec,
             this.col_ware_no,
-            this.col_com_no,
             this.col_input_admin,
             this.col_input_etc});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -224,12 +222,6 @@
             this.col_ware_no.HeaderText = "창고명";
             this.col_ware_no.Name = "col_ware_no";
             // 
-            // col_com_no
-            // 
-            this.col_com_no.DataPropertyName = "com_name";
-            this.col_com_no.HeaderText = "거래처명";
-            this.col_com_no.Name = "col_com_no";
-            // 
             // col_input_admin
             // 
             this.col_input_admin.DataPropertyName = "input_admin";
@@ -246,7 +238,7 @@
             this.col_input_etc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_input_etc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // mngmnt_1_1_insertData
+            // mngmnt_2_1_insertData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,10 +251,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "mngmnt_1_1_insertData";
+            this.Name = "mngmnt_2_1_insertData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "mngmnt_1_1_insertData";
-
+            this.Text = "mngmnt_2_1_insertData";
+            this.Load += new System.EventHandler(this.mngmnt_2_1_insertData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridInsertManageInput)).EndInit();
             this.ResumeLayout(false);
@@ -286,7 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_count;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_inspec;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_ware_no;
-        private System.Windows.Forms.DataGridViewComboBoxColumn col_com_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_admin;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_etc;
     }

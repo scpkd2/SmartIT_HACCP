@@ -1,6 +1,6 @@
 ﻿namespace Haccp_MES._2_management
 {
-    partial class mngmnt_1_inputProduct
+    partial class mngmnt_2_outputProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-<<<<<<< HEAD
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-=======
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtPicker2 = new System.Windows.Forms.DateTimePicker();
@@ -49,10 +44,10 @@
             this.lblHeadCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridManageInputHead = new System.Windows.Forms.DataGridView();
+            this.gridManageoutputHead = new System.Windows.Forms.DataGridView();
             this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.output_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,24 +68,22 @@
             this.lbl_mat_name = new System.Windows.Forms.Label();
             this.lbl_mat_type = new System.Windows.Forms.Label();
             this.lbl_mat_spec = new System.Windows.Forms.Label();
-            this.txt_input_inspec = new System.Windows.Forms.TextBox();
             this.lbl_mat_price = new System.Windows.Forms.Label();
-            this.txt_input_count = new System.Windows.Forms.TextBox();
-            this.lbl_input_totprc = new System.Windows.Forms.Label();
+            this.txt_output_count = new System.Windows.Forms.TextBox();
+            this.lbl_output_totprc = new System.Windows.Forms.Label();
             this.lbl_ware_name = new System.Windows.Forms.Label();
-            this.txt_input_admin = new System.Windows.Forms.TextBox();
-            this.txt_input_etc = new System.Windows.Forms.TextBox();
+            this.txt_output_admin = new System.Windows.Forms.TextBox();
+            this.txt_output_etc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridManageoutputHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -101,11 +94,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(327, 32);
+            this.label8.Location = new System.Drawing.Point(331, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 102;
-            this.label8.Text = "거래처명";
+            this.label8.Text = "거래처";
             // 
             // label7
             // 
@@ -142,18 +135,18 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 98;
-            this.label6.Text = "입고일자";
+            this.label6.Text = "출고일자";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(62, 29);
+            this.label5.Location = new System.Drawing.Point(64, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 37);
             this.label5.TabIndex = 93;
-            this.label5.Text = "품목입고관리";
+            this.label5.Text = "제품출고관리";
             // 
             // btnUpdate
             // 
@@ -230,266 +223,81 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 24);
             this.label1.TabIndex = 83;
-            this.label1.Text = "입고내역";
+            this.label1.Text = "출고내역";
             // 
-<<<<<<< HEAD
-            // gridManageInput
+            // gridManageoutputHead
             // 
-            this.gridManageInput.AllowUserToAddRows = false;
-            this.gridManageInput.AllowUserToDeleteRows = false;
-            this.gridManageInput.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridManageInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridManageInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.check,
-            this.input_idx,
-            this.mat_name,
-            this.mat_type,
-            this.mat_spec,
-            this.input_count,
-            this.ware_name,
-            this.input_date});
-            this.gridManageInput.Location = new System.Drawing.Point(25, 125);
-            this.gridManageInput.Name = "gridManageInput";
-            this.gridManageInput.ReadOnly = true;
-            this.gridManageInput.RowTemplate.Height = 23;
-            this.gridManageInput.Size = new System.Drawing.Size(904, 159);
-            this.gridManageInput.TabIndex = 81;
-            // 
-            // check
-            // 
-            this.check.HeaderText = "선택";
-            this.check.Name = "check";
-            this.check.ReadOnly = true;
-            this.check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.check.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // input_idx
-            // 
-            this.input_idx.DataPropertyName = "input_idx";
-            this.input_idx.HeaderText = "입고번호";
-            this.input_idx.Name = "input_idx";
-            this.input_idx.ReadOnly = true;
-            // 
-            // mat_name
-            // 
-            this.mat_name.DataPropertyName = "mat_name";
-            this.mat_name.HeaderText = "품목명";
-            this.mat_name.Name = "mat_name";
-            this.mat_name.ReadOnly = true;
-            // 
-            // mat_type
-            // 
-            this.mat_type.DataPropertyName = "mat_type";
-            this.mat_type.HeaderText = "품목유형";
-            this.mat_type.Name = "mat_type";
-            this.mat_type.ReadOnly = true;
-            // 
-            // mat_spec
-            // 
-            this.mat_spec.DataPropertyName = "mat_spec";
-            this.mat_spec.HeaderText = "수불단위";
-            this.mat_spec.Name = "mat_spec";
-            this.mat_spec.ReadOnly = true;
-            // 
-            // input_count
-            // 
-            this.input_count.DataPropertyName = "input_count";
-            this.input_count.HeaderText = "입고수량";
-            this.input_count.Name = "input_count";
-            this.input_count.ReadOnly = true;
-            // 
-            // ware_name
-            // 
-            this.ware_name.DataPropertyName = "ware_name";
-            this.ware_name.HeaderText = "창고";
-            this.ware_name.Name = "ware_name";
-            this.ware_name.ReadOnly = true;
-            // 
-            // input_date
-            // 
-            this.input_date.DataPropertyName = "input_date";
-            this.input_date.HeaderText = "입고일자";
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
-            // 
-            // gridOrderInfoBody
-            // 
-            this.gridOrderInfoBody.AllowUserToAddRows = false;
-            this.gridOrderInfoBody.AllowUserToDeleteRows = false;
-            this.gridOrderInfoBody.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridOrderInfoBody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridOrderInfoBody.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridOrderInfoBody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.Column15,
-            this.Column16});
-            this.gridOrderInfoBody.Location = new System.Drawing.Point(25, 329);
-            this.gridOrderInfoBody.Name = "gridOrderInfoBody";
-            this.gridOrderInfoBody.ReadOnly = true;
-            this.gridOrderInfoBody.RowTemplate.Height = 23;
-            this.gridOrderInfoBody.Size = new System.Drawing.Size(904, 188);
-            this.gridOrderInfoBody.TabIndex = 82;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RELEASE_NO";
-            this.dataGridViewTextBoxColumn1.HeaderText = "입고번호";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "RELEASE_DATE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "입고일자";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ITEM_GUBUN";
-            this.dataGridViewTextBoxColumn3.HeaderText = "제품구분";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ITEM_CODE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "제품코드";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn5.HeaderText = "제품명";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ITEM_CAPACITY";
-            this.dataGridViewTextBoxColumn6.HeaderText = "용량";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ITEM_UNIT";
-            this.dataGridViewTextBoxColumn7.HeaderText = "단위";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ITEM_QTY";
-            this.dataGridViewTextBoxColumn8.HeaderText = "수량";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-=======
-            // gridManageInputHead
-            // 
-            this.gridManageInputHead.AllowUserToAddRows = false;
-            this.gridManageInputHead.AllowUserToDeleteRows = false;
-            this.gridManageInputHead.AllowUserToResizeColumns = false;
-            this.gridManageInputHead.AllowUserToResizeRows = false;
-            this.gridManageInputHead.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridManageoutputHead.AllowUserToAddRows = false;
+            this.gridManageoutputHead.AllowUserToDeleteRows = false;
+            this.gridManageoutputHead.AllowUserToResizeColumns = false;
+            this.gridManageoutputHead.AllowUserToResizeRows = false;
+            this.gridManageoutputHead.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridManageInputHead.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridManageInputHead.BackgroundColor = System.Drawing.Color.Silver;
-            this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridManageInputHead.ColumnHeadersHeight = 29;
-            this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridManageoutputHead.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridManageoutputHead.BackgroundColor = System.Drawing.Color.Silver;
+            this.gridManageoutputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridManageoutputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridManageoutputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageoutputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridManageoutputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCheck,
             this.Column2,
-            this.input_date,
+            this.output_date,
             this.Column13,
             this.Column3,
             this.Column15,
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(25, 160);
-            this.gridManageInputHead.MultiSelect = false;
-            this.gridManageInputHead.Name = "gridManageInputHead";
-            this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridManageInputHead.RowHeadersVisible = false;
-            this.gridManageInputHead.RowHeadersWidth = 51;
-            this.gridManageInputHead.RowTemplate.Height = 23;
-            this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(869, 196);
-            this.gridManageInputHead.TabIndex = 81;
-            this.gridManageInputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentClick);
-            this.gridManageInputHead.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentDoubleClick);
-            this.gridManageInputHead.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridManageInput_CellPainting);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageoutputHead.DefaultCellStyle = dataGridViewCellStyle7;
+            this.gridManageoutputHead.EnableHeadersVisualStyles = false;
+            this.gridManageoutputHead.Location = new System.Drawing.Point(25, 160);
+            this.gridManageoutputHead.MultiSelect = false;
+            this.gridManageoutputHead.Name = "gridManageoutputHead";
+            this.gridManageoutputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageoutputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gridManageoutputHead.RowHeadersVisible = false;
+            this.gridManageoutputHead.RowTemplate.Height = 23;
+            this.gridManageoutputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridManageoutputHead.Size = new System.Drawing.Size(869, 196);
+            this.gridManageoutputHead.TabIndex = 81;
+            this.gridManageoutputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageoutputHead_CellContentClick);
+            this.gridManageoutputHead.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageoutputHead_CellContentDoubleClick);
+            this.gridManageoutputHead.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridManageoutput_CellPainting);
             // 
             // colCheck
             // 
             this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colCheck.DataPropertyName = "chkbox";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.NullValue = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle6;
             this.colCheck.FalseValue = "false";
             this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colCheck.Frozen = true;
             this.colCheck.HeaderText = "";
-            this.colCheck.MinimumWidth = 6;
             this.colCheck.Name = "colCheck";
             this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -498,29 +306,25 @@
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "input_idx";
-            this.Column2.HeaderText = "입고번호";
-            this.Column2.MinimumWidth = 6;
+            this.Column2.DataPropertyName = "output_idx";
+            this.Column2.HeaderText = "출고번호";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
->>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             // 
-            // input_date
+            // output_date
             // 
-            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.input_date.DataPropertyName = "input_date";
-            this.input_date.HeaderText = "입고일자";
-            this.input_date.MinimumWidth = 6;
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
-            this.input_date.Width = 88;
+            this.output_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.output_date.DataPropertyName = "output_date";
+            this.output_date.HeaderText = "출고일자";
+            this.output_date.Name = "output_date";
+            this.output_date.ReadOnly = true;
+            this.output_date.Width = 88;
             // 
             // Column13
             // 
             this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column13.DataPropertyName = "com_name";
             this.Column13.HeaderText = "거래처";
-            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             this.Column13.Width = 89;
@@ -529,23 +333,20 @@
             // 
             this.Column3.DataPropertyName = "mat_name";
             this.Column3.HeaderText = "품목명";
-            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column15
             // 
-            this.Column15.DataPropertyName = "input_totprc";
+            this.Column15.DataPropertyName = "output_totprc";
             this.Column15.HeaderText = "총액";
-            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "input_admin";
+            this.Column1.DataPropertyName = "output_admin";
             this.Column1.HeaderText = "관리자";
-            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -562,7 +363,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -603,7 +404,7 @@
             // 
             // txtComName
             // 
-            this.txtComName.Location = new System.Drawing.Point(386, 28);
+            this.txtComName.Location = new System.Drawing.Point(378, 28);
             this.txtComName.Name = "txtComName";
             this.txtComName.Size = new System.Drawing.Size(100, 21);
             this.txtComName.TabIndex = 103;
@@ -641,7 +442,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 107;
-            this.label2.Text = "입고 상세내역";
+            this.label2.Text = "출고 상세내역";
             // 
             // tblLyoutPnl
             // 
@@ -658,20 +459,18 @@
             this.tblLyoutPnl.Controls.Add(this.lbl_mat_name, 3, 0);
             this.tblLyoutPnl.Controls.Add(this.lbl_mat_type, 1, 1);
             this.tblLyoutPnl.Controls.Add(this.lbl_mat_spec, 3, 1);
-            this.tblLyoutPnl.Controls.Add(this.txt_input_inspec, 5, 1);
             this.tblLyoutPnl.Controls.Add(this.lbl_mat_price, 1, 2);
-            this.tblLyoutPnl.Controls.Add(this.txt_input_count, 3, 2);
-            this.tblLyoutPnl.Controls.Add(this.lbl_input_totprc, 5, 2);
+            this.tblLyoutPnl.Controls.Add(this.txt_output_count, 3, 2);
+            this.tblLyoutPnl.Controls.Add(this.lbl_output_totprc, 5, 2);
             this.tblLyoutPnl.Controls.Add(this.lbl_ware_name, 1, 3);
-            this.tblLyoutPnl.Controls.Add(this.txt_input_admin, 3, 3);
-            this.tblLyoutPnl.Controls.Add(this.txt_input_etc, 5, 3);
+            this.tblLyoutPnl.Controls.Add(this.txt_output_admin, 3, 3);
+            this.tblLyoutPnl.Controls.Add(this.txt_output_etc, 5, 3);
             this.tblLyoutPnl.Controls.Add(this.label12, 2, 2);
             this.tblLyoutPnl.Controls.Add(this.label10, 0, 1);
             this.tblLyoutPnl.Controls.Add(this.label4, 0, 0);
             this.tblLyoutPnl.Controls.Add(this.label9, 2, 0);
             this.tblLyoutPnl.Controls.Add(this.label11, 0, 2);
             this.tblLyoutPnl.Controls.Add(this.label13, 4, 2);
-            this.tblLyoutPnl.Controls.Add(this.label14, 4, 1);
             this.tblLyoutPnl.Controls.Add(this.label15, 2, 1);
             this.tblLyoutPnl.Controls.Add(this.label16, 0, 3);
             this.tblLyoutPnl.Controls.Add(this.label17, 4, 3);
@@ -740,22 +539,15 @@
             // lbl_mat_spec
             // 
             this.lbl_mat_spec.AutoSize = true;
+            this.tblLyoutPnl.SetColumnSpan(this.lbl_mat_spec, 3);
             this.lbl_mat_spec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_spec.Location = new System.Drawing.Point(396, 30);
+            this.lbl_mat_spec.Location = new System.Drawing.Point(408, 30);
+            this.lbl_mat_spec.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lbl_mat_spec.Name = "lbl_mat_spec";
-            this.lbl_mat_spec.Size = new System.Drawing.Size(189, 28);
+            this.lbl_mat_spec.Size = new System.Drawing.Size(473, 28);
             this.lbl_mat_spec.TabIndex = 127;
             this.lbl_mat_spec.Text = " ";
-            this.lbl_mat_spec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txt_input_inspec
-            // 
-            this.txt_input_inspec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_input_inspec.Location = new System.Drawing.Point(690, 32);
-            this.txt_input_inspec.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txt_input_inspec.Name = "txt_input_inspec";
-            this.txt_input_inspec.Size = new System.Drawing.Size(191, 23);
-            this.txt_input_inspec.TabIndex = 118;
+            this.lbl_mat_spec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_mat_price
             // 
@@ -768,26 +560,26 @@
             this.lbl_mat_price.Text = " ";
             this.lbl_mat_price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txt_input_count
+            // txt_output_count
             // 
-            this.txt_input_count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_input_count.Location = new System.Drawing.Point(396, 61);
-            this.txt_input_count.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txt_input_count.Name = "txt_input_count";
-            this.txt_input_count.Size = new System.Drawing.Size(189, 23);
-            this.txt_input_count.TabIndex = 116;
-            this.txt_input_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_output_count.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_output_count.Location = new System.Drawing.Point(396, 61);
+            this.txt_output_count.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txt_output_count.Name = "txt_output_count";
+            this.txt_output_count.Size = new System.Drawing.Size(189, 23);
+            this.txt_output_count.TabIndex = 116;
+            this.txt_output_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lbl_input_totprc
+            // lbl_output_totprc
             // 
-            this.lbl_input_totprc.AutoSize = true;
-            this.lbl_input_totprc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_input_totprc.Location = new System.Drawing.Point(690, 59);
-            this.lbl_input_totprc.Name = "lbl_input_totprc";
-            this.lbl_input_totprc.Size = new System.Drawing.Size(191, 28);
-            this.lbl_input_totprc.TabIndex = 133;
-            this.lbl_input_totprc.Text = " ";
-            this.lbl_input_totprc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_output_totprc.AutoSize = true;
+            this.lbl_output_totprc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_output_totprc.Location = new System.Drawing.Point(690, 59);
+            this.lbl_output_totprc.Name = "lbl_output_totprc";
+            this.lbl_output_totprc.Size = new System.Drawing.Size(191, 28);
+            this.lbl_output_totprc.TabIndex = 133;
+            this.lbl_output_totprc.Text = " ";
+            this.lbl_output_totprc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_ware_name
             // 
@@ -800,23 +592,23 @@
             this.lbl_ware_name.Text = " ";
             this.lbl_ware_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_input_admin
+            // txt_output_admin
             // 
-            this.txt_input_admin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_input_admin.Location = new System.Drawing.Point(396, 90);
-            this.txt_input_admin.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txt_input_admin.Name = "txt_input_admin";
-            this.txt_input_admin.Size = new System.Drawing.Size(189, 23);
-            this.txt_input_admin.TabIndex = 134;
+            this.txt_output_admin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_output_admin.Location = new System.Drawing.Point(396, 90);
+            this.txt_output_admin.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txt_output_admin.Name = "txt_output_admin";
+            this.txt_output_admin.Size = new System.Drawing.Size(189, 23);
+            this.txt_output_admin.TabIndex = 134;
             // 
-            // txt_input_etc
+            // txt_output_etc
             // 
-            this.txt_input_etc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_input_etc.Location = new System.Drawing.Point(690, 90);
-            this.txt_input_etc.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txt_input_etc.Name = "txt_input_etc";
-            this.txt_input_etc.Size = new System.Drawing.Size(191, 23);
-            this.txt_input_etc.TabIndex = 117;
+            this.txt_output_etc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_output_etc.Location = new System.Drawing.Point(690, 90);
+            this.txt_output_etc.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txt_output_etc.Name = "txt_output_etc";
+            this.txt_output_etc.Size = new System.Drawing.Size(191, 23);
+            this.txt_output_etc.TabIndex = 117;
             // 
             // label12
             // 
@@ -908,21 +700,6 @@
             this.label13.Text = "총액";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(589, 30);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 28);
-            this.label14.TabIndex = 111;
-            this.label14.Text = "검사방법";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -968,7 +745,7 @@
             this.label17.Text = "비고";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mngmnt_1_inputProduct
+            // mngmnt_2_outputProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -988,20 +765,12 @@
             this.Controls.Add(this.lblHeadCount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gridManageInputHead);
+            this.Controls.Add(this.gridManageoutputHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "mngmnt_1_inputProduct";
-<<<<<<< HEAD
-            this.Text = "mngmnt_inputProduct";
-            this.Load += new System.EventHandler(this.mngmnt_1_inputProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridManageInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridOrderInfoBody)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-=======
-            this.Text = " ";
-            this.Load += new System.EventHandler(this.mngmnt_1_inputProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).EndInit();
->>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
+            this.Name = "mngmnt_2_outputProduct";
+            this.Text = "mngmnt_outputProduct";
+            this.Load += new System.EventHandler(this.mngmnt_2_outputProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridManageoutputHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -1029,7 +798,7 @@
         private System.Windows.Forms.Label lblHeadCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gridManageInputHead;
+        private System.Windows.Forms.DataGridView gridManageoutputHead;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -1042,31 +811,29 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbl_mat_no;
-        private System.Windows.Forms.Label lbl_mat_name;
         private System.Windows.Forms.Label lbl_mat_type;
         private System.Windows.Forms.Label lbl_mat_spec;
-        private System.Windows.Forms.TextBox txt_input_inspec;
         private System.Windows.Forms.Label lbl_mat_price;
-        private System.Windows.Forms.TextBox txt_input_count;
-        private System.Windows.Forms.Label lbl_input_totprc;
+        private System.Windows.Forms.TextBox txt_output_count;
+        private System.Windows.Forms.Label lbl_output_totprc;
         private System.Windows.Forms.Label lbl_ware_name;
-        private System.Windows.Forms.TextBox txt_input_admin;
-        private System.Windows.Forms.TextBox txt_input_etc;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.TextBox txt_output_admin;
+        private System.Windows.Forms.TextBox txt_output_etc;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtMatName;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtComName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn output_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label lbl_mat_name;
     }
 }

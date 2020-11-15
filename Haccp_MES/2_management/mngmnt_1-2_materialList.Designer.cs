@@ -28,42 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridMaterialList = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridMaterialList)).BeginInit();
+            this.gridSelectInfoMaterial = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSelectInfoMaterial)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridMaterialList
-            // 
-            this.gridMaterialList.AllowUserToAddRows = false;
-            this.gridMaterialList.AllowUserToResizeColumns = false;
-            this.gridMaterialList.AllowUserToResizeRows = false;
-            this.gridMaterialList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.gridMaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridMaterialList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.gridMaterialList.Location = new System.Drawing.Point(28, 80);
-            this.gridMaterialList.Name = "gridMaterialList";
-            this.gridMaterialList.RowTemplate.Height = 23;
-            this.gridMaterialList.Size = new System.Drawing.Size(495, 150);
-            this.gridMaterialList.TabIndex = 0;
-            this.gridMaterialList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridMaterialList_CellContentClick);
             // 
             // label1
             // 
@@ -88,7 +68,7 @@
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(448, 268);
+            this.btnClose.Location = new System.Drawing.Point(645, 252);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 100;
@@ -96,95 +76,136 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Column1
+            // gridSelectInfoMaterial
             // 
-            this.Column1.DataPropertyName = "mat_no";
-            this.Column1.HeaderText = "품목코드";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 78;
+            this.gridSelectInfoMaterial.AllowUserToAddRows = false;
+            this.gridSelectInfoMaterial.AllowUserToDeleteRows = false;
+            this.gridSelectInfoMaterial.AllowUserToResizeColumns = false;
+            this.gridSelectInfoMaterial.AllowUserToResizeRows = false;
+            this.gridSelectInfoMaterial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridSelectInfoMaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSelectInfoMaterial.BackgroundColor = System.Drawing.Color.Silver;
+            this.gridSelectInfoMaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSelectInfoMaterial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridSelectInfoMaterial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSelectInfoMaterial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridSelectInfoMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column14});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSelectInfoMaterial.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridSelectInfoMaterial.EnableHeadersVisualStyles = false;
+            this.gridSelectInfoMaterial.Location = new System.Drawing.Point(28, 73);
+            this.gridSelectInfoMaterial.MultiSelect = false;
+            this.gridSelectInfoMaterial.Name = "gridSelectInfoMaterial";
+            this.gridSelectInfoMaterial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSelectInfoMaterial.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridSelectInfoMaterial.RowHeadersVisible = false;
+            this.gridSelectInfoMaterial.RowTemplate.Height = 23;
+            this.gridSelectInfoMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSelectInfoMaterial.Size = new System.Drawing.Size(692, 173);
+            this.gridSelectInfoMaterial.TabIndex = 104;
+            this.gridSelectInfoMaterial.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSelectInfoMaterial_CellMouseDoubleClick);
             // 
-            // Column2
+            // Column8
             // 
-            this.Column2.DataPropertyName = "mat_name";
-            this.Column2.HeaderText = "품목명";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 66;
+            this.Column8.DataPropertyName = "mat_no";
+            this.Column8.HeaderText = "품목코드";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
-            // Column3
+            // Column9
             // 
-            this.Column3.DataPropertyName = "mat_type";
-            this.Column3.HeaderText = "품목유형";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 78;
+            this.Column9.DataPropertyName = "mat_name";
+            this.Column9.HeaderText = "품목명";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
-            // Column4
+            // Column10
             // 
-            this.Column4.DataPropertyName = "mat_spec";
-            this.Column4.HeaderText = "단위";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 54;
+            this.Column10.DataPropertyName = "mat_type";
+            this.Column10.HeaderText = "품목유형";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
-            // Column5
+            // Column11
             // 
-            this.Column5.DataPropertyName = "mat_price";
-            this.Column5.HeaderText = "단가";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 54;
+            this.Column11.DataPropertyName = "mat_spec";
+            this.Column11.HeaderText = "단위";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
-            // Column6
+            // Column12
             // 
-            this.Column6.DataPropertyName = "com_name";
-            this.Column6.HeaderText = "거래처";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 66;
+            this.Column12.DataPropertyName = "mat_price";
+            this.Column12.HeaderText = "단가";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
-            // Column7
+            // Column14
             // 
-            this.Column7.DataPropertyName = "mat_etc";
-            this.Column7.HeaderText = "비고";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 54;
+            this.Column14.DataPropertyName = "mat_etc";
+            this.Column14.HeaderText = "비고";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
             // 
             // mngmnt_1_2_materialList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 303);
+            this.ClientSize = new System.Drawing.Size(747, 303);
+            this.Controls.Add(this.gridSelectInfoMaterial);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gridMaterialList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mngmnt_1_2_materialList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "mngmnt_1_2_materialList";
             this.Load += new System.EventHandler(this.mngmnt_1_2_materialList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSelectInfoMaterial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gridMaterialList;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridView gridSelectInfoMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
     }
 }

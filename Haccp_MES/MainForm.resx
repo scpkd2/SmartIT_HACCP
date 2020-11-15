@@ -209,6 +209,18 @@
         IY0/5Qp/BDZTgyqjJGEshREHepLTFy/sNHPMHc16AAAAAElFTkSuQmCC
 </value>
   </data>
+<<<<<<< HEAD
+=======
+  <data name="btn_ProcessMng.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAYAAAD0f5bSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACgSURBVChTfZBB
+        EYAwDASRgIRKQAISkICESkACEpCABCQgARH9l7sZyjTpwWMfSW4nmXQ5Z0lKKag+kU0IPTjVjMgmhBnk
+        r21NgyC8P1JU86ZBED4eVjVvGgjytCKRwWdMQRBanDT5jCkQ4NdqgWx1hpgCgfI1j/milyLgeR5zYi0E
+        oLaQ60sagdpSeE9keAAUTqC2FDbAXKC0Av+xH9J8AzbFS0T914DIAAAAAElFTkSuQmCC
+</value>
+  </data>
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
   <data name="btn_Storg_Mng.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
