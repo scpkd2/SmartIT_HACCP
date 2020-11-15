@@ -14,6 +14,7 @@ namespace Haccp_MES._2_management
 {
     public partial class mngmnt_1_inputProduct : Form
     {
+        //tt
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
