@@ -102,7 +102,11 @@
             this.panelProdt_SubMenu.Controls.Add(this.btn_Result_Mng);
             this.panelProdt_SubMenu.Controls.Add(this.btn_Work_CMD);
             this.panelProdt_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< HEAD
+            this.panelProdt_SubMenu.Location = new System.Drawing.Point(0, 472);
+=======
             this.panelProdt_SubMenu.Location = new System.Drawing.Point(0, 502);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.panelProdt_SubMenu.Name = "panelProdt_SubMenu";
             this.panelProdt_SubMenu.Size = new System.Drawing.Size(219, 105);
             this.panelProdt_SubMenu.TabIndex = 8;
@@ -175,7 +179,11 @@
             this.btn_Product_Mng.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Product_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_Product_Mng.Image")));
             this.btn_Product_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
+            this.btn_Product_Mng.Location = new System.Drawing.Point(0, 430);
+=======
             this.btn_Product_Mng.Location = new System.Drawing.Point(0, 460);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.btn_Product_Mng.Name = "btn_Product_Mng";
             this.btn_Product_Mng.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_Product_Mng.Size = new System.Drawing.Size(219, 42);
@@ -193,9 +201,15 @@
             this.panelOpt_SubMenu.Controls.Add(this.btn_Out_item_Mng);
             this.panelOpt_SubMenu.Controls.Add(this.btn_Input_Item_Mng);
             this.panelOpt_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< HEAD
+            this.panelOpt_SubMenu.Location = new System.Drawing.Point(0, 296);
+            this.panelOpt_SubMenu.Name = "panelOpt_SubMenu";
+            this.panelOpt_SubMenu.Size = new System.Drawing.Size(219, 134);
+=======
             this.panelOpt_SubMenu.Location = new System.Drawing.Point(0, 325);
             this.panelOpt_SubMenu.Name = "panelOpt_SubMenu";
             this.panelOpt_SubMenu.Size = new System.Drawing.Size(219, 135);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.panelOpt_SubMenu.TabIndex = 6;
             // 
             // btn_Inven_Matching
@@ -270,7 +284,11 @@
             this.btn_Input_Item_Mng.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Input_Item_Mng.Size = new System.Drawing.Size(219, 32);
             this.btn_Input_Item_Mng.TabIndex = 1;
+<<<<<<< HEAD
+            this.btn_Input_Item_Mng.Text = "     원자재 입고관리";
+=======
             this.btn_Input_Item_Mng.Text = "     품목 입고 관리";
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.btn_Input_Item_Mng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Input_Item_Mng.UseVisualStyleBackColor = true;
             this.btn_Input_Item_Mng.Click += new System.EventHandler(this.btn_Input_Item_Mng_Click);
@@ -286,7 +304,11 @@
             this.btn_Opt_Mng.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Opt_Mng.Image = ((System.Drawing.Image)(resources.GetObject("btn_Opt_Mng.Image")));
             this.btn_Opt_Mng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
+            this.btn_Opt_Mng.Location = new System.Drawing.Point(0, 254);
+=======
             this.btn_Opt_Mng.Location = new System.Drawing.Point(0, 283);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.btn_Opt_Mng.Name = "btn_Opt_Mng";
             this.btn_Opt_Mng.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_Opt_Mng.Size = new System.Drawing.Size(219, 42);
@@ -299,14 +321,21 @@
             // panelMES_info_SubMenu
             // 
             this.panelMES_info_SubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+<<<<<<< HEAD
+=======
             this.panelMES_info_SubMenu.Controls.Add(this.btn_ProcessMng);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Storg_Mng);
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Prodt_Mng);
             this.panelMES_info_SubMenu.Controls.Add(this.btn_Clinet_Mng);
             this.panelMES_info_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMES_info_SubMenu.Location = new System.Drawing.Point(0, 152);
             this.panelMES_info_SubMenu.Name = "panelMES_info_SubMenu";
+<<<<<<< HEAD
+            this.panelMES_info_SubMenu.Size = new System.Drawing.Size(219, 102);
+=======
             this.panelMES_info_SubMenu.Size = new System.Drawing.Size(219, 131);
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.panelMES_info_SubMenu.TabIndex = 4;
             // 
             // btn_ProcessMng
@@ -799,6 +828,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button tabHome;
         private System.Windows.Forms.Button tabCilentMng;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.Button btn_ProcessMng;
         private System.Windows.Forms.Button tabitem_Input_mng;
         private System.Windows.Forms.Button tabItemInFoMng;
@@ -810,6 +841,7 @@
         private System.Windows.Forms.Button tabOutputProduct;
         private System.Windows.Forms.Button tabProcess;
         private System.Windows.Forms.Button tabWHSmng;
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
     }
 }
 

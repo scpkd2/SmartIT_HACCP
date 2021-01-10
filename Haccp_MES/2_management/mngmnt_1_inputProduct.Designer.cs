@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< HEAD
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtPicker2 = new System.Windows.Forms.DateTimePicker();
@@ -227,6 +232,188 @@
             this.label1.TabIndex = 83;
             this.label1.Text = "입고내역";
             // 
+<<<<<<< HEAD
+            // gridManageInput
+            // 
+            this.gridManageInput.AllowUserToAddRows = false;
+            this.gridManageInput.AllowUserToDeleteRows = false;
+            this.gridManageInput.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridManageInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridManageInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.check,
+            this.input_idx,
+            this.mat_name,
+            this.mat_type,
+            this.mat_spec,
+            this.input_count,
+            this.ware_name,
+            this.input_date});
+            this.gridManageInput.Location = new System.Drawing.Point(25, 125);
+            this.gridManageInput.Name = "gridManageInput";
+            this.gridManageInput.ReadOnly = true;
+            this.gridManageInput.RowTemplate.Height = 23;
+            this.gridManageInput.Size = new System.Drawing.Size(904, 159);
+            this.gridManageInput.TabIndex = 81;
+            // 
+            // check
+            // 
+            this.check.HeaderText = "선택";
+            this.check.Name = "check";
+            this.check.ReadOnly = true;
+            this.check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.check.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // input_idx
+            // 
+            this.input_idx.DataPropertyName = "input_idx";
+            this.input_idx.HeaderText = "입고번호";
+            this.input_idx.Name = "input_idx";
+            this.input_idx.ReadOnly = true;
+            // 
+            // mat_name
+            // 
+            this.mat_name.DataPropertyName = "mat_name";
+            this.mat_name.HeaderText = "품목명";
+            this.mat_name.Name = "mat_name";
+            this.mat_name.ReadOnly = true;
+            // 
+            // mat_type
+            // 
+            this.mat_type.DataPropertyName = "mat_type";
+            this.mat_type.HeaderText = "품목유형";
+            this.mat_type.Name = "mat_type";
+            this.mat_type.ReadOnly = true;
+            // 
+            // mat_spec
+            // 
+            this.mat_spec.DataPropertyName = "mat_spec";
+            this.mat_spec.HeaderText = "수불단위";
+            this.mat_spec.Name = "mat_spec";
+            this.mat_spec.ReadOnly = true;
+            // 
+            // input_count
+            // 
+            this.input_count.DataPropertyName = "input_count";
+            this.input_count.HeaderText = "입고수량";
+            this.input_count.Name = "input_count";
+            this.input_count.ReadOnly = true;
+            // 
+            // ware_name
+            // 
+            this.ware_name.DataPropertyName = "ware_name";
+            this.ware_name.HeaderText = "창고";
+            this.ware_name.Name = "ware_name";
+            this.ware_name.ReadOnly = true;
+            // 
+            // input_date
+            // 
+            this.input_date.DataPropertyName = "input_date";
+            this.input_date.HeaderText = "입고일자";
+            this.input_date.Name = "input_date";
+            this.input_date.ReadOnly = true;
+            // 
+            // gridOrderInfoBody
+            // 
+            this.gridOrderInfoBody.AllowUserToAddRows = false;
+            this.gridOrderInfoBody.AllowUserToDeleteRows = false;
+            this.gridOrderInfoBody.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridOrderInfoBody.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridOrderInfoBody.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridOrderInfoBody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.Column15,
+            this.Column16});
+            this.gridOrderInfoBody.Location = new System.Drawing.Point(25, 329);
+            this.gridOrderInfoBody.Name = "gridOrderInfoBody";
+            this.gridOrderInfoBody.ReadOnly = true;
+            this.gridOrderInfoBody.RowTemplate.Height = 23;
+            this.gridOrderInfoBody.Size = new System.Drawing.Size(904, 188);
+            this.gridOrderInfoBody.TabIndex = 82;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RELEASE_NO";
+            this.dataGridViewTextBoxColumn1.HeaderText = "입고번호";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "RELEASE_DATE";
+            this.dataGridViewTextBoxColumn2.HeaderText = "입고일자";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ITEM_GUBUN";
+            this.dataGridViewTextBoxColumn3.HeaderText = "제품구분";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ITEM_CODE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "제품코드";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn5.HeaderText = "제품명";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ITEM_CAPACITY";
+            this.dataGridViewTextBoxColumn6.HeaderText = "용량";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ITEM_UNIT";
+            this.dataGridViewTextBoxColumn7.HeaderText = "단위";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ITEM_QTY";
+            this.dataGridViewTextBoxColumn8.HeaderText = "수량";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+=======
             // gridManageInputHead
             // 
             this.gridManageInputHead.AllowUserToAddRows = false;
@@ -316,6 +503,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             // 
             // input_date
             // 
@@ -803,9 +991,17 @@
             this.Controls.Add(this.gridManageInputHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mngmnt_1_inputProduct";
+<<<<<<< HEAD
+            this.Text = "mngmnt_inputProduct";
+            this.Load += new System.EventHandler(this.mngmnt_1_inputProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridManageInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrderInfoBody)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+=======
             this.Text = " ";
             this.Load += new System.EventHandler(this.mngmnt_1_inputProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).EndInit();
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -17,12 +17,18 @@ namespace Haccp_MES._2_management
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
+<<<<<<< HEAD
+        DataTable dt;
+=======
         DataTable dtHead;
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
 
         public mngmnt_1_inputProduct()
         {
             dtHead = new DataTable();
             InitializeComponent();
+            conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+            dt = new DataTable();
         }
 
         private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
@@ -129,6 +135,25 @@ namespace Haccp_MES._2_management
             btnSelect_Click(sender, e);
         }
 
+<<<<<<< HEAD
+        private void mngmnt_1_inputProduct_Load(object sender, EventArgs e)
+        {
+            conn.Open(); 
+            
+            string orderInfoHeadQuery = "select input_idx, mat_name, mat_type, mat_spec, input_count, ware_name, input_date from manage_input, info_material, info_warehouse"+
+                " where manage_input.mat_no = info_material.mat_no and manage_input.ware_no = info_warehouse.ware_no;";
+            cmd = new MySqlCommand(orderInfoHeadQuery, conn);
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dt);
+
+            gridManageInput.DataSource = dt;
+
+            lblHeadCount.Text = dt.Rows.Count.ToString();
+
+            //dt.Dispose();
+            conn.Close();
+        }
+=======
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow drRow in gridManageInputHead.Rows)
@@ -246,5 +271,6 @@ namespace Haccp_MES._2_management
             conn.Close();
         }
 
+>>>>>>> e6c881031ef351650d895bc01cef7f4cea72ace2
     }
 }
